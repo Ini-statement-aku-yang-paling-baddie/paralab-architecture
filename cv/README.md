@@ -9,7 +9,7 @@ Folder ini memuat seluruh artefak computer vision ParaLab.
 Instal dependensi CV pada environment Python yang akan menjalankan generator:
 
 ```bash
-python3 -m pip install -r cv/requirements.txt
+python3 -m pip install -r requirements/cv.txt
 ```
 
 Lalu build dan validasi V3:

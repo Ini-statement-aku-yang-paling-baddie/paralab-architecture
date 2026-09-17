@@ -2,7 +2,7 @@
 
 > **Status:** hasil piloting hackathon, bukan model produksi.
 > **Cakupan:** dataset prosedural `cv/data/synthetic_v3/`, notebook `cv/notebooks/train_visual_screening.ipynb`, output run 1-3 di `cv/outputs/`.
-> **Terkait:** [../architecture/architecture_v4.md](../architecture/architecture_v4.md) §11 (F_CV: Visual Screening sebagai Asisten Capture untuk F3), [../data/data_pipeline.md](../data/data_pipeline.md), [../../cv/README.md](../../cv/README.md).
+> **Terkait:** [../architecture/architecture_v5.md](../architecture/architecture_v5.md) §9 (F_CV: Visual Screening sebagai Asisten Capture untuk F3), [../data/data_pipeline.md](../data/data_pipeline.md), [../../cv/README.md](../../cv/README.md).
 
 ---
 
@@ -21,7 +21,7 @@ Piloting ini menguji apakah classifier CV kecil (`TinyVialCNN`) bisa membedakan 
 2. Dataset v3 (domain-randomized, warna independen dari label) adalah desain yang benar secara konsep.
 3. Bug run 2 ada di model (`AdaptiveAvgPool2d((1,1))` membuang informasi posisi spasial), bukan di data. Fix sudah diverifikasi dua kali: smoke test CPU lokal (96.9% val acc) dan run resmi di Kaggle GPU (89.6% test acc) — konsisten.
 4. Hasil ini **tidak membuktikan model siap dipakai pada foto kosmetik asli**. Ini murni bukti bahwa pipeline train/eval-nya berfungsi dengan benar pada domain sintetis yang terkontrol.
-5. Taksonomi CV ternyata nyaris identik dengan enum `appearance` di dataset F3 yang sedang dikerjakan (`data/full_synthetic/`) — mapping langsung tanpa kehilangan informasi. Contoh gate confidence/abstention dan jalur human-confirmation sudah diformalkan sebagai modul **F_CV** di [../architecture/architecture_v4.md §11](../architecture/architecture_v4.md#11-f_cv-visual-screening-sebagai-asisten-capture-untuk-f3). Yang tersisa murni eksekusi, bukan desain: validasi domain di foto asli (belum lolos) — lihat §4.
+5. Taksonomi CV ternyata nyaris identik dengan enum `appearance` di dataset F3 yang sedang dikerjakan (`data/full_synthetic/`) — mapping langsung tanpa kehilangan informasi. Contoh gate confidence/abstention dan jalur human-confirmation sudah diformalkan sebagai modul **F_CV** di [../architecture/architecture_v5.md §9](../architecture/architecture_v5.md#9-f5-dan-pilot-cv). Yang tersisa murni eksekusi, bukan desain: validasi domain di foto asli (belum lolos) — lihat §4.
 
 ---
 
@@ -112,7 +112,7 @@ Hasil 89.6% ini **tidak memprediksi performa pada foto kosmetik asli**. Alasan:
 3. **Bukti dari confusion pattern sendiri**: error 100% terjadi tepat di ujung bawah range parameter (`layer_height`, `strength`) — model belajar threshold numerik generator, bukan konsep visual general yang robust ke variasi rendering nyata.
 4. **Model kecil, from-scratch, data sangat sedikit**: `TinyVialCNN` (~330K parameter) dilatih dari nol pakai 448 gambar, tanpa exposure ke tekstur/noise foto asli sama sekali.
 
-Ini konsisten dengan keputusan produk yang sudah ada: [../architecture/architecture_v4.md](../architecture/architecture_v4.md) menaruh classifier CV visual di **P2, "Ditunda sampai memperoleh dataset gambar berlabel yang sesuai domain"** — bukan P0/P1 seperti F1/F2/F3.
+Ini konsisten dengan keputusan produk yang sudah ada: [../architecture/architecture_v5.md](../architecture/architecture_v5.md) menaruh classifier CV visual di **P2, "Ditunda sampai memperoleh dataset gambar berlabel yang sesuai domain"** — bukan P0/P1 seperti F1/F2/F3.
 
 **Yang transferable ke data asli** (bagian yang tetap berharga dari piloting ini):
 - Taksonomi kelas (`creaming`, `phase_separation`, `heterogeneous`) adalah fenomena instabilitas emulsi kosmetik yang nyata dan dikenal di literatur formulasi — bukan label arbitrer seperti trajectory pH/viskositas sintetis di F3.
@@ -129,7 +129,7 @@ Ini konsisten dengan keputusan produk yang sudah ada: [../architecture/architect
 
 ## 4. Kompatibilitas dengan pipeline F3 — BELUM, dengan bukti konkret
 
-Rencana produk: CV berperan sebagai **otomasi capture** — peneliti foto sampel alih-alih input observasi manual, hasil CV langsung masuk sebagai data checkpoint yang dikonsumsi F3. Ini dicek terhadap data F3 pilot yang **sudah dieksekusi** (`data/canonical/checkpoints.jsonl`, `data/derived/forecast_features.jsonl`, `data/schema_contract.json`), bukan cuma terhadap desain konseptual di ../architecture/architecture_v4.md.
+Rencana produk: CV berperan sebagai **otomasi capture** — peneliti foto sampel alih-alih input observasi manual, hasil CV langsung masuk sebagai data checkpoint yang dikonsumsi F3. Ini dicek terhadap data F3 pilot yang **sudah dieksekusi** (`data/canonical/checkpoints.jsonl`, `data/derived/forecast_features.jsonl`, `data/schema_contract.json`), bukan cuma terhadap desain konseptual di ../architecture/architecture_v5.md.
 
 ### 4.1 Taksonomi — SOLVED, dua dataset F3 punya vocab appearance berbeda
 
@@ -168,30 +168,30 @@ Zero information loss, zero perlu nilai enum baru. Mapping ini didefinisikan seb
 
 Satu entri `observations[]` di `forecast_features.jsonl` berisi **tiga hal sekaligus**: `appearance` (kategorikal), `measurements.ph`, `measurements.viscosity_cp` (numerik dari instrumen). CV hanya mengisi `appearance`; `ph`/`viscosity_cp` tetap dari pH meter dan viskometer. **Ini memang scope yang dimaksud** — CV berperan sebagai otomasi capture visual, bukan pengganti seluruh proses pencatatan checkpoint. Dikonfirmasi: bukan limitasi yang perlu ditutup, cukup dinyatakan eksplisit di setiap klaim produk supaya tidak overselling ("CV mengotomasi field appearance", bukan "CV mengotomasi observasi checkpoint").
 
-### 4.3 Confidence/abstention — SOLVED, diimplementasikan di ../architecture/architecture_v4.md §11.4
+### 4.3 Confidence/abstention — SOLVED, diimplementasikan di ../architecture/architecture_v5.md §9.4
 
-Enum `appearance` di `full_synthetic` (§4.1) **tidak punya nilai `uncertain` di level checkpoint** (beda dari pilot lama). Daripada menambah nilai enum baru khusus buat CV (yang berarti ubah kontrak F3 lagi), solusinya diformalkan sebagai *confidence gate* di [../architecture/architecture_v4.md §11.4](../architecture/architecture_v4.md#114-confidence-gate-dan-abstention): confidence kelas teratas memenuhi threshold → `proposed_appearance_patch` diisi sebagai draft yang tinggal dikonfirmasi; di bawah threshold → tidak ada draft sama sekali, field `appearance` checkpoint tetap kosong dan diisi manual peneliti seperti alur tanpa CV. Satu keputusan desain, menyatu dengan mekanisme konfirmasi di §4.4 — bukan mekanisme terpisah.
+Enum `appearance` di `full_synthetic` (§4.1) **tidak punya nilai `uncertain` di level checkpoint** (beda dari pilot lama). Daripada menambah nilai enum baru khusus buat CV (yang berarti ubah kontrak F3 lagi), solusinya diformalkan sebagai *confidence gate* di [../architecture/architecture_v5.md §9.4](../architecture/architecture_v5.md#9-f5-dan-pilot-cv): confidence kelas teratas memenuhi threshold → `proposed_appearance_patch` diisi sebagai draft yang tinggal dikonfirmasi; di bawah threshold → tidak ada draft sama sekali, field `appearance` checkpoint tetap kosong dan diisi manual peneliti seperti alur tanpa CV. Satu keputusan desain, menyatu dengan mekanisme konfirmasi di §4.4 — bukan mekanisme terpisah.
 
-Titik awal threshold: dari confusion matrix run 3, kesalahan klasifikasi punya confidence mulai dari 0.48 sampai 0.98 — jadi confidence mentah bukan sinyal sempurna, tapi tetap berguna sebagai filter kasar. Threshold pasti (mis. 0.6) baru bisa dikalibrasi setelah ada data foto asli (Fase 2, §6), bukan diklaim final sekarang — ../architecture/architecture_v4.md §11.4 mencatat ini eksplisit sebagai starting point, bukan angka final.
+Titik awal threshold: dari confusion matrix run 3, kesalahan klasifikasi punya confidence mulai dari 0.48 sampai 0.98 — jadi confidence mentah bukan sinyal sempurna, tapi tetap berguna sebagai filter kasar. Threshold pasti (mis. 0.6) baru bisa dikalibrasi setelah ada data foto asli (Fase 2, §6), bukan diklaim final sekarang — ../architecture/architecture_v5.md §9.4 mencatat ini eksplisit sebagai starting point, bukan angka final.
 
-### 4.4 Jalur human sign-off untuk CV — SOLVED, diimplementasikan di ../architecture/architecture_v4.md §11
+### 4.4 Jalur human sign-off untuk CV — SOLVED, diimplementasikan di ../architecture/architecture_v5.md §9
 
 Bayangkan skenario konkret: sampel sebenarnya cuma ada beberapa gelembung kecil (harusnya `uniform`), tapi CV membacanya sebagai `heterogeneous` dengan confidence 80%. Kalau ini ditulis langsung ke checkpoint tanpa dicek manusia:
 
-1. Checkpoint di arsitektur ini didesain append-only/immutable (../architecture/architecture_v4.md §4) — begitu tersimpan, salah baca CV itu jadi bagian permanen dari record trial.
+1. Checkpoint di arsitektur ini didesain append-only/immutable (../architecture/architecture_v5.md §4) — begitu tersimpan, salah baca CV itu jadi bagian permanen dari record trial.
 2. F3 membaca checkpoint itu apa adanya dan menghasilkan forecast risiko berdasarkan appearance yang **salah**.
 3. Peneliti melihat forecast "risiko tinggi" dan bisa saja mengambil keputusan reformulasi/hentikan trial padahal sampelnya baik-baik saja — keputusan formulasi yang salah, dipicu satu foto yang salah dibaca, dan tidak ada yang pernah mengecek ulang karena sistem "mempercayai" CV begitu saja.
 4. Ke depannya, kalau mau mengevaluasi "seberapa akurat CV di lapangan", datanya tidak ada — karena tidak pernah direkam mana prediksi yang dikoreksi manusia vs dipakai apa adanya.
 
-Prinsip #10 ../architecture/architecture_v4.md (*"Human sign-off wajib. Tidak ada output AI yang otomatis memfinalkan formula, observasi, atau keputusan compliance."*) dan pola yang sudah ada di F5 (voice logging) itu justru satu-satunya titik yang mencegah skenario di atas. Ini sekarang diformalkan sebagai bagian arsitektur resmi: [../architecture/architecture_v4.md §11](../architecture/architecture_v4.md#11-f_cv-visual-screening-sebagai-asisten-capture-untuk-f3) mendefinisikan modul **F_CV** dengan kontrak `proposed_appearance_patch` + `per_class_probabilities` + `requires_confirmation: true` → user konfirmasi/koreksi → baru ditulis ke checkpoint kanonis → F3 baru jalan setelah checkpoint valid tersimpan — pola identik F5 (§10), modalitas beda (foto, bukan suara). Titik konfirmasi yang sama itu jadi sumber data untuk mengukur akurasi CV di real-world usage nanti (persentase prediksi yang dikoreksi manusia) — dicatat eksplisit di §11.6 sebagai dasar kalibrasi ulang threshold dan penentuan kapan gate validasi domain bisa dianggap terlewati.
+Prinsip #10 ../architecture/architecture_v5.md (*"Human sign-off wajib. Tidak ada output AI yang otomatis memfinalkan formula, observasi, atau keputusan compliance."*) dan pola yang sudah ada di F5 (voice logging) itu justru satu-satunya titik yang mencegah skenario di atas. Ini sekarang diformalkan sebagai bagian arsitektur resmi: [../architecture/architecture_v5.md §9](../architecture/architecture_v5.md#9-f5-dan-pilot-cv) mendefinisikan modul **F_CV** dengan kontrak `proposed_appearance_patch` + `per_class_probabilities` + `requires_confirmation: true` → user konfirmasi/koreksi → baru ditulis ke checkpoint kanonis → F3 baru jalan setelah checkpoint valid tersimpan — pola identik F5 (§10), modalitas beda (foto, bukan suara). Titik konfirmasi yang sama itu jadi sumber data untuk mengukur akurasi CV di real-world usage nanti (persentase prediksi yang dikoreksi manusia) — dicatat eksplisit di §9.6 sebagai dasar kalibrasi ulang threshold dan penentuan kapan gate validasi domain bisa dianggap terlewati.
 
 ### 4.5 Gate validasi domain — masih berlaku, sengaja belum terlewati
 
-Sesuai §3: model belum tervalidasi di foto asli. [../architecture/architecture_v4.md §11.6](../architecture/architecture_v4.md#116-batas-tanggung-jawab-dan-status-validasi-domain) eksplisit melarang klaim phase-separation classification sebagai kebenaran final tanpa model visual tervalidasi domain. Bedanya dengan sebelumnya: sekarang eksplisit dicatat bahwa konfirmasi manusia (§4.4) berperan ganda sebagai mitigasi interim untuk status ini — bukan alasan untuk menganggap gate ini sudah terlewati. Menyambungkan output CV sebagai fitur F3 **tanpa** jalur konfirmasi tetap pelanggaran terhadap prinsip #2.
+Sesuai §3: model belum tervalidasi di foto asli. [../architecture/architecture_v5.md §9.6](../architecture/architecture_v5.md#9-f5-dan-pilot-cv) eksplisit melarang klaim phase-separation classification sebagai kebenaran final tanpa model visual tervalidasi domain. Bedanya dengan sebelumnya: sekarang eksplisit dicatat bahwa konfirmasi manusia (§4.4) berperan ganda sebagai mitigasi interim untuk status ini — bukan alasan untuk menganggap gate ini sudah terlewati. Menyambungkan output CV sebagai fitur F3 **tanpa** jalur konfirmasi tetap pelanggaran terhadap prinsip #2.
 
 ### 4.6 Kesimpulan kompatibilitas
 
-**Keempat concern sudah punya jawaban desain yang eksplisit dan tercatat di arsitektur:** taksonomi solved via mapping langsung ke `full_synthetic` tanpa kehilangan informasi (§4.1); cakupan appearance-only dikonfirmasi by design, bukan gap (§4.2); confidence/abstention dan human-confirmation kini diformalkan sebagai modul **F_CV** di [../architecture/architecture_v4.md §11](../architecture/architecture_v4.md#11-f_cv-visual-screening-sebagai-asisten-capture-untuk-f3) (§4.3, §4.4). Yang tersisa murni soal eksekusi, bukan desain: gate validasi domain (§4.5) baru terlewati setelah ada data foto asli dan model divalidasi ulang (§6 Fase 1-2) — desain kontraknya sudah siap dipakai begitu itu terjadi.
+**Keempat concern sudah punya jawaban desain yang eksplisit dan tercatat di arsitektur:** taksonomi solved via mapping langsung ke `full_synthetic` tanpa kehilangan informasi (§4.1); cakupan appearance-only dikonfirmasi by design, bukan gap (§4.2); confidence/abstention dan human-confirmation kini diformalkan sebagai modul **F_CV** di [../architecture/architecture_v5.md §9](../architecture/architecture_v5.md#9-f5-dan-pilot-cv) (§4.3, §4.4). Yang tersisa murni soal eksekusi, bukan desain: gate validasi domain (§4.5) baru terlewati setelah ada data foto asli dan model divalidasi ulang (§6 Fase 1-2) — desain kontraknya sudah siap dipakai begitu itu terjadi.
 
 ---
 
@@ -216,10 +216,10 @@ Standardisasi ini **tidak menghilangkan kebutuhan validasi domain nyata** (§3) 
 
 ## 6. Rencana jika lolos ke inkubasi
 
-### Fase 0 — Selaras skema (SELESAI, sudah diformalkan di [../architecture/architecture_v4.md §11](../architecture/architecture_v4.md#11-f_cv-visual-screening-sebagai-asisten-capture-untuk-f3))
-- ✅ Pemetaan taksonomi (§4.1, §11.3): `stable_uniform→uniform`, `creaming→creaming`, `heterogeneous→heterogeneous`, `phase_separation→separated`, langsung ke enum `appearance` di `data/full_synthetic/`. Tidak perlu naikkan `feature_schema_version` F3 (enum sudah mendukung), cukup versionkan mapping-nya sendiri (`visual_screening_contract_version: "cv-appearance-map-v1"`).
-- ✅ Kontrak output F_CV (§11.5): `predicted_label`, `confidence`, `per_class_probabilities`, `model_version`, `image_ref`, `proposed_appearance_patch`, `requires_confirmation: true` — mengikuti pola `f5_examples` yang sudah ada.
-- ✅ Confidence gate (§4.3, §11.4): di bawah threshold, field `appearance` checkpoint dibiarkan kosong/pending untuk diisi manual, bukan dipaksa jadi nilai enum baru. Angka threshold pasti masih starting point, dikalibrasi ulang di Fase 2 dengan data foto asli.
+### Fase 0 — Selaras skema (SELESAI, sudah diformalkan di [../architecture/architecture_v5.md §9](../architecture/architecture_v5.md#9-f5-dan-pilot-cv))
+- ✅ Pemetaan taksonomi (§4.1, §9.3): `stable_uniform→uniform`, `creaming→creaming`, `heterogeneous→heterogeneous`, `phase_separation→separated`, langsung ke enum `appearance` di `data/full_synthetic/`. Tidak perlu naikkan `feature_schema_version` F3 (enum sudah mendukung), cukup versionkan mapping-nya sendiri (`visual_screening_contract_version: "cv-appearance-map-v1"`).
+- ✅ Kontrak output F_CV (§9.5): `predicted_label`, `confidence`, `per_class_probabilities`, `model_version`, `image_ref`, `proposed_appearance_patch`, `requires_confirmation: true` — mengikuti pola `f5_examples` yang sudah ada.
+- ✅ Confidence gate (§4.3, §9.4): di bawah threshold, field `appearance` checkpoint dibiarkan kosong/pending untuk diisi manual, bukan dipaksa jadi nilai enum baru. Angka threshold pasti masih starting point, dikalibrasi ulang di Fase 2 dengan data foto asli.
 - Sisa kerja Fase 0: implementasi kode nyata dari kontrak yang sudah didesain ini (belum ada baris kode produk, baru spesifikasi arsitektur).
 
 ### Fase 1 — Standardisasi capture & pengumpulan data asli
@@ -234,11 +234,11 @@ Standardisasi ini **tidak menghilangkan kebutuhan validasi domain nyata** (§3) 
 
 ### Fase 3 — Integrasi F3 dengan human-in-the-loop
 - Implementasikan flow: foto → CV propose → peneliti konfirmasi/koreksi → tulis ke checkpoint kanonis → F3 jalan hanya setelah checkpoint valid — identik dengan pola F5, modalitas berbeda.
-- Audit event mencatat: `model_version` CV, confidence, apakah dikonfirmasi/dikoreksi manusia (mengikuti §14.2 ../architecture/architecture_v4.md).
+- Audit event mencatat `model_version` CV, confidence, serta apakah hasil dikonfirmasi atau dikoreksi manusia, mengikuti prinsip auditability di Architecture v5.
 - CV tetap **tidak pernah** mengisi `measurements.ph`/`viscosity_cp` — field itu tetap butuh instrumen atau input manual/voice (F5).
 
 ### Fase 4 — Perluasan setelah domain coverage test
-- Baru pertimbangkan menambah kelas/produk family lain setelah Fase 2-3 terbukti generalize di domain O/W gel-cream, sesuai roadmap tertunda §17 ../architecture/architecture_v4.md.
+- Pertimbangkan product family lain hanya setelah Fase 2-3 terbukti generalize pada domain O/W gel-cream, sesuai roadmap Architecture v5.
 
 ---
 
@@ -249,8 +249,8 @@ Standardisasi ini **tidak menghilangkan kebutuhan validasi domain nyata** (§3) 
 - Akurasi 89.6% (run 3) hanya berlaku di dalam distribusi render sintetis yang sama; tidak ada dasar untuk mengekstrapolasi angka ini ke performa di foto asli.
 - Model belum dikalibrasi (confidence mentah dari softmax, belum divalidasi terhadap frekuensi benar aktual) — beberapa kesalahan klasifikasi di run 3 punya confidence tinggi (0.91-0.98) padahal salah.
 - Confusion `stable_uniform` ↔ `creaming` mengindikasikan model sensitif terhadap threshold parameter generator di ujung range, bukan konsep visual yang robust.
-- Mekanisme human-confirmation dan confidence-gate/abstention sudah didesain formal ([../architecture/architecture_v4.md §11](../architecture/architecture_v4.md#11-f_cv-visual-screening-sebagai-asisten-capture-untuk-f3)), tapi **belum ada implementasi kode** — masih spesifikasi arsitektur, belum tersambung ke pipeline F3 nyata.
-- Threshold confidence di §11.4 adalah starting point, belum dikalibrasi dari data nyata apa pun (sintetis maupun foto asli).
+- Mekanisme human-confirmation dan confidence-gate/abstention sudah didesain formal ([../architecture/architecture_v5.md §9](../architecture/architecture_v5.md#9-f5-dan-pilot-cv)), tapi **belum ada implementasi kode** — masih spesifikasi arsitektur, belum tersambung ke pipeline F3 nyata.
+- Threshold confidence di §9.4 adalah starting point, belum dikalibrasi dari data nyata apa pun (sintetis maupun foto asli).
 - Standardisasi kamera (§5) masih usulan desain, belum diimplementasikan atau diuji.
 
 ## 8. Klarifikasi untuk juri/reviewer inkubasi

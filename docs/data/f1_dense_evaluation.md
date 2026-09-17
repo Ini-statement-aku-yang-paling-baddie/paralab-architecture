@@ -24,7 +24,7 @@ Versi diselaraskan dengan metadata model:
 
 ```bash
 uv venv .venv --python 3.11
-uv pip install --python .venv/bin/python -r requirements-f1-dense.txt
+uv pip install --python .venv/bin/python -r requirements/f1_dense.txt
 .venv/bin/python scripts/evaluate_f1_dense.py
 ```
 

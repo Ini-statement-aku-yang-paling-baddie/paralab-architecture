@@ -1,4 +1,6 @@
-# ParaLab AI — Arsitektur Teknis v3
+# ParaLab AI: Arsitektur v3
+
+> **ARSIP HISTORIS:** dokumen ini telah digantikan oleh [Architecture v5](../../architecture/architecture_v5.md). Jangan gunakan sebagai panduan implementasi aktif.
 
 > **Status:** proposed implementation architecture untuk hackathon
 >
@@ -568,7 +570,7 @@ Kriteria:
 
 ## 10. Corpus and Evaluation Plan
 
-[`CORPUS-PLAN.md`](../data/corpus_plan.md) tetap menjadi dasar generation. Tambahkan pengamanan berikut.
+[`CORPUS-PLAN.md`](../../data/corpus_plan.md) tetap menjadi dasar generation. Tambahkan pengamanan berikut.
 
 ### 10.1 Corpus tiers
 

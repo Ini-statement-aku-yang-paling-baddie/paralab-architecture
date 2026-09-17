@@ -57,7 +57,7 @@ class SyntheticVisualDatasetTests(unittest.TestCase):
             self.assertTrue(generator.validate_directory(output))
 
     def test_cv_requirements_declare_pillow(self):
-        requirements = ROOT / "cv" / "requirements.txt"
+        requirements = ROOT / "requirements" / "cv.txt"
         self.assertTrue(requirements.is_file())
         declared = requirements.read_text(encoding="utf-8").splitlines()
         self.assertIn("Pillow>=10,<12", declared)

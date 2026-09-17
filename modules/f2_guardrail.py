@@ -1,27 +1,30 @@
-"""ParaLab AI - F2 Guardrail Engine (V4 contract).
-Konsumsi data/ingredient_master.json + data/formulation_rules.json.
-Output: status vocabulary V4, rules_fired (rule_id/version/source), derived_features, sign-off flag.
-Lolos 14 acceptance tests (lihat tests/test_f2_guardrail.py)."""
-"""F2 Guardrail Engine v4 — konsumsi ingredient_master.json + formulation_rules.json.
-Output sesuai kontrak V4 §8.3-8.5: status vocabulary, derived features, audit-ready results.
-Di-test lokal terhadap semua acceptance test lama + kasus baru V4."""
-import json, re, difflib, os
-from pathlib import Path
+"""F2 Guardrail Engine untuk normalisasi bahan dan screening deterministik.
+
+Engine membaca ingredient master dan formulation rules, lalu menghasilkan status,
+rule provenance, derived feature F3, dan flag human sign-off.
+"""
+
+import difflib
+import json
+import re
 from datetime import datetime
+from pathlib import Path
 
-DATA = Path(__file__).resolve().parents[1] / 'data'
+DATA = Path(__file__).resolve().parents[1] / "data"
 
-# ---------- load ----------
-master_doc = json.load(open(os.path.join(DATA, 'ingredient_master.json'), encoding='utf-8'))
-rules_doc = json.load(open(os.path.join(DATA, 'formulation_rules.json'), encoding='utf-8'))
-ING = master_doc['ingredients']; RULES = rules_doc['rules']; META = rules_doc['meta']
-by_id = {m['ingredient_id']: m for m in ING}
+with (DATA / "ingredient_master.json").open(encoding="utf-8") as handle:
+    master_doc = json.load(handle)
+with (DATA / "formulation_rules.json").open(encoding="utf-8") as handle:
+    rules_doc = json.load(handle)
 
-# alias/INCI -> ingredient_id
-_norm_map = {}
-for m in ING:
-    _norm_map[_k(m['inci_name'])] if False else None
-def _k(s): return re.sub(r'[^a-z0-9 ]', '', s.lower()).strip()
+ING = master_doc["ingredients"]
+RULES = rules_doc["rules"]
+META = rules_doc["meta"]
+by_id = {m["ingredient_id"]: m for m in ING}
+
+
+def _k(s):
+    return re.sub(r"[^a-z0-9 ]", "", s.lower()).strip()
 _lookup = {}
 for m in ING:
     _lookup[_k(m['inci_name'])] = m['ingredient_id']

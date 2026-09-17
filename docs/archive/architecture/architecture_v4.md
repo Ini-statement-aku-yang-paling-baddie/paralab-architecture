@@ -1,5 +1,7 @@
 # ParaLab AI: Arsitektur v4
 
+> **ARSIP HISTORIS:** dokumen ini telah digantikan oleh [Architecture v5](../../architecture/architecture_v5.md). Jangan gunakan sebagai panduan implementasi aktif.
+
 > **Status:** cetak biru implementasi prototipe hackathon  
 > **Menggantikan:** `architecture_v3.md` untuk keputusan scope MVP dan aliran data
 > **Mempertahankan:** prinsip v3, yaitu inferensi local-first, RAG berbasis evidence, guardrail deterministik, kontrol akses sebelum retrieval, human sign-off, dan output yang dapat diaudit.

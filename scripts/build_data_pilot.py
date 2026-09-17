@@ -328,6 +328,7 @@ def validate_derived(d, r):
 
 
 ROOT = Path(__file__).resolve().parents[1]
+SOURCE_DIR = ROOT / 'data' / 'legacy_sources'
 ORIGINALS = ['corpus_paralab.json', 'embeddings_paralab.npy']
 DEMO_COMPONENTS = {'DEMO:WATER': 'Air demo', 'DEMO:GLYCERIN': 'Glycerin',
                    'DEMO:SQUALANE': 'Squalane', 'DEMO:NIACINAMIDE': 'Niacinamide',
@@ -393,7 +394,7 @@ def metrics(d, r):
 
 def build(output, seed=17):
     output = Path(output).resolve()
-    originals = {name: sha(ROOT / name) for name in ORIGINALS}
+    originals = {name: sha(SOURCE_DIR / name) for name in ORIGINALS}
     previous = output / 'sha256_manifest.json'
     if previous.exists() and json.loads(previous.read_text())['originals'] != originals:
         raise ValueError('Hash sumber berubah dari snapshot sebelumnya; perlu review, tidak ditimpa.')
@@ -401,7 +402,7 @@ def build(output, seed=17):
     if raw.exists() and sha(raw) != originals['corpus_paralab.json']:
         raise ValueError('Snapshot raw berbeda; tidak ditimpa.')
     raw.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(ROOT / 'corpus_paralab.json', raw)
+    shutil.copyfile(SOURCE_DIR / 'corpus_paralab.json', raw)
     audit, aliases = audit_source(raw)
     d = generate(seed)
     errors = validate(d)
@@ -426,10 +427,10 @@ def build(output, seed=17):
         'split_policy': '6 keluarga formula; 4 train, 1 validation, 1 test; ditetapkan sebelum derivasi',
         'limitations': ['Semua angka adalah simulasi.', 'Tidak ada resep lab, human review, model, embedding, audio, atau gambar nyata.',
                         'Split keluarga demo bukan bukti generalisasi ilmiah.']})
-    if originals != {name: sha(ROOT / name) for name in ORIGINALS}:
+    if originals != {name: sha(SOURCE_DIR / name) for name in ORIGINALS}:
         raise ValueError('Sumber asli berubah selama build')
     # Output integrasi lain adalah pipeline mandiri; tidak boleh mengubah manifest pilot sintetis.
-    excluded_roots = {'public_observed', 'training', 'open_sources', 'full_synthetic'}
+    excluded_roots = {'public_observed', 'training', 'open_sources', 'full_synthetic', 'legacy_sources'}
     files = {str(p.relative_to(output)): sha(p) for p in sorted(output.rglob('*'))
              if p.is_file() and p.name != 'sha256_manifest.json' and p.relative_to(output).parts[0] not in excluded_roots}
     dump(previous, {'algorithm': 'sha256', 'originals': originals, 'files': files})
@@ -448,12 +449,12 @@ def validate_directory(output):
         d, r = read_rows('canonical', TABLES), read_rows('derived', DERIVED)
         errors = validate_derived(d, r)
         manifest = json.loads((output / 'sha256_manifest.json').read_text())
-        excluded_roots = {'public_observed', 'training', 'open_sources', 'full_synthetic'}
+        excluded_roots = {'public_observed', 'training', 'open_sources', 'full_synthetic', 'legacy_sources'}
         actual = {str(p.relative_to(output)): sha(p) for p in sorted(output.rglob('*'))
                   if p.is_file() and p.name != 'sha256_manifest.json' and p.relative_to(output).parts[0] not in excluded_roots}
         if manifest['files'] != actual:
             errors.append('Manifest file/hash tidak cocok')
-        if manifest['originals'] != {name: sha(ROOT / name) for name in ORIGINALS}:
+        if manifest['originals'] != {name: sha(SOURCE_DIR / name) for name in ORIGINALS}:
             errors.append('Hash sumber asli berubah')
         if sha(output / 'raw/corpus_paralab.json') != manifest['originals']['corpus_paralab.json']:
             errors.append('Raw snapshot tidak identik')

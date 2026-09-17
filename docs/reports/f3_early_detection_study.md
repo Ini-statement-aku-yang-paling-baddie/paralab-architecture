@@ -247,13 +247,13 @@ Perlu dibedakan derajat kesirkularan dua kelompok fitur:
   karang.
 
 Yang tetap sah adalah **arsitekturnya** — bahwa F2 memasok faktor risiko
-deterministik ke F3 (`../architecture/architecture_v4.md` §9.6) masuk akal secara domain, karena
+deterministik ke F3 (`../architecture/architecture_v5.md` §8) masuk akal secara domain, karena
 inkompatibilitas elektrolit-thickener memang risiko formulasi terdokumentasi dan
 karena itulah ia ada di rule base F2 sejak awal. Yang **tidak** sah adalah
 besarannya. Seberapa kuat faktor-faktor itu benar-benar memprediksi stabilitas
 hanya dapat dijawab oleh data lab asli.
 
-Konsekuensi praktis: Mode A (`../architecture/architecture_v4.md` §9.2) **konsisten** dengan
+Konsekuensi praktis: Mode A (`../architecture/architecture_v5.md` §8) **konsisten** dengan
 hasil ini, tetapi tidak dibuktikan olehnya. Kalibrasi Mode A terhadap data nyata
 tetap menjadi prasyarat sebelum klaim apa pun dibuat.
 
@@ -404,7 +404,7 @@ dapat ditransfer ke dunia nyata, dan §10 adalah rencana kalibrasinya."*
    shelf life nyata (lihat §2.2).
 6. `likely_failure_mode` belum tersedia karena label masih biner.
 7. F3 tidak menggantikan formal stability validation, sesuai
-   `../architecture/architecture_v4.md` §9.1.
+   `../architecture/architecture_v5.md` §8.
 
 ## 8. Roadmap
 
@@ -483,4 +483,4 @@ sendiri, sehingga "probabilitas 0,8 berarti 80% gagal" belum bermakna di luar.
 - Analisis landmark: `modules/f3_stability_sentinel/landmark_sweep.py` → `modules/f3_stability_sentinel/outputs/1/landmark_sweep.json`
 - Sensitivitas bobot: `modules/f3_stability_sentinel/weight_sensitivity.py` → `modules/f3_stability_sentinel/outputs/1/weight_sensitivity.json`
 - Test kontrak F3: `tests/test_f3_stability_sentinel.py`
-- Arsitektur: `../architecture/architecture_v4.md` §9 (F3), §13.3 (evaluasi)
+- Arsitektur: `../architecture/architecture_v5.md` §8 (F3 dan evaluasi)

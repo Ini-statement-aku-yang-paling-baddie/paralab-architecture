@@ -7,6 +7,7 @@ import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
+SOURCE_DIR = ROOT / 'data' / 'legacy_sources'
 SCRIPT = ROOT / 'scripts/build_data_pilot.py'
 
 
@@ -21,7 +22,7 @@ class PilotTests(unittest.TestCase):
     def test_raw_audit_and_aliases(self):
         self.assertTrue(SCRIPT.exists(), 'CLI pilot belum tersedia')
         m = api()
-        audit, aliases = m.audit_source(ROOT / 'corpus_paralab.json')
+        audit, aliases = m.audit_source(SOURCE_DIR / 'corpus_paralab.json')
         self.assertEqual((audit['entries'], audit['unique_ids'], audit['trials'], audit['moisturizer'], len(aliases)), (200, 200, 492, 90, 23))
         self.assertEqual(audit['partial_formulas'], 200)
         self.assertTrue(audit['warnings'])
@@ -127,7 +128,7 @@ class PilotTests(unittest.TestCase):
         import sys
         m = api()
         self.assertTrue(hasattr(m, 'build'), 'Ekspor CLI belum tersedia')
-        originals = {name: m.sha(ROOT / name) for name in ['corpus_paralab.json', 'embeddings_paralab.npy']}
+        originals = {name: m.sha(SOURCE_DIR / name) for name in ['corpus_paralab.json', 'embeddings_paralab.npy']}
         with tempfile.TemporaryDirectory() as tmp:
             out = Path(tmp) / 'pilot'
             command = [sys.executable, str(SCRIPT), 'build', '--output', str(out)]
@@ -148,7 +149,7 @@ class PilotTests(unittest.TestCase):
             cp = out / 'canonical/checkpoints.jsonl'
             cp.write_text(cp.read_text().replace('uniform', 'nonsense', 1))
             self.assertNotEqual(subprocess.run(check, capture_output=True).returncode, 0)
-        self.assertEqual(originals, {name: m.sha(ROOT / name) for name in originals})
+        self.assertEqual(originals, {name: m.sha(SOURCE_DIR / name) for name in originals})
 
     def test_pilot_manifest_ignores_independent_integrated_outputs(self):
         m = api()

@@ -1,4 +1,6 @@
-# REFERENCES
+# Catatan riset awal
+
+> **ARSIP HISTORIS:** daftar ini merupakan eksplorasi awal dan tidak seluruhnya telah diverifikasi atau digunakan sebagai evidence ParaLab.
 
 Drive: https://drive.google.com/drive/folders/1nvLUXOZbJNaBvPAFkXlOxxnX4rDZYrq4
 

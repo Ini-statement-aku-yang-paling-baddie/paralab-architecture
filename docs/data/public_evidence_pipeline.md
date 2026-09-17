@@ -2,7 +2,7 @@
 
 ## Tujuan
 
-Pipeline ini menambahkan data yang benar-benar dilaporkan sumber open-access tanpa mengubah `corpus_paralab.json`, embedding lama, atau mengklaim bahwa semua data ParaLab menjadi data lab nyata.
+Pipeline ini menambahkan data yang benar-benar dilaporkan sumber open-access tanpa mengubah `data/legacy_sources/corpus_paralab.json`, embedding lama, atau mengklaim bahwa semua data ParaLab menjadi data lab nyata.
 
 Ada tiga origin yang tetap terpisah:
 

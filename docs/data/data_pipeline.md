@@ -2,7 +2,7 @@
 
 ## Status dan batas keselamatan
 
-Pipeline **sudah dijalankan**, bukan hanya rencana. Implementasi menggunakan Python 3 stdlib, seed default `17`, tanpa unduhan, training ML, pembuatan embedding, LLM, audio, atau gambar. Pilot ini menggantikan target ekspansi 600 trial pada tahap implementasi data saja; tidak mengubah [`ARCHITECTURE-V4.md`](../architecture/architecture_v4.md).
+Pipeline **sudah dijalankan**, bukan hanya rencana. Implementasi menggunakan Python 3 stdlib, seed default `17`, tanpa unduhan, training ML, pembuatan embedding, LLM, audio, atau gambar. Pilot ini menggantikan target ekspansi 600 trial pada tahap implementasi data saja; tidak mengubah [`Architecture v5`](../architecture/architecture_v5.md).
 
 **Seluruh trajectory merupakan simulasi belum direview. Jangan meracik formula ini.** Total formula 100% hanya menjamin kelengkapan aritmetika: emulsifier dan preservative masih placeholder tanpa identitas/spesifikasi. Formula tidak menjamin emulsi O/W yang dapat dibuat, keamanan, efektivitas, kompatibilitas, atau compliance. Tidak ada `human_verified: true` yang dibuat.
 
@@ -122,9 +122,9 @@ Build diulang dan **24 file output identik byte/hash**, termasuk manifest. Test 
 Hash sumber terjaga dan dibandingkan dengan Git HEAD:
 
 ```text
-corpus_paralab.json
+data/legacy_sources/corpus_paralab.json
 40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856
-embeddings_paralab.npy
+data/legacy_sources/embeddings_paralab.npy
 a02ba85cc669d3dd33f218cd0b57c4b4bad56b8258cb1e93d8b00940efde8373
 ```
 

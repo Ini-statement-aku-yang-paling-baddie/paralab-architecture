@@ -1,52 +1,111 @@
-# data/ — Artefak Dataset ParaLab V4
+# Data ParaLab
 
-Semua file di sini dihasilkan oleh `notebooks/corpus_generator/paralab_v4_corpus_generator.ipynb` (source: `notebooks/corpus_generator/generate_corpus_v4.py`).
-Regenerasi deterministik: seed `42`. Jalankan ulang notebook untuk mereproduksi persis.
+Folder ini adalah pusat data kanonis, view turunan, provenance, dan artefak evaluasi. Sebagian besar file dihasilkan oleh script, sehingga jangan diedit manual tanpa menjalankan ulang validator.
 
-> ⚠️ **Semua data sintetis** (`data_origin: synthetic_demo`, `scientific_validation_status: not_validated_for_production`).
-> Tidak merepresentasikan data riset Paragon maupun produk nyata. Nilai numerik dari generator deterministik;
-> narasi dibatasi oleh seed (tidak ada angka yang dikarang LLM).
+> [!WARNING]
+> Dataset ParaLab mayoritas merupakan **synthetic-demo** dan bukan data laboratorium, resep, atau ground truth ilmiah. Periksa `data_origin`, `human_verified`, dan `scientific_validation_status` pada setiap alur konsumsi.
 
-## Domain (V4 §1.1)
+## Mulai dari mana
 
-Satu vertical saja: **moisturizer gel-cream O/W untuk kulit berminyak**.
-Variasi dibuat di dalam keluarga ini (sistem aktif, emulsifier, rasio fase minyak, thickener, parameter proses).
+| Kebutuhan | Lokasi |
+|---|---|
+| Dataset longitudinal utama F3 | `full_synthetic/` |
+| Split siap training F3 dan catalog F1 | `training/` |
+| Evidence retrieval F1 | `evidence_corpus.jsonl`, `evidence_rag_text.jsonl` |
+| Ingredient ontology dan rule F2 | `ingredient_master.json`, `formulation_rules.json` |
+| Benchmark F1 | `labeling/rag_blind_v1/`, `evaluation/` |
+| Evidence publik | `public_observed/`, `open_sources/` |
+| Pilot integrasi awal | `canonical/`, `derived/` dan metadata root data |
+| Sumber lama yang masih dibutuhkan pilot | `legacy_sources/` |
 
-## Peta konsumsi per tim
+## Hierarki data
 
-| File | Konsumen | Peran |
-|---|---|---|
-| `formula_seeds.jsonl` | **tim F3** (trajectory generator) | **KONTRAK**: 600 trial, tiap trial punya `scenario_family` + `expected_outcome`/`expected_failure_mode`/`expected_failure_week`. Trajectory numerik harus konsisten dengan keluarga skenario ini |
-| `evidence_corpus.jsonl` | **tim web** + F1 | 600 evidence card (judul, observasi, pelajaran, outcome, `source_id`) untuk render dashboard & kartu hasil pencarian |
-| `evidence_rag_text.jsonl` | F1 retrieval | teks siap-embed per `source_id` |
-| `embeddings_paralab.npy` | F1 retrieval | matriks 600×384 (dihasilkan notebook) |
-| `rag_dev_queries.jsonl` | evaluasi F1 | 40 query berlabel (`label_source: generated`) untuk tuning |
-| `rag_blind_test_queries.jsonl` | evaluasi F1 | 10 query ditulis manusia — **`relevant_source_ids` masih kosong, perlu pelabelan manusia** (§12.2) |
-| `ingredient_master.json` | F1 + F2 + F5 | ontology bahan kanonis (80 bahan, `ingredient_id` stabil) |
-| `formulation_rules.json` | **F2** | 165 aturan versioned (`rule_id`, `rule_version`, `source_id`) |
-| `f2_screen_example.json` | tim web | **contoh** output kontrak F2 (bentuk API response) |
-| `metadata.json` | semua | ringkasan, distribusi, disclaimer, peran file |
+```text
+data/
+├── full_synthetic/           # dataset longitudinal synthetic-demo utama
+│   ├── canonical/            # project, formula, trial, checkpoint, outcome
+│   └── derived/              # view F1, F3, dan contoh F5
+├── training/                 # split konsumsi model dan catalog evidence
+├── labeling/rag_blind_v1/    # queue serta label machine-adjudicated F1
+├── evaluation/               # hasil evaluator F1
+├── public_observed/          # evidence publik yang lolos pipeline
+├── open_sources/             # hasil ingestion sumber terbuka
+├── legacy_sources/           # input pilot lama, tidak tampil di root repo
+├── canonical/ dan derived/   # pilot integrasi awal yang masih reproducible
+├── ingredient_master.json    # ontology bahan kanonis
+├── formulation_rules.json    # rule F2 versioned
+└── sha256_manifest.json      # integritas snapshot data
+```
 
-## Kontrak antar-track
+## Dataset utama
 
-1. **F1 ↔ F3**: `source_id` di evidence corpus dipakai F3 sebagai `evidence_ids` (V4 §7.3).
-   Formula seed yang sama menjadi dasar trajectory, sehingga relasi evidence↔forecast konsisten *by construction*.
-2. **F2 → F3**: `derived_features` dari `modules/f2_guardrail.py` (`electrolyte_thickener_risk`, dll) memakai
-   `feature_schema_version = stability-sentinel-v1` — skema ini harus identik saat training dan inference F3.
-3. **F5 → F2**: fuzzy-match nama bahan hasil STT memakai `aliases` di `ingredient_master.json`
-   (sudah diuji untuk typo seperti `niasinamida` → `ING:NIACINAMIDE`).
+Dataset `full_synthetic/` berisi:
 
-## Catatan kualitas yang diketahui
+- 200 proyek;
+- 600 formula dan trial;
+- 4.800 checkpoint;
+- 600 outcome;
+- 579 pasangan feature/label F3 eligible;
+- 21 outcome ambigu yang dikeluarkan dari supervised forecast.
 
-- Retrieval semantik murni (MiniLM) belum diskriminatif untuk query berbasis *failure mode*
-  (contoh: query "fase minyak dan air memisah" mengembalikan kasus `pass` di top-5).
-  → Ini alasan teknis F1 memakai **hybrid retrieval** (lexical + dense + RRF) sesuai V4 §7.2, bukan dense saja.
-- 116/200 judul jurnal unik (58%). Wajar karena semua proyek berada di satu keluarga produk.
-- `literature` di luar scope: tidak ada dataset stabilitas longitudinal kosmetik yang publik —
-  karena itu trajectory (tim F3) digenerate dengan kalibrasi, bukan diunduh.
+Detail generator, label, titik waktu, dan split terdapat di [`docs/data/full_dataset.md`](../docs/data/full_dataset.md).
 
-## Disclaimer
+## Konsumsi per capability
 
-Status halal/BPOM/batas konsentrasi di KB adalah **pendekatan data publik** untuk prototipe dan
-**bukan** pengganti verifikasi ke daftar resmi MUI / BPOM / CosIng. Wajib diverifikasi ulang
-sebelum dipakai untuk keputusan nyata.
+### F1
+
+- `evidence_rag_text.jsonl` adalah teks siap embedding.
+- Baseline aktif memakai dense retrieval SentenceTransformer tanpa BM25 fallback.
+- Blind benchmark menggunakan label machine-adjudicated, bukan review formulator.
+- Model dan embedding evaluator aktif disimpan lokal di `sentence-transformer/` dan di-ignore Git.
+
+### F2
+
+- `ingredient_master.json` menyediakan `ingredient_id`, INCI, alias, dan metadata.
+- `formulation_rules.json` menyediakan `rule_id`, version, source, severity, dan rationale.
+- Rule ini masih prototipe dan tidak boleh dipakai sebagai approval regulasi atau halal.
+
+### F3
+
+- `training/f3_train.jsonl`: 405 row.
+- `training/f3_validation.jsonl`: 88 row.
+- `training/f3_test.jsonl`: 86 row.
+- Hanya feature formula turunan F2, proses, storage, dan observasi sampai landmark yang boleh masuk model.
+- Evidence publik saat ini tidak masuk supervised F3 karena tidak memenuhi kontrak longitudinal.
+
+### F5
+
+`full_synthetic/derived/f5_examples.jsonl` berisi transcript teks deterministik dan target patch. File ini bukan rekaman audio atau hasil STT yang tervalidasi. `requires_confirmation` selalu dipertahankan.
+
+## Build dan validasi
+
+```bash
+python3 scripts/build_data_pilot.py validate
+python3 scripts/build_full_dataset.py validate
+python3 scripts/build_public_evidence.py validate
+python3 scripts/build_training_views.py validate
+```
+
+Untuk regenerasi dataset utama:
+
+```bash
+python3 scripts/build_full_dataset.py build
+python3 scripts/build_training_views.py build
+```
+
+Setelah regenerasi, selalu jalankan validator sebelum memakai atau melakukan commit pada output.
+
+## Provenance dan larangan pencampuran
+
+- `synthetic_demo` membuktikan integrasi software, bukan performa ilmiah.
+- `observed_public` dapat dipakai sebagai evidence jika lisensi dan provenance jelas.
+- Record cross-sectional publik tidak boleh diubah menjadi trajectory F3 buatan.
+- Label `machine_adjudicated` tidak boleh disebut human review atau expert gold label.
+- Formula sintetis lengkap harus tetap berstatus `unreviewed_not_lab_recipe`.
+
+## Dokumen terkait
+
+- [Dataset penuh dan F3](../docs/data/full_dataset.md)
+- [Evaluasi F1 dense](../docs/data/f1_dense_evaluation.md)
+- [Pipeline evidence publik](../docs/data/public_evidence_pipeline.md)
+- [Pipeline pilot awal](../docs/data/data_pipeline.md)

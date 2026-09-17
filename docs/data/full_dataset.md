@@ -2,7 +2,7 @@
 
 ## Status
 
-Target Core Data [`ARCHITECTURE-V4.md`](../architecture/architecture_v4.md) sudah digenerasikan:
+Target Core Data [`Architecture v5`](../architecture/architecture_v5.md) sudah digenerasikan:
 
 | Entitas | Jumlah |
 |---|---:|
@@ -102,6 +102,6 @@ Output siap konsumsi terdapat di:
 
 Feature F3 hanya berisi formula, proses, storage, dan observasi minggu 0, 1, 2, serta 4. Label minggu ke-12 disimpan terpisah lalu dijoin oleh builder. Trial dengan outcome ambigu tidak dipaksa menjadi pass/fail dan disimpan di `forecast_excluded.jsonl`.
 
-Konsumen F3 (`modules/f3_stability_sentinel/train_stability_sentinel.py`) tidak membaca persentase bahan mentah. Formula feature diturunkan lewat `modules.f2_guardrail.derive_features()` sesuai batas tanggung jawab [`ARCHITECTURE-V4.md`](../architecture/architecture_v4.md) §9.6.
+Konsumen F3 (`modules/f3_stability_sentinel/train_stability_sentinel.py`) tidak membaca persentase bahan mentah. Formula feature diturunkan lewat `modules.f2_guardrail.derive_features()` sesuai batas tanggung jawab [`Architecture v5`](../architecture/architecture_v5.md) §8.
 
 Data paper publik tetap dipakai sebagai evidence F1 dan konteks F2. Saat ini 0 row publik masuk supervised F3 karena belum ada sumber yang memenuhi kontrak longitudinal landmark minggu ke-4 dan outcome minggu ke-12.

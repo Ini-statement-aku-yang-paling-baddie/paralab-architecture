@@ -2,7 +2,7 @@
 
 > **Status:** arsitektur implementasi saat ini, diperbarui dari seluruh artefak yang sudah ada di repository.
 >
-> **Menggantikan:** [architecture_v4.md](architecture_v4.md) sebagai dokumen arsitektur utama.
+> **Menggantikan:** [architecture_v4.md](../archive/architecture/architecture_v4.md) sebagai dokumen arsitektur utama.
 >
 > **Batas utama:** ParaLab adalah prototipe local-first untuk R&D moisturizer gel-cream O/W kulit berminyak. Ia membantu peneliti menelusuri evidence, menyaring formula, dan menandai risiko lebih awal. Ia **bukan** pengganti formulator, uji stabilitas formal, persetujuan regulasi, atau keputusan produksi.
 

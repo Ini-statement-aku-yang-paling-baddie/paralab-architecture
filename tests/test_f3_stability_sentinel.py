@@ -62,7 +62,7 @@ SAFE_FORMULA = [
 ]
 
 
-@unittest.skipUnless(DEPS_AVAILABLE, "butuh pandas + scikit-learn (modules/f3_stability_sentinel/requirements.txt)")
+@unittest.skipUnless(DEPS_AVAILABLE, "butuh pandas + scikit-learn (requirements/f3_stability_sentinel.txt)")
 class FeatureExtractionTests(unittest.TestCase):
     def test_trend_features_come_from_baseline_and_landmark_only(self):
         m = api()
@@ -111,7 +111,7 @@ class FeatureExtractionTests(unittest.TestCase):
         self.assertNotIn("viscosity_change_pct", row)
 
 
-@unittest.skipUnless(DEPS_AVAILABLE, "butuh pandas + scikit-learn (modules/f3_stability_sentinel/requirements.txt)")
+@unittest.skipUnless(DEPS_AVAILABLE, "butuh pandas + scikit-learn (requirements/f3_stability_sentinel.txt)")
 class ForecastContractTests(unittest.TestCase):
     def test_lead_time_counts_only_flagged_trials_that_actually_failed(self):
         import numpy as np
