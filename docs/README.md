@@ -40,6 +40,7 @@ Folder ini memisahkan dokumentasi aktif dari materi historis. Pembaca baru cukup
 | Dokumen | Isi |
 |---|---|
 | [huggingface_spaces.md](deploy/huggingface_spaces.md) | Deploy API F3 sebagai Docker Space gratis di Hugging Face |
+| [local_llm_hosting.md](deploy/local_llm_hosting.md) | Menjalankan F1 evidence summarizer (Qwen2.5-1.5B + LoRA) di mesin lokal |
 
 ## Arsip
 

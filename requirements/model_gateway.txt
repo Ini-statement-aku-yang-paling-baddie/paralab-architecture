@@ -1,0 +1,4 @@
+# Local F1/F2/F4/F5 gateway. F3 remains in its pinned .venv-f3 runtime.
+-r f1_summarizer.txt
+fastapi==0.115.12
+uvicorn[standard]==0.53.0

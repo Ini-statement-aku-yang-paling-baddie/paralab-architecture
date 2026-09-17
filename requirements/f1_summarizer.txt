@@ -1,0 +1,18 @@
+# Runtime untuk F1 evidence summarizer: Qwen2.5-1.5B-Instruct + LoRA adapter
+# "formulab-qwen-lora" (task f1_evidence_summary, lihat models/README.md).
+#
+# Versi transformers/torch DISAMAKAN dengan requirements/f1_dense.txt supaya
+# satu environment bisa menjalankan retrieval (SentenceTransformer) dan
+# summarizer (Qwen + PEFT) sekaligus tanpa versi bentrok.
+#
+# Default CPU-only lewat --extra-index-url. Kalau mesinmu punya GPU NVIDIA
+# (mis. RTX 4050 di sini punya 6 GB VRAM, cukup untuk model 1.5B + adapter),
+# lihat docs/deploy/local_llm_hosting.md untuk varian instalasi CUDA-nya.
+--extra-index-url https://download.pytorch.org/whl/cpu
+numpy>=1.26,<3
+transformers==5.0.0
+torch==2.10.0+cpu
+peft>=0.13,<1
+accelerate>=1.0,<2
+safetensors>=0.4,<1
+sentence-transformers==5.4.1

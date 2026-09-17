@@ -1,8 +1,16 @@
 # Local SentenceTransformer export and embeddings (417 MB; reproducible locally)
 sentence-transformer/
 
+# Local model weights (3.6 GB: Qwen2.5-1.5B base, formulab LoRA adapter,
+# unzipped embedding model). Reproducible from a base checkpoint plus the
+# LoRA adapter files, never meant to enter Git history. models/README.md is
+# tracked on purpose so a fresh clone still explains what belongs here.
+models/*
+!models/README.md
+
 # Python virtual environments and bytecode
 .venv/
 .venv-f3/
+.venv-f1-llm/
 __pycache__/
 *.py[cod]
