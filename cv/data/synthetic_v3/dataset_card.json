@@ -1,0 +1,32 @@
+{
+  "class_counts": {
+    "creaming": 160,
+    "heterogeneous": 160,
+    "phase_separation": 160,
+    "stable_uniform": 160
+  },
+  "dataset_version": "procedural-cv-v3",
+  "image_count": 640,
+  "image_size": 256,
+  "labels": [
+    "stable_uniform",
+    "creaming",
+    "phase_separation",
+    "heterogeneous"
+  ],
+  "limitations": [
+    "Gambar adalah domain-randomized procedural renders, bukan foto kosmetik nyata.",
+    "Label hanya merepresentasikan parameter generator, bukan scientific ground truth.",
+    "Dataset tidak memvalidasi generalisasi ke stability assessment kosmetik nyata."
+  ],
+  "seed": 2026,
+  "sequence_count": 160,
+  "sequences_per_class": 40,
+  "split_counts": {
+    "test": 96,
+    "train": 448,
+    "validation": 96
+  },
+  "split_unit": "sample_sequence_id; stratified by visual label",
+  "views_per_sequence": 4
+}

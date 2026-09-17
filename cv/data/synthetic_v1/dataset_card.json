@@ -1,0 +1,34 @@
+{
+  "class_counts": {
+    "creaming": 72,
+    "heterogeneous": 72,
+    "phase_separation": 72,
+    "stable_uniform": 72,
+    "uncertain": 72
+  },
+  "dataset_version": "procedural-cv-v2",
+  "image_count": 360,
+  "image_size": 256,
+  "labels": [
+    "stable_uniform",
+    "creaming",
+    "phase_separation",
+    "heterogeneous",
+    "uncertain"
+  ],
+  "limitations": [
+    "Gambar dibuat secara prosedural untuk demonstrasi, bukan foto sampel kosmetik.",
+    "Label berasal dari parameter generator dan bukan scientific ground truth.",
+    "Dataset tidak memvalidasi model untuk stability assessment kosmetik nyata."
+  ],
+  "seed": 2026,
+  "sequence_count": 120,
+  "sequences_per_class": 24,
+  "split_counts": {
+    "test": 45,
+    "train": 255,
+    "validation": 60
+  },
+  "split_unit": "sample_sequence_id; stratified by visual label",
+  "views_per_sequence": 3
+}
