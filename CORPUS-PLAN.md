@@ -1,7 +1,10 @@
-# FormuLab AI — Rencana Korpus Dummy & Training Set (v1)
+# FormuLab AI — Rencana Korpus & Distilasi (v1.2)
 
-> Pelengkap `ARCHITECTURE.md` §3 (F1) dan §8 (distilasi). Dokumen ini mendefinisikan struktur korpus jurnal sintetis (untuk embedding F1) dan template prompt untuk meng-generate training set (untuk LoRA F1+F5).
-> Prinsip: **teacher LLM besar tidak menulis acak** — ia hanya menulis narasi di atas *seed terstruktur* yang kita tentukan. Ini menjaga konsistensi angka, mencegah duplikat, dan membuat korpus bisa diregenerasi deterministik.
+> **Konteks update (2026-09-17):** dokumen ini kini selaras dengan `ARCHITECTURE-V4.md` — korpus V4 (200 jurnal / 600 trial, satu vertical O/W gel-cream) ada di `data/` dan sudah terealisasi via `FormuLab-V4-Corpus-Generator.ipynb`. Bagian yang masih aktif dan menjadi kontrak distilasi: **§3 (prinsip seed-driven), §4a/§4b (template prompt tugas), §5 (volume & split), §6 (anti-pattern)**. Struktur korpus §1 mengikuti `data/evidence_corpus.jsonl` (sudah berbeda dari yang tertulis di sini — lihat `data/README.md`).
+>
+> **PEMBAGIAN KERJA:** track ini (F1 + F2) sudah selesai sampai KB + korpus + F2 contract; **F5 STT = teammate**, **web UI = teammate**, **F3/trajectory = Arlen (selesai, `data/full_synthetic/`)**. **Distilasi LLM = track ini.** Teacher model: **GPT-5.5 via API** (akses disediakan teman) — hanya untuk GENERATE training set, bukan inference demo (demo = model student lokal, narasi on-premise V4 §8).
+>
+> **Status: SIAP DIEKSEKUSI** — korpus sudah ada, tinggal generate training set + LoRA.
 
 ---
 
@@ -168,3 +171,50 @@ Transkrip: "{hasil_stt_dengan_typo}"
 - [ ] Generate training set 4a + 4b (~1.400 contoh)
 - [ ] Quality gate 4d (uji zero-shot teacher)
 - [ ] Embedding seluruh korpus + index (F1 siap dipasang ke prototipe)
+
+---
+
+## 7. Spesifikasi Eksekusi Distilasi (kontrak dengan teacher = GPT-5.5 via API)
+
+> Bagian ini adalah **spesifikasi kerja** untuk notebook distilasi. Semua input sudah ada di `data/`.
+
+### 7.1 Dua tugas yang dilatih
+
+| Tugas | Melayani | Input (dari `data/`) | Target output model student |
+|---|---|---|---|
+| **A. Evidence summarization** | F1 (ringkasan kartu) | `evidence_corpus.jsonl` (600 record) | ringkasan 2-3 kalimat pola trial, TANPA menyebut konsentrasi persentase (K5) |
+| **B. Voice-log extraction** | F5 (teammate, STT) | `full_synthetic/derived/f5_examples.jsonl` (4.200) | JSON kanonis: `{checkpoint_id, measurements{ph,viscosity_cp}, observations{appearance}, field_confidence{...}, requires_confirmation:true}` — SKEMA HARUS SAMA dengan `f5_examples.jsonl` (kontrak F5 V4 §10.2) |
+
+### 7.2 Volume, split, seed
+
+- Task A: ~600 contoh (1 per evidence record) + 2 parafrase query → ~1.400
+- Task B: subsample 800 dari 4.200 (jaga distribusi `observed/missing/invalid/uncertain`)
+- Split 80/10/10 **by journal family / trial** (jangan random row-level, §12.2 V4); seed 42
+- Setiap record training menyimpan `source_id` lineage ke data aslinya
+
+### 7.3 Aturan teacher (V4 §6.5 — tidak bisa ditawar)
+
+1. Teacher **TIDAK BOLEH** mengarang angka: pH, viskositas, konsentrasi, minggu gagal, outcome, keputusan regulatory — semua angka disalin dari seed/data terstruktur
+2. Teacher hanya menulis: judul, narasi observasi, pelajaran, parafrase query, draft penjelasan
+3. Untuk Task B: teacher menghasilkan variasi transcript bicara (typo fonetik, angka lisan "dua persen" → 2.0) — label tetap dari `f5_examples.jsonl`
+4. Zero-shot gate: uji 20 sampel pola terkeras (transkrip berisik) SEBELUM bayar full generation — kalau teacher gagal, perbaiki pola, bukan prompt-nya
+
+### 7.4 Student & runtime
+
+| Aspek | Pilihan | Alasan |
+|---|---|---|
+| Base model | **Qwen2.5-1.5B-Instruct** (fallback: Llama-3.2-3B) | muat LoRA di T4 Kaggle gratis, cukup untuk tugas sempit |
+| Method | LoRA (peft + trl, SFT) | standar, cepat, checkpoint kecil |
+| Training | Kaggle GPU T4, ~1-2 jam per tugas | preferensi tim (training di Kaggle) |
+| Export | GGUF (llama.cpp, Q4_K_M) + tokenizer | jalan lokal laptop demo tanpa GPU |
+| Serving demo | llama-cpp-python / ollama, prompt per tugas | inference lokal, mendukung narasi on-premise |
+
+### 7.5 Definition of Done distilasi
+
+- [ ] Training set A + B tergenerate via GPT-5.5 API, semua angka traceable ke seed (`source_id` di tiap record)
+- [ ] Quality gate 7.3.4 lolos (20/20 sampel terkeras)
+- [ ] LoRA A dan B selesai training di Kaggle, loss curve tidak overfit
+- [ ] Evaluasi student vs teacher pada holdout: Task A (ringkasan jujur, tanpa % konsentrasi), Task B (field accuracy ≥95%, `requires_confirmation` selalu true)
+- [ ] GGUF exported + smoke test inference lokal (tanpa internet)
+- [ ] Model & training report di-commit (`models/`, `reports/`), hash tercatat di manifest
+
