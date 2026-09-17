@@ -1,0 +1,7 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "labeling_manifest.json": "2abf4c2a2f8ff7fcc77fa7af701461c7764111248cd29b5d8bd8bc2f2d15d7a1",
+    "rag_blind_label_candidates.jsonl": "da475b9cf9c31f1579a7979c650067fd51b8d8eee3b1a99864fce37ea77f7b18"
+  }
+}

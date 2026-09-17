@@ -1,0 +1,17 @@
+{
+  "corpus_source_sha256": "56b5ff18b731b8cb39946331fb3c455df22524b76ae6a3644b44920d161b5291",
+  "human_approved_count": 0,
+  "instructions": [
+    "Reviewer mengubah relevance menjadi 0, 1, atau 2 berdasarkan query dan evidence snapshot.",
+    "Reviewer tidak boleh mengubah source_id atau menganggap data synthetic sebagai eksperimen nyata.",
+    "QB-009 harus mempertahankan coverage gap gender, karena corpus tidak memiliki metadata pria/gender.",
+    "Hanya setelah adjudication, export label final boleh dipakai untuk metrik blind F1."
+  ],
+  "label_source": "ai_assisted_provisional",
+  "pool_size_per_query": 30,
+  "query_count": 10,
+  "query_source_sha256": "5f8c73c7fcf9d5aaaffc3720e6b1b2f562450dc34e1f13000cdcbe3d94e53967",
+  "review_queue_count": 300,
+  "review_status": "needs_human_review",
+  "version": "rag-label-pilot-v1"
+}

@@ -2,9 +2,10 @@
 Output sesuai kontrak V4 §8.3-8.5: status vocabulary, derived features, audit-ready results.
 Di-test lokal terhadap semua acceptance test lama + kasus baru V4."""
 import json, re, difflib, os
+from pathlib import Path
 from datetime import datetime
 
-DATA = r'C:\Users\fikri\Code\UI HACKATHON\hackathon\ui-hackathon-juara\data'
+DATA = Path(__file__).resolve().parents[1] / 'data'
 
 # ---------- load ----------
 master_doc = json.load(open(os.path.join(DATA, 'ingredient_master.json'), encoding='utf-8'))
