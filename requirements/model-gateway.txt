@@ -1,0 +1,26 @@
+# ParaLab local Qwen + STT gateway (Linux + NVIDIA GPU)
+#
+# IMPORTANT: install a CUDA-enabled PyTorch build separately BEFORE installing
+# this file. Never let pip silently select the CPU-only torch wheel.
+# Follow https://pytorch.org/get-started/locally/ for the host driver's
+# supported CUDA wheel, then verify torch.cuda.is_available() is True.
+#
+# Do not put model weights, API tokens, or tunnel credentials in this repo.
+
+# HTTP gateway
+fastapi>=0.115,<1
+uvicorn[standard]>=0.30,<1
+python-multipart>=0.0.9,<1
+pydantic>=2.8,<3
+
+# Qwen 2.5 + PEFT LoRA runtime
+transformers>=4.46,<6
+peft>=0.13,<1
+accelerate>=1.0,<2
+safetensors>=0.4,<1
+sentence-transformers>=3,<6
+numpy>=1.26,<3
+
+# F5 local STT runtime. ffmpeg is a system package, not a pip package.
+faster-whisper>=1.1,<2
+ctranslate2>=4,<5
