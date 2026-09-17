@@ -16,6 +16,29 @@ https://pubmed.ncbi.nlm.nih.gov/31979051/
 
 https://aocs.onlinelibrary.wiley.com/doi/10.1002/jsde.12852?utm_source=chatgpt.com
 
+# DATASET COSMETIC
+
+Accelerating Formulation Design via Machine Learning: Generating a High-throughput Shampoo Formulations Dataset - PMC 
+
+INCIDB/cosmetics-skincare-inci-database: Comprehensive, multi-source skincare and cosmetic formulation database unifying 19,846 products, 43,097 canonical INCI compounds, 5,994 brands, 319,989 composition mappings 
+
+cosmetics-skincare-inci-database/DATA_DICTIONARY.md at master · INCIDB/cosmetics-skincare-inci-database 
+
+A dataset of formulation compositions for self-emulsifying drug delivery systems | Scientific Data 
+
+Cosmetic ingredient database - Internal Market, Industry, Entrepreneurship and SMEs 
+
+INCIDB — Skincare & Cosmetics INCI Database for Developers 
+
+world.openbeautyfacts.org 
+
+CosIng - Cosmetics - GROWTH - European Commission 
+
+Cek Bahan Kosmetik — Apakah Aman? | CekBahan 
+
+https://www.bing.com/search?q=inci+cari+data+kosmetik&cvid=86fb8e236c6a48e39334
+
+
 # PROBLEMS
 
 Tiga "Vital Few" (Penyebab Utama 80% Masalah): 
