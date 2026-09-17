@@ -1,0 +1,12 @@
+{
+  "contract_version": "public-evidence-v1",
+  "current_f3_status": "0 public rows eligible; synthetic_demo tetap dataset smoke-test terpisah.",
+  "seamless_integration": {
+    "common_origin_field": "data_origin",
+    "f1": "Gunakan f1_evidence_documents sebagai corpus evidence dengan citation.",
+    "f2": "Gunakan hanya sebagai context evidence; tidak membentuk rule otomatis.",
+    "f3": "Hanya rows dengan status explicitly_eligible dan landmark/outcome kompatibel yang boleh diekspor ke train/test. Semua row sumber ini excluded."
+  },
+  "source_sha256": "eb1dca365846fd1aa5733aa2efd28cef6020cef70655f6e878b30153d144a829",
+  "train_test_policy": "Kelompok sumber/paper harus menjadi unit split. Jangan split baris formulasi dari paper sama melintasi train/test."
+}

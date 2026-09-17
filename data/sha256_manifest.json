@@ -1,0 +1,32 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "audit_original.json": "427db123b97ddeb653844aa8408ca95ea852275ea7af27533187417bb353b88d",
+    "authentic_rules.json": "6abdd964c1cfa4c4035cc217a4af335dc18ecdb4589e3cb283afa8d381249b20",
+    "canonical/checkpoints.jsonl": "63ae14e99aa6c01a9ca21c029a5a0a018581ec6a8dee09c40948a057d5c07571",
+    "canonical/formulas.jsonl": "20761185fc57a63a6677b7191182a2088f718a756a494144ac6a72e3ea10fd87",
+    "canonical/observation_series.jsonl": "3750698458dda9af34b0bd4027f9b44bdd20ac41e5aafff20ed342d96e52b061",
+    "canonical/outcomes.jsonl": "a9241ba88209ad9db340680ad4ac45f72d85f4d8f51d7502e2b0c4c06f936d29",
+    "canonical/projects.jsonl": "265688a28c714efe498c9b968bfb5400f66812e7bc1d09bab1671f76ad9f70e4",
+    "canonical/trials.jsonl": "c5236d33cc4d34ba117ccede51b019a5534392c95ffc74dc9b1188d51d879cd0",
+    "demo_components.json": "f4021fa82615e914addf20535a7855f7db0a399aa8cc862e4835711329cfcc73",
+    "derived/f1_train_corpus.jsonl": "4e981fcc1dced1d3ad59c39d6c2cb7d82ab184f0e760d824da15f9d5b2dce054",
+    "derived/f5_examples.jsonl": "f2f843e7080570401bd3289ad5edf7d3454a3b5653dfdf896557fa5e081e9ddd",
+    "derived/forecast_censored.jsonl": "f2730e8130ad444d0cc98bcf9b6563f4aad0c84fa12e99a33b3262f33c63fc9c",
+    "derived/forecast_excluded.jsonl": "b5399073746871c5c23d7af3e27372bf99688e93cfdb553618bff0f89889cac5",
+    "derived/forecast_features.jsonl": "56c165917f0363ee63e075ee59a9e032478df3c04cbf76466c676653f069d103",
+    "derived/forecast_labels.jsonl": "7b00a0c4de5de295a9717b92626246d73e3fdc830daee8ae05501eaa034bf5f3",
+    "derived/image_manifest.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "derived/journal_documents.jsonl": "be3b1a2483e6a9f11647b39bcea1577ddc2c15b370460accfc5d906f1848197a",
+    "ingredient_aliases.json": "4107b934745fb68ba7eb065c7b7167a3b715997a3e64ef91f93e09a1c960126a",
+    "metadata.json": "3a51161e6fa9697dbc29c803f8ebc19961dddbb6a9b2bd3fe929d6ea8337cea2",
+    "metrics.json": "728666906559f9bf1c9e7f7d9d0baa7560a4cddba4a62f2a06edaf64d3e644b7",
+    "raw/corpus_formulab.json": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
+    "schema_contract.json": "41554f70d659068a6dd06dae1c3b48f5554f33be3a0369425f6d3f9d6e6c2935",
+    "simulation_assumptions.json": "509dd65e82324bb5ac810307797a5b81a35652056b83f22063075d126dd9e500"
+  },
+  "originals": {
+    "corpus_formulab.json": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
+    "embeddings_formulab.npy": "a02ba85cc669d3dd33f218cd0b57c4b4bad56b8258cb1e93d8b00940efde8373"
+  }
+}

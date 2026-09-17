@@ -1,0 +1,43 @@
+{
+  "data_origin": "synthetic_demo",
+  "description": "Skenario matematis buatan, bukan aturan kimia atau evidence publik.",
+  "formula_note": "Komponen demo termasuk placeholder emulsifier/preservative; tidak layak diracik.",
+  "human_verified": false,
+  "id": "SIM-001",
+  "measurement_ranges": {
+    "ph": [
+      0,
+      14
+    ],
+    "viscosity_cp": [
+      0,
+      1000000
+    ]
+  },
+  "range_note": "Batas sanity input perangkat lunak; bukan spesifikasi stabilitas kosmetik.",
+  "scenarios": [
+    "pass",
+    "late_failure",
+    "early_failure",
+    "right_censored",
+    "uncertain",
+    "missing_invalid"
+  ],
+  "scientific_validation_status": "not_validated_for_production",
+  "source_ids": [],
+  "temperatures_c": [
+    25,
+    40
+  ],
+  "trajectory_note": "Baseline acak seeded; drift kecil. Nilai terminal failure adalah injeksi skenario, tanpa kausalitas bahan.",
+  "version": "pilot-v1",
+  "weeks": [
+    0,
+    1,
+    2,
+    4,
+    6,
+    8,
+    12
+  ]
+}

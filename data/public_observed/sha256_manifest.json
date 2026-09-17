@@ -1,0 +1,11 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "f1_evidence_documents.jsonl": "74def47e5f069d70bf1f80c45076c5d19585839edb6b6df0784d1489385cea7e",
+    "f3_excluded_candidates.jsonl": "8dada3c93ebcf08cb23aa19f49b71f805e32eb5df3c12edf3dcec0999a226f8b",
+    "observed_formulations.jsonl": "b6fb575b9dbcb87f2bc28af7c92afe8c5fa2fb5c628c17e51477b288e29200e4",
+    "source_index.json": "1a07e6e25253131471a92eab4799bd64dda2915bcc51c2d3043bb21e2b29d6b3",
+    "training_contract.json": "6cb9e290d35c79a22ccee32e42901361af08a8a56c4f0d2d4b45a62b5fc3fb4f"
+  },
+  "source_sha256": "eb1dca365846fd1aa5733aa2efd28cef6020cef70655f6e878b30153d144a829"
+}

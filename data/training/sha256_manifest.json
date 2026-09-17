@@ -1,0 +1,8 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "f1_evidence_catalog.jsonl": "3510384a7707a5876bb5ff009a918065e71e1384e7225576caefba8ca321c8df",
+    "f3_forecast_train.jsonl": "2b56ef556995e07c9eff1db0db9c3d8ed1610c8bc39e93fabe7a8605d59903bc",
+    "training_report.json": "97fcab6aac33cf1266f6d3738e8f4a30d25ca8fed4c70fd93bc40136810ed63e"
+  }
+}

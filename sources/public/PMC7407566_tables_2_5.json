@@ -1,0 +1,41 @@
+{
+  "source_id": "PUB-PMC7407566",
+  "title": "Progressing Towards the Sustainable Development of Cream Formulations",
+  "doi": "10.3390/pharmaceutics12070647",
+  "article_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7407566/",
+  "publisher_url": "https://www.mdpi.com/1999-4923/12/7/647",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "accessed_at": "2026-09-17",
+  "extraction_method": "manual_double_checked_html_table_transcription",
+  "source_table_ids": ["Table 2", "Table 5"],
+  "domain": "pharmaceutical_o_w_hydrocortisone_cream",
+  "domain_limitations": [
+    "Bukan moisturizer kosmetik.",
+    "Formula lengkap tidak dilaporkan dalam tabel ini; hanya tiga variabel DoE.",
+    "pH dan instability index diukur pada protokol/waktu berbeda.",
+    "Bukan seri longitudinal hingga landmark minggu ke-4 atau outcome minggu ke-12."
+  ],
+  "not_a_lab_recipe": true,
+  "measurements": {
+    "ph": {"source_table": "Table 5", "timepoint_days": 1, "method": "triplicate; 1 g cream dispersed in 10 mL distilled water; 25 C"},
+    "instability_index": {"source_table": "Table 5", "timepoint_days": 4, "method": "LUMiSizer; duplicate; 84 h centrifugation at 4000 rpm and 40 C"}
+  },
+  "formulations": [
+    {"paper_formula_id":"F1","glycerol_monostearate_pct":5,"isopropyl_myristate_pct":3,"homogenization_rpm":16000,"ph_mean":6.65,"ph_sd":0.04,"instability_index_mean":0.270,"instability_index_sd":0.093,"instability_compliance":"NC","data_origin":"observed_public","not_a_lab_recipe":true},
+    {"paper_formula_id":"F2","glycerol_monostearate_pct":15,"isopropyl_myristate_pct":9,"homogenization_rpm":16000,"ph_mean":6.73,"ph_sd":0.04,"instability_index_mean":0.077,"instability_index_sd":0.006,"instability_compliance":"C","data_origin":"observed_public","not_a_lab_recipe":true},
+    {"paper_formula_id":"F3","glycerol_monostearate_pct":5,"isopropyl_myristate_pct":6,"homogenization_rpm":11000,"ph_mean":6.60,"ph_sd":0.05,"instability_index_mean":0.280,"instability_index_sd":0.130,"instability_compliance":"NC","data_origin":"observed_public","not_a_lab_recipe":true},
+    {"paper_formula_id":"F4","glycerol_monostearate_pct":10,"isopropyl_myristate_pct":9,"homogenization_rpm":11000,"ph_mean":6.62,"ph_sd":0.06,"instability_index_mean":0.170,"instability_index_sd":0.050,"instability_compliance":"NC","data_origin":"observed_public","not_a_lab_recipe":true},
+    {"paper_formula_id":"F5","glycerol_monostearate_pct":15,"isopropyl_myristate_pct":6,"homogenization_rpm":11000,"ph_mean":6.653,"ph_sd":0.012,"instability_index_mean":0.072,"instability_index_sd":0.006,"instability_compliance":"C","data_origin":"observed_public","not_a_lab_recipe":true},
+    {"paper_formula_id":"F6","glycerol_monostearate_pct":5,"isopropyl_myristate_pct":9,"homogenization_rpm":16000,"ph_mean":6.570,"ph_sd":0.008,"instability_index_mean":0.300,"instability_index_sd":0.200,"instability_compliance":"NC","data_origin":"observed_public","not_a_lab_recipe":true},
+    {"paper_formula_id":"F7","glycerol_monostearate_pct":10,"isopropyl_myristate_pct":6,"homogenization_rpm":16000,"ph_mean":6.677,"ph_sd":0.012,"instability_index_mean":0.116,"instability_index_sd":0.007,"instability_compliance":"C","data_origin":"observed_public","not_a_lab_recipe":true},
+    {"paper_formula_id":"F8","glycerol_monostearate_pct":10,"isopropyl_myristate_pct":6,"homogenization_rpm":16000,"ph_mean":6.660,"ph_sd":0.009,"instability_index_mean":0.113,"instability_index_sd":0.003,"instability_compliance":"C","data_origin":"observed_public","not_a_lab_recipe":true},
+    {"paper_formula_id":"F9","glycerol_monostearate_pct":10,"isopropyl_myristate_pct":3,"homogenization_rpm":11000,"ph_mean":6.680,"ph_sd":0.008,"instability_index_mean":0.071,"instability_index_sd":0.004,"instability_compliance":"C","data_origin":"observed_public","not_a_lab_recipe":true},
+    {"paper_formula_id":"F10","glycerol_monostearate_pct":15,"isopropyl_myristate_pct":3,"homogenization_rpm":16000,"ph_mean":6.675,"ph_sd":0.012,"instability_index_mean":0.031,"instability_index_sd":0.012,"instability_compliance":"C","data_origin":"observed_public","not_a_lab_recipe":true},
+    {"paper_formula_id":"F11","glycerol_monostearate_pct":10,"isopropyl_myristate_pct":6,"homogenization_rpm":16000,"ph_mean":6.733,"ph_sd":0.017,"instability_index_mean":0.140,"instability_index_sd":0.020,"instability_compliance":"NC","data_origin":"observed_public","not_a_lab_recipe":true},
+    {"paper_formula_id":"F12","glycerol_monostearate_pct":10,"isopropyl_myristate_pct":9,"homogenization_rpm":22000,"ph_mean":6.75,"ph_sd":0.02,"instability_index_mean":0.118,"instability_index_sd":0.004,"instability_compliance":"C","data_origin":"observed_public","not_a_lab_recipe":true},
+    {"paper_formula_id":"F13","glycerol_monostearate_pct":10,"isopropyl_myristate_pct":3,"homogenization_rpm":22000,"ph_mean":6.673,"ph_sd":0.005,"instability_index_mean":0.060,"instability_index_sd":0.020,"instability_compliance":"C","data_origin":"observed_public","not_a_lab_recipe":true},
+    {"paper_formula_id":"F14","glycerol_monostearate_pct":15,"isopropyl_myristate_pct":6,"homogenization_rpm":22000,"ph_mean":6.74,"ph_sd":0.00,"instability_index_mean":0.048,"instability_index_sd":0.003,"instability_compliance":"C","data_origin":"observed_public","not_a_lab_recipe":true},
+    {"paper_formula_id":"F15","glycerol_monostearate_pct":5,"isopropyl_myristate_pct":6,"homogenization_rpm":22000,"ph_mean":6.627,"ph_sd":0.005,"instability_index_mean":0.270,"instability_index_sd":0.120,"instability_compliance":"NC","data_origin":"observed_public","not_a_lab_recipe":true}
+  ]
+}
