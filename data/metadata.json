@@ -1,16 +1,41 @@
 {
-  "limitations": [
-    "Semua angka adalah simulasi.",
-    "Tidak ada resep lab, human review, model, embedding, audio, atau gambar nyata.",
-    "Split keluarga demo bukan bukti generalisasi ilmiah."
-  ],
-  "scope": "12 project, 2 trial/project, 2 storage/trial",
-  "script_sha256": "2128167eb5b094aac2713b5a8ee118537d1d501ed66211296c64ea35510c505f",
-  "seed": 17,
-  "source_sha256": {
-    "corpus_formulab.json": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-    "embeddings_formulab.npy": "a02ba85cc669d3dd33f218cd0b57c4b4bad56b8258cb1e93d8b00940efde8373"
-  },
-  "split_policy": "6 keluarga formula; 4 train, 1 validation, 1 test; ditetapkan sebelum derivasi",
-  "version": "pilot-v1"
+ "generated_at": "2026-09-17T16:16:47.472537",
+ "generator_version": "v1",
+ "seed": 42,
+ "product_family": "o_w_gel_cream_moisturizer",
+ "domain_label": "Moisturizer gel-cream O/W untuk kulit berminyak",
+ "counts": {
+  "journals": 200,
+  "trials": 600,
+  "evidence_records": 600,
+  "dev_queries": 40,
+  "blind_queries": 10
+ },
+ "scenario_family_distribution": {
+  "stable": 230,
+  "early_viscosity_drop": 76,
+  "delayed_phase_separation": 95,
+  "ph_drift": 50,
+  "electrolyte_thickener_failure": 48,
+  "process_parameter_failure": 56,
+  "borderline": 45
+ },
+ "outcome_distribution": {
+  "pass": 278,
+  "failed": 277,
+  "needs_review": 45
+ },
+ "anti_trivial_qc_passed": true,
+ "file_roles": {
+  "formula_seeds.jsonl": "KONTRAK dengan trajectory generator (tim F3) - setiap trial punya scenario_family + expected outcome",
+  "evidence_corpus.jsonl": "Input F1 - evidence card dengan source_id",
+  "rag_dev_queries.jsonl": "Query dev berlabel (tuning F1)",
+  "rag_blind_test_queries.jsonl": "Query blind test - PERLU pelabelan manusia",
+  "evidence_rag_text.jsonl": "Teks siap-embed untuk dense retrieval"
+ },
+ "disclaimer": "Seluruh data bersifat sintetis berbasis skenario (synthetic_demo) untuk prototipe hackathon. Tidak merepresentasikan data riset Paragon maupun data produk nyata. Nilai numerik dihasilkan generator deterministik; narasi dibatasi oleh seed.",
+ "provenance": {
+  "data_origin": "synthetic_demo",
+  "scientific_validation_status": "not_validated_for_production"
+ }
 }

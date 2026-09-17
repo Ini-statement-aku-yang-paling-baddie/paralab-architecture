@@ -1,0 +1,17 @@
+{
+ "limitations": [
+  "Semua angka adalah simulasi.",
+  "Tidak ada resep lab, human review, model, embedding, audio, atau gambar nyata.",
+  "Split keluarga demo bukan bukti generalisasi ilmiah."
+ ],
+ "scope": "12 project, 2 trial/project, 2 storage/trial",
+ "script_sha256": "e8a72f7584109871ffb6a4718041bdb43c0dcb6e7032a9392bf6d194bc8b03a4",
+ "seed": 17,
+ "source_sha256": {
+  "corpus_formulab.json": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
+  "embeddings_formulab.npy": "a02ba85cc669d3dd33f218cd0b57c4b4bad56b8258cb1e93d8b00940efde8373"
+ },
+ "split_policy": "6 keluarga formula; 4 train, 1 validation, 1 test; ditetapkan sebelum derivasi",
+ "version": "pilot-v1",
+ "_note": "Metadata pipeline pilot (build_data_pilot.py, seed 17) - MILIK PIPELINE PILOT, bukan evidence corpus V4. Metadata korpus V4 ada di data/metadata.json. Dipisah saat resolusi merge 2026-09-17 agar dua pipeline tidak saling menimpa."
+}

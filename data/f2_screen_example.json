@@ -1,0 +1,191 @@
+{
+ "screened_at": "2026-09-17T16:09:23.795961",
+ "rule_version": "2026.09",
+ "overall_status": "warning",
+ "disclaimer": "Data ilustratif prototipe hackathon - pendekatan data publik, BUKAN daftar resmi MUI/BPOM/CosIng. Wajib verifikasi ulang sebelum dipakai untuk keputusan nyata.",
+ "results": [
+  {
+   "input": "Niacinamide",
+   "ingredient_id": "ING:NIACINAMIDE",
+   "inci_name": "Niacinamide",
+   "status": "clear",
+   "rules_fired": [
+    {
+     "rule_id": "COMPAT-002",
+     "rule_version": "2026.09",
+     "severity": "info",
+     "source_id": "RULESRC-002",
+     "rationale": "oil control saling memperkuat",
+     "requires_human_review": true
+    },
+    {
+     "rule_id": "COMPAT-003",
+     "rule_version": "2026.09",
+     "severity": "info",
+     "source_id": "RULESRC-003",
+     "rationale": "soothing menutup potensi iritasi aktif",
+     "requires_human_review": true
+    },
+    {
+     "rule_id": "COMPAT-022",
+     "rule_version": "2026.09",
+     "severity": "info",
+     "source_id": "RULESRC-022",
+     "rationale": "soothing menutup potensi iritasi aktif",
+     "requires_human_review": true
+    },
+    {
+     "rule_id": "COMPAT-024",
+     "rule_version": "2026.09",
+     "severity": "info",
+     "source_id": "RULESRC-024",
+     "rationale": "oil control saling memperkuat",
+     "requires_human_review": true
+    }
+   ],
+   "requires_human_review": true
+  },
+  {
+   "input": "Zinc PCA",
+   "ingredient_id": "ING:ZINC_PCA",
+   "inci_name": "Zinc PCA",
+   "status": "clear",
+   "rules_fired": [
+    {
+     "rule_id": "COMPAT-002",
+     "rule_version": "2026.09",
+     "severity": "info",
+     "source_id": "RULESRC-002",
+     "rationale": "oil control saling memperkuat",
+     "requires_human_review": true
+    },
+    {
+     "rule_id": "COMPAT-024",
+     "rule_version": "2026.09",
+     "severity": "info",
+     "source_id": "RULESRC-024",
+     "rationale": "oil control saling memperkuat",
+     "requires_human_review": true
+    }
+   ],
+   "requires_human_review": true
+  },
+  {
+   "input": "Mineral Oil",
+   "ingredient_id": "ING:MINERAL_OIL",
+   "inci_name": "Mineral Oil",
+   "status": "warning",
+   "rules_fired": [
+    {
+     "rule_id": "CTX-KOMED-001",
+     "rule_version": "2026.09",
+     "severity": "warning",
+     "source_id": "INGREF-CTX",
+     "rationale": "komedogenik 2/5 — berisiko utk target kulit berminyak",
+     "requires_human_review": false
+    },
+    {
+     "rule_id": "CTX-POSITION-001",
+     "rule_version": "2026.09",
+     "severity": "warning",
+     "source_id": "INGREF-CTX",
+     "rationale": "Secara persepsi kurang sejalan dengan positioning high-value/premium",
+     "requires_human_review": false
+    }
+   ],
+   "requires_human_review": false
+  },
+  {
+   "input": "Dimethicone",
+   "ingredient_id": "ING:DIMETHICONE",
+   "inci_name": "Dimethicone",
+   "status": "clear",
+   "rules_fired": [],
+   "requires_human_review": false
+  },
+  {
+   "input": "Glycerin",
+   "ingredient_id": "ING:GLYCERIN",
+   "inci_name": "Glycerin",
+   "status": "warning",
+   "rules_fired": [
+    {
+     "rule_id": "HAL-080",
+     "rule_version": "2026.09",
+     "severity": "warning",
+     "source_id": "RULESRC-080",
+     "rationale": "default halal bila bersertifikat sumber nabati; minta sertifikat supplier",
+     "requires_human_review": true
+    }
+   ],
+   "requires_human_review": true
+  },
+  {
+   "input": "Panthenol",
+   "ingredient_id": "ING:PANTHENOL",
+   "inci_name": "Panthenol",
+   "status": "clear",
+   "rules_fired": [
+    {
+     "rule_id": "COMPAT-003",
+     "rule_version": "2026.09",
+     "severity": "info",
+     "source_id": "RULESRC-003",
+     "rationale": "soothing menutup potensi iritasi aktif",
+     "requires_human_review": true
+    },
+    {
+     "rule_id": "COMPAT-022",
+     "rule_version": "2026.09",
+     "severity": "info",
+     "source_id": "RULESRC-022",
+     "rationale": "soothing menutup potensi iritasi aktif",
+     "requires_human_review": true
+    }
+   ],
+   "requires_human_review": true
+  },
+  {
+   "input": "Fragrance \"Citrus Woody Blend\"",
+   "ingredient_id": "ING:FRAGRANCE",
+   "inci_name": "Fragrance",
+   "status": "warning",
+   "rules_fired": [
+    {
+     "rule_id": "HAL-077",
+     "rule_version": "2026.09",
+     "severity": "warning",
+     "source_id": "RULESRC-077",
+     "rationale": "komposisi tidak diungkap - status halal tergantung sertifikasi blend; deklarasi alergen wajib bila >0.001% (leave-on)",
+     "requires_human_review": true
+    },
+    {
+     "rule_id": "ALG-078",
+     "rule_version": "2026.09",
+     "severity": "warning",
+     "source_id": "RULESRC-078",
+     "rationale": "wajib deklarasi alergen pada label",
+     "requires_human_review": false
+    }
+   ],
+   "requires_human_review": true
+  }
+ ],
+ "derived_features": {
+  "feature_schema_version": "stability-sentinel-v1",
+  "ingredient_count": 7,
+  "electrolyte_load": "high",
+  "thickener_sensitivity": "low",
+  "electrolyte_thickener_risk": "low",
+  "emulsifier_balance_status": "watch",
+  "compatibility_warning_count": 3,
+  "blocked_count": 0,
+  "unknown_count": 0,
+  "final_ph": 5.7
+ },
+ "model_coverage": {
+  "status": "supported_demo_domain",
+  "reason": "Formula dapat dipetakan ke O/W gel-cream synthetic feature schema."
+ },
+ "requires_human_signoff": true
+}

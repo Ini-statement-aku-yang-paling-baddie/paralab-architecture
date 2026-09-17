@@ -1,0 +1,2927 @@
+{
+ "meta": {
+  "rule_version": "2026.09",
+  "generated_at": "2026-09-17",
+  "disclaimer": "Data ilustratif prototipe hackathon - pendekatan data publik, BUKAN daftar resmi MUI/BPOM/CosIng. Wajib verifikasi ulang sebelum dipakai untuk keputusan nyata.",
+  "provenance": {
+   "data_origin": "synthetic_demo",
+   "curated_from": "kb_bahan.json v1.0-demo"
+  }
+ },
+ "count": 80,
+ "ingredients": [
+  {
+   "ingredient_id": "ING:ADAPALENE",
+   "inci_name": "Adapalene",
+   "display_name": "Adapalene",
+   "aliases": [
+    "adapalene 0.1",
+    "differin"
+   ],
+   "functional_classes": [
+    "active"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.1,
+    "max": 0.1
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "khusus_obat",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "retinoid obat keras - bukan bahan kosmetik",
+   "source_ids": [
+    "INGREF-001"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:ALCOHOL_DENAT",
+   "inci_name": "Alcohol Denat",
+   "display_name": "Alcohol Denat",
+   "aliases": [
+    "alcohol denatured",
+    "etanol",
+    "ethanol",
+    "sd alcohol"
+   ],
+   "functional_classes": [
+    "solvent_modifier"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 15.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "syubhat",
+    "bpom_status": "restricted",
+    "allergen_labeling_required": true
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "alkohol terlarang/syubhat utk halal - WAJIB review; drying & iritasi utk kulit kering/sensitif",
+   "source_ids": [
+    "INGREF-002"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:ALLANTOIN",
+   "inci_name": "Allantoin",
+   "display_name": "Allantoin",
+   "aliases": [
+    "alantoin"
+   ],
+   "functional_classes": [
+    "active"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.2,
+    "max": 2.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-003"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:ALPHA_ARBUTIN",
+   "inci_name": "Alpha Arbutin",
+   "display_name": "Alpha Arbutin",
+   "aliases": [
+    "arbutin",
+    "alpha arbutine"
+   ],
+   "functional_classes": [
+    "active"
+   ],
+   "phase_compatibility": [
+    "oil",
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 2.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-004"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:ARGANIA_SPINOSA_KERNEL_OIL",
+   "inci_name": "Argania Spinosa Kernel Oil",
+   "display_name": "Argania Spinosa Kernel Oil",
+   "aliases": [
+    "argan oil",
+    "minyak argan"
+   ],
+   "functional_classes": [
+    "emollient"
+   ],
+   "phase_compatibility": [
+    "oil"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 10.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-005"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:ASCORBIC_ACID",
+   "inci_name": "Ascorbic Acid",
+   "display_name": "Ascorbic Acid",
+   "aliases": [
+    "l-ascorbic acid",
+    "vitamin c murni",
+    "vitamin c"
+   ],
+   "functional_classes": [
+    "active"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 5.0,
+    "max": 20.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "butuh pH rendah (<3.5), stabil di kemasan gelap",
+   "source_ids": [
+    "INGREF-006"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:AZELAIC_ACID",
+   "inci_name": "Azelaic Acid",
+   "display_name": "Azelaic Acid",
+   "aliases": [
+    "asam azelat",
+    "azeleat"
+   ],
+   "functional_classes": [
+    "active"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 10.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "khusus_obat",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "di atas 10% tergolong obat (derivat asam - cek regulasi)",
+   "source_ids": [
+    "INGREF-007"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:BENZOYL_PEROXIDE",
+   "inci_name": "Benzoyl Peroxide",
+   "display_name": "Benzoyl Peroxide",
+   "aliases": [
+    "bpo",
+    "benzoyl peroksida"
+   ],
+   "functional_classes": [
+    "active"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 2.5,
+    "max": 5.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "khusus_obat",
+    "allergen_labeling_required": true
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "tergolong obat di beberapa wilayah; mengoksidasi kemasan/tekstil",
+   "source_ids": [
+    "INGREF-008"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:BETAINE",
+   "inci_name": "Betaine",
+   "display_name": "Betaine",
+   "aliases": [
+    "trimetil glisin",
+    "betaine anhydrous"
+   ],
+   "functional_classes": [
+    "humectant"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 5.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-009"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:BISABOLOL",
+   "inci_name": "Bisabolol",
+   "display_name": "Bisabolol",
+   "aliases": [
+    "alpha-bisabolol",
+    "kamilen aktif"
+   ],
+   "functional_classes": [
+    "active"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.2,
+    "max": 1.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-010"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:BUTYLENE_GLYCOL",
+   "inci_name": "Butylene Glycol",
+   "display_name": "Butylene Glycol",
+   "aliases": [
+    "bg",
+    "butilen glikol"
+   ],
+   "functional_classes": [
+    "humectant",
+    "solvent_modifier"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 10.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-011"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:BUTYROSPERMUM_PARKII_BUTTER",
+   "inci_name": "Butyrospermum Parkii Butter",
+   "display_name": "Butyrospermum Parkii Butter",
+   "aliases": [
+    "shea butter",
+    "shea"
+   ],
+   "functional_classes": [
+    "emollient"
+   ],
+   "phase_compatibility": [
+    "oil"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 15.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 2,
+   "notes": "",
+   "source_ids": [
+    "INGREF-012"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:CAFFEINE",
+   "inci_name": "Caffeine",
+   "display_name": "Caffeine",
+   "aliases": [
+    "kafein"
+   ],
+   "functional_classes": [
+    "active"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 3.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-013"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:CAMELLIA_SINENSIS_LEAF_EXTRACT",
+   "inci_name": "Camellia Sinensis Leaf Extract",
+   "display_name": "Camellia Sinensis Leaf Extract",
+   "aliases": [
+    "green tea extract",
+    "egcg",
+    "ekstrak teh hijau"
+   ],
+   "functional_classes": [
+    "active"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 5.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-014"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:CAPRYLIC_CAPRIC_TRIGLYCERIDE",
+   "inci_name": "Caprylic/Capric Triglyceride",
+   "display_name": "Caprylic/Capric Triglyceride",
+   "aliases": [
+    "trigliserida caprilik",
+    "mct oil",
+    "fractionated coconut oil"
+   ],
+   "functional_classes": [
+    "emollient"
+   ],
+   "phase_compatibility": [
+    "oil"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 20.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 1,
+   "notes": "",
+   "source_ids": [
+    "INGREF-015"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:CARBOMER",
+   "inci_name": "Carbomer",
+   "display_name": "Carbomer",
+   "aliases": [
+    "karbomer",
+    "carbopol"
+   ],
+   "functional_classes": [
+    "thickener_structure"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": true,
+   "concentration_range_pct_w_w": {
+    "min": 0.1,
+    "max": 1.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "butuh netralisasi (TEA/NaOH); pH akhir pengaruh actives",
+   "source_ids": [
+    "INGREF-016"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:CENTELLA_ASIATICA_EXTRACT",
+   "inci_name": "Centella Asiatica Extract",
+   "display_name": "Centella Asiatica Extract",
+   "aliases": [
+    "cica",
+    "gotu kola",
+    "pegagan",
+    "madecassoside"
+   ],
+   "functional_classes": [
+    "active"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 5.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-017"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:CERAMIDE_NP",
+   "inci_name": "Ceramide NP",
+   "display_name": "Ceramide NP",
+   "aliases": [
+    "seramida np",
+    "ceramide 3",
+    "sphingolipid"
+   ],
+   "functional_classes": [
+    "active"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.05,
+    "max": 1.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "perlu_review",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "fermentasi/sintetis biasanya aman; cek sertifikat",
+   "source_ids": [
+    "INGREF-018"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:CETEARETH_20",
+   "inci_name": "Ceteareth-20",
+   "display_name": "Ceteareth-20",
+   "aliases": [
+    "setearet-20"
+   ],
+   "functional_classes": [
+    "surfactant_emulsifier"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 5.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "perlu_review",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 1,
+   "notes": "",
+   "source_ids": [
+    "INGREF-019"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:CETEARYL_ALCOHOL",
+   "inci_name": "Cetearyl Alcohol",
+   "display_name": "Cetearyl Alcohol",
+   "aliases": [
+    "setearil alkohol",
+    "cetyl stearyl alcohol"
+   ],
+   "functional_classes": [
+    "surfactant_emulsifier",
+    "thickener_structure"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 8.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "perlu_review",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 2,
+   "notes": "fatty alcohol BUKAN alkohol terlarang",
+   "source_ids": [
+    "INGREF-020"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:CETYL_ALCOHOL",
+   "inci_name": "Cetyl Alcohol",
+   "display_name": "Cetyl Alcohol",
+   "aliases": [
+    "setil alkohol",
+    "cetylic alcohol"
+   ],
+   "functional_classes": [
+    "emollient",
+    "thickener_structure"
+   ],
+   "phase_compatibility": [
+    "oil"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 6.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "perlu_review",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 2,
+   "notes": "fatty alcohol BUKAN alkohol terlarang; status tergantung sumber (nabati = halal)",
+   "source_ids": [
+    "INGREF-021"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:COCAMIDOPROPYL_BETAINE",
+   "inci_name": "Cocamidopropyl Betaine",
+   "display_name": "Cocamidopropyl Betaine",
+   "aliases": [
+    "capb",
+    "kokamidopropil betaina"
+   ],
+   "functional_classes": [
+    "surfactant_emulsifier"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 15.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": true
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "alergen kontak (ACDS) - terutama impurity amidoamine",
+   "source_ids": [
+    "INGREF-022"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:COCO_GLUCOSIDE",
+   "inci_name": "Coco-Glucoside",
+   "display_name": "Coco-Glucoside",
+   "aliases": [
+    "kokoglukosida"
+   ],
+   "functional_classes": [
+    "surfactant_emulsifier"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 15.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-023"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:COCOS_NUCIFERA_OIL",
+   "inci_name": "Cocos Nucifera Oil",
+   "display_name": "Cocos Nucifera Oil",
+   "aliases": [
+    "coconut oil",
+    "minyak kelapa",
+    "vco"
+   ],
+   "functional_classes": [
+    "emollient"
+   ],
+   "phase_compatibility": [
+    "oil"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 20.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 4,
+   "notes": "",
+   "source_ids": [
+    "INGREF-024"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:CYCLOPENTASILOXANE",
+   "inci_name": "Cyclopentasiloxane",
+   "display_name": "Cyclopentasiloxane",
+   "aliases": [
+    "d5",
+    "siklopentasiloksan"
+   ],
+   "functional_classes": [
+    "emollient"
+   ],
+   "phase_compatibility": [
+    "oil"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 15.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "restricted",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 1,
+   "notes": "D5 dalam kajian EU (batas leave-on); cek regulasi terkini",
+   "source_ids": [
+    "INGREF-025"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:DECYL_GLUCOSIDE",
+   "inci_name": "Decyl Glucoside",
+   "display_name": "Decyl Glucoside",
+   "aliases": [
+    "desil glukosida"
+   ],
+   "functional_classes": [
+    "surfactant_emulsifier"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 15.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-026"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:DIMETHICONE",
+   "inci_name": "Dimethicone",
+   "display_name": "Dimethicone",
+   "aliases": [
+    "dimetikon",
+    "silikon ringan"
+   ],
+   "functional_classes": [
+    "emollient"
+   ],
+   "phase_compatibility": [
+    "oil"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 10.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 1,
+   "notes": "beri catatan positioning 'silikon-free' bila segmen premium natural",
+   "source_ids": [
+    "INGREF-027"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:DMDM_HYDANTOIN",
+   "inci_name": "DMDM Hydantoin",
+   "display_name": "DMDM Hydantoin",
+   "aliases": [
+    "dmdm hidantoin",
+    "formaldehyde donor"
+   ],
+   "functional_classes": [
+    "preservative"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.1,
+    "max": 0.5
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "restricted",
+    "allergen_labeling_required": true
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "formaldehyde releaser - deklarasi wajib; hindari utk positioning 'clean'",
+   "source_ids": [
+    "INGREF-028"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:ETHYLHEXYLGLYCERIN",
+   "inci_name": "Ethylhexylglycerin",
+   "display_name": "Ethylhexylglycerin",
+   "aliases": [
+    "ehg",
+    "etilheksilgliserin"
+   ],
+   "functional_classes": [
+    "preservative"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.1,
+    "max": 1.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-029"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:EUGENOL",
+   "inci_name": "Eugenol",
+   "display_name": "Eugenol",
+   "aliases": [
+    "yugenol",
+    "cengkeh"
+   ],
+   "functional_classes": [
+    "sensorial"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.01,
+    "max": 0.3
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "restricted",
+    "allergen_labeling_required": true
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "alergen wajib deklarasi + ada batas",
+   "source_ids": [
+    "INGREF-030"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:FRAGRANCE",
+   "inci_name": "Fragrance",
+   "display_name": "Fragrance",
+   "aliases": [
+    "parfum",
+    "fragrance oil",
+    "perfume",
+    "aroma"
+   ],
+   "functional_classes": [
+    "sensorial"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.1,
+    "max": 1.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "syubhat",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": true
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "komposisi tidak diungkap - status halal tergantung sertifikasi blend; deklarasi alergen wajib bila >0.001% (leave-on)",
+   "source_ids": [
+    "INGREF-031"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:GLYCERIN",
+   "inci_name": "Glycerin",
+   "display_name": "Glycerin",
+   "aliases": [
+    "gliserin",
+    "glycerine",
+    "gliseren"
+   ],
+   "functional_classes": [
+    "humectant"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 2.0,
+    "max": 10.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "perlu_review",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "default halal bila bersertifikat sumber nabati; minta sertifikat supplier",
+   "source_ids": [
+    "INGREF-032"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:GLYCERYL_STEARATE",
+   "inci_name": "Glyceryl Stearate",
+   "display_name": "Glyceryl Stearate",
+   "aliases": [
+    "glyceryl stearate se",
+    "gliseril stearat"
+   ],
+   "functional_classes": [
+    "surfactant_emulsifier",
+    "thickener_structure"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 6.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "perlu_review",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 1,
+   "notes": "status tergantung sumber glycerin (nabati/sintetis = aman)",
+   "source_ids": [
+    "INGREF-033"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:GLYCOLIC_ACID",
+   "inci_name": "Glycolic Acid",
+   "display_name": "Glycolic Acid",
+   "aliases": [
+    "aha",
+    "asam glikolat",
+    "glikolat"
+   ],
+   "functional_classes": [
+    "active"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 3.0,
+    "max": 10.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "restricted",
+    "allergen_labeling_required": true
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "wajib peringatan SPF; batas konsentrasi & pH berlaku",
+   "source_ids": [
+    "INGREF-034"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:GLYCYRRHIZA_GLABRA_ROOT_EXTRACT",
+   "inci_name": "Glycyrrhiza Glabra Root Extract",
+   "display_name": "Glycyrrhiza Glabra Root Extract",
+   "aliases": [
+    "licorice extract",
+    "akar manis",
+    "glabridin"
+   ],
+   "functional_classes": [
+    "active"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 5.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-035"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:HYDROXYETHYLCELLULOSE",
+   "inci_name": "Hydroxyethylcellulose",
+   "display_name": "Hydroxyethylcellulose",
+   "aliases": [
+    "hec",
+    "hidroksietil selulosa"
+   ],
+   "functional_classes": [
+    "thickener_structure"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.2,
+    "max": 2.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-036"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:ISOPROPYL_ALCOHOL",
+   "inci_name": "Isopropyl Alcohol",
+   "display_name": "Isopropyl Alcohol",
+   "aliases": [
+    "ipa",
+    "isopropil alkohol",
+    "alcohol isopropylicus"
+   ],
+   "functional_classes": [
+    "solvent_modifier"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 10.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "perlu_review",
+    "bpom_status": "restricted",
+    "allergen_labeling_required": true
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "terlalu keras utk skin care wajah - biasanya antiseptik/toner lama",
+   "source_ids": [
+    "INGREF-037"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:ISOPROPYL_MYRISTATE",
+   "inci_name": "Isopropyl Myristate",
+   "display_name": "Isopropyl Myristate",
+   "aliases": [
+    "ipm",
+    "isopropil miristat"
+   ],
+   "functional_classes": [
+    "emollient",
+    "solvent_modifier"
+   ],
+   "phase_compatibility": [
+    "oil"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 10.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 5,
+   "notes": "komedogenik tinggi - hindari untuk kulit berminyak/berjerawat",
+   "source_ids": [
+    "INGREF-038"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:KOJIC_ACID",
+   "inci_name": "Kojic Acid",
+   "display_name": "Kojic Acid",
+   "aliases": [
+    "kojic dipalmitate",
+    "asam kojat"
+   ],
+   "functional_classes": [
+    "active"
+   ],
+   "phase_compatibility": [
+    "oil",
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 2.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "restricted",
+    "allergen_labeling_required": true
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "potensi iritasi/kontak alergi; batas konsentrasi berlaku",
+   "source_ids": [
+    "INGREF-039"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:LACTIC_ACID",
+   "inci_name": "Lactic Acid",
+   "display_name": "Lactic Acid",
+   "aliases": [
+    "asam laktat",
+    "ala"
+   ],
+   "functional_classes": [
+    "active",
+    "humectant"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 3.0,
+    "max": 10.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "perlu_review",
+    "bpom_status": "restricted",
+    "allergen_labeling_required": true
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "turunan susu/sintetis - perlu verifikasi sumber utk status halal",
+   "source_ids": [
+    "INGREF-040"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:LANOLIN",
+   "inci_name": "Lanolin",
+   "display_name": "Lanolin",
+   "aliases": [
+    "lanolin alcohol",
+    "wool fat",
+    "adeps lanae"
+   ],
+   "functional_classes": [
+    "emollient"
+   ],
+   "phase_compatibility": [
+    "oil"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 10.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "syubhat",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": true
+   },
+   "comedogenic_rating_indicative": 1,
+   "notes": "asal hewan (wol) - WAJIB sertifikat halal; tanpa sertifikat = syubhat",
+   "source_ids": [
+    "INGREF-041"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:LIMONENE",
+   "inci_name": "Limonene",
+   "display_name": "Limonene",
+   "aliases": [
+    "d-limonene",
+    "limonen"
+   ],
+   "functional_classes": [
+    "sensorial"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.01,
+    "max": 0.5
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": true
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "26 alergen wajib deklarasi EU/BPOM; oksidasi = sensitizer kuat",
+   "source_ids": [
+    "INGREF-042"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:LINALOOL",
+   "inci_name": "Linalool",
+   "display_name": "Linalool",
+   "aliases": [
+    "linalul"
+   ],
+   "functional_classes": [
+    "sensorial"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.01,
+    "max": 0.5
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": true
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "26 alergen wajib deklarasi",
+   "source_ids": [
+    "INGREF-043"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:MANDELIC_ACID",
+   "inci_name": "Mandelic Acid",
+   "display_name": "Mandelic Acid",
+   "aliases": [
+    "asam mandelat"
+   ],
+   "functional_classes": [
+    "active"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 2.0,
+    "max": 10.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "restricted",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "AHA paling ringan - cocok kulit sensitif",
+   "source_ids": [
+    "INGREF-044"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:MENTHOL",
+   "inci_name": "Menthol",
+   "display_name": "Menthol",
+   "aliases": [
+    "mentol"
+   ],
+   "functional_classes": [
+    "sensorial"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.05,
+    "max": 1.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "restricted",
+    "allergen_labeling_required": true
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "sensitizing/irritasi mukosa; batas ketat utk wajah",
+   "source_ids": [
+    "INGREF-045"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:METHYLPARABEN",
+   "inci_name": "Methylparaben",
+   "display_name": "Methylparaben",
+   "aliases": [
+    "metyl paraben",
+    "paraben metil"
+   ],
+   "functional_classes": [
+    "preservative"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.1,
+    "max": 0.4
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "restricted",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "paraben single ester dibatasi; variasi persepsi konsumen 'paraben-free'",
+   "source_ids": [
+    "INGREF-046"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:MINERAL_OIL",
+   "inci_name": "Mineral Oil",
+   "display_name": "Mineral Oil",
+   "aliases": [
+    "paraffinum liquidum",
+    "minyak mineral",
+    "liquid paraffin"
+   ],
+   "functional_classes": [
+    "emollient"
+   ],
+   "phase_compatibility": [
+    "oil"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 15.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 2,
+   "notes": "refined pharmaceutical grade aman; namun persepsi komedogenik & kurang sejalan utk positioning premium/kulit berminyak",
+   "source_ids": [
+    "INGREF-047"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:NIACINAMIDE",
+   "inci_name": "Niacinamide",
+   "display_name": "Niacinamide",
+   "aliases": [
+    "nicotinamide",
+    "vitamin b3",
+    "niasinamida",
+    "niacinamida"
+   ],
+   "functional_classes": [
+    "active"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 2.0,
+    "max": 5.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-048"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:OLEA_EUROPAEA_OIL",
+   "inci_name": "Olea Europaea Oil",
+   "display_name": "Olea Europaea Oil",
+   "aliases": [
+    "olive oil",
+    "minyak zaitun"
+   ],
+   "functional_classes": [
+    "emollient"
+   ],
+   "phase_compatibility": [
+    "oil"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 20.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 2,
+   "notes": "",
+   "source_ids": [
+    "INGREF-049"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:PANTHENOL",
+   "inci_name": "Panthenol",
+   "display_name": "Panthenol",
+   "aliases": [
+    "pro-vitamin b5",
+    "pantenol",
+    "dexpanthenol"
+   ],
+   "functional_classes": [
+    "active",
+    "humectant"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 5.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-050"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:PEG_100_STEARATE",
+   "inci_name": "PEG-100 Stearate",
+   "display_name": "PEG-100 Stearate",
+   "aliases": [
+    "peg 100",
+    "peg-100 stearat"
+   ],
+   "functional_classes": [
+    "surfactant_emulsifier"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 5.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "perlu_review",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 1,
+   "notes": "turunan PEG - cek 1,4-dioxane trace & sumber",
+   "source_ids": [
+    "INGREF-051"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:PETROLATUM",
+   "inci_name": "Petrolatum",
+   "display_name": "Petrolatum",
+   "aliases": [
+    "vaseline",
+    "petrolat",
+    "soft paraffin"
+   ],
+   "functional_classes": [
+    "emollient"
+   ],
+   "phase_compatibility": [
+    "oil"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 20.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "restricted",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "BPOM menuntut jelas sumber refined; berat utk kulit berminyak",
+   "source_ids": [
+    "INGREF-052"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:PHENOXYETHANOL",
+   "inci_name": "Phenoxyethanol",
+   "display_name": "Phenoxyethanol",
+   "aliases": [
+    "fenoksietanol",
+    "phenoxy ethanol"
+   ],
+   "functional_classes": [
+    "preservative"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.3,
+    "max": 1.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "restricted",
+    "allergen_labeling_required": true
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "BPOM max 1% untuk kosmetik",
+   "source_ids": [
+    "INGREF-053"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:POLYSORBATE_20",
+   "inci_name": "Polysorbate 20",
+   "display_name": "Polysorbate 20",
+   "aliases": [
+    "tween 20",
+    "polisorbat 20"
+   ],
+   "functional_classes": [
+    "surfactant_emulsifier"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 5.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "perlu_review",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "turunan sorbitan (bisa asal lemak hewan/nabati) - cek sertifikat",
+   "source_ids": [
+    "INGREF-054"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:POLYSORBATE_80",
+   "inci_name": "Polysorbate 80",
+   "display_name": "Polysorbate 80",
+   "aliases": [
+    "tween 80",
+    "polisorbat 80"
+   ],
+   "functional_classes": [
+    "surfactant_emulsifier"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 5.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "perlu_review",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "turunan sorbitan (bisa asal lemak hewan/nabati) - cek sertifikat",
+   "source_ids": [
+    "INGREF-055"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:POTASSIUM_SORBATE",
+   "inci_name": "Potassium Sorbate",
+   "display_name": "Potassium Sorbate",
+   "aliases": [
+    "kalium sorbat",
+    "sorbik"
+   ],
+   "functional_classes": [
+    "preservative"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": true,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.05,
+    "max": 0.3
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-056"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:PROPYLENE_GLYCOL",
+   "inci_name": "Propylene Glycol",
+   "display_name": "Propylene Glycol",
+   "aliases": [
+    "pg",
+    "propilen glikol"
+   ],
+   "functional_classes": [
+    "humectant",
+    "solvent_modifier"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 10.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "perlu_review",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": true
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "sensitisasi kontak jarang tapi tercatat; umumnya sintetis/nabati",
+   "source_ids": [
+    "INGREF-057"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:PROPYLPARABEN",
+   "inci_name": "Propylparaben",
+   "display_name": "Propylparaben",
+   "aliases": [
+    "propil paraben"
+   ],
+   "functional_classes": [
+    "preservative"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.05,
+    "max": 0.14
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "restricted",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "BPOM membatasi kombinasi ester paraben (total 0.8%, single 0.4%)",
+   "source_ids": [
+    "INGREF-058"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:RETINOL",
+   "inci_name": "Retinol",
+   "display_name": "Retinol",
+   "aliases": [
+    "vitamin a",
+    "retinol solution"
+   ],
+   "functional_classes": [
+    "active"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.01,
+    "max": 0.3
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "restricted",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "BPOM membatasi retinoid pada kosmetik; wajib peringatan penggunaan malam + SPF",
+   "source_ids": [
+    "INGREF-059"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:SALICYLIC_ACID",
+   "inci_name": "Salicylic Acid",
+   "display_name": "Salicylic Acid",
+   "aliases": [
+    "bha",
+    "asam salisilat",
+    "salisilat"
+   ],
+   "functional_classes": [
+    "active"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 2.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "restricted",
+    "allergen_labeling_required": true
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "BPOM membatasi konsentrasi kosmetik; hindari pengguna hamil dalam jumlah besar",
+   "source_ids": [
+    "INGREF-060"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:SIMMONDSIA_CHINENSIS_SEED_OIL",
+   "inci_name": "Simmondsia Chinensis Seed Oil",
+   "display_name": "Simmondsia Chinensis Seed Oil",
+   "aliases": [
+    "jojoba oil",
+    "minyak jojoba"
+   ],
+   "functional_classes": [
+    "emollient"
+   ],
+   "phase_compatibility": [
+    "oil"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 10.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 2,
+   "notes": "",
+   "source_ids": [
+    "INGREF-061"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:SODIUM_ASCORBYL_PHOSPHATE",
+   "inci_name": "Sodium Ascorbyl Phosphate",
+   "display_name": "Sodium Ascorbyl Phosphate",
+   "aliases": [
+    "sap",
+    "sodium ascorbil phosphate",
+    "vitamin c turunan"
+   ],
+   "functional_classes": [
+    "active"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": true,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 5.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "alternatif L-AA yang stabil di pH lebih tinggi; kompatibel niacinamide",
+   "source_ids": [
+    "INGREF-062"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:SODIUM_BENZOATE",
+   "inci_name": "Sodium Benzoate",
+   "display_name": "Sodium Benzoate",
+   "aliases": [
+    "natrium benzoat",
+    "bensonoat"
+   ],
+   "functional_classes": [
+    "preservative"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": true,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.2,
+    "max": 0.5
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "efektif di pH <5; hati-hati kombinasi ascorbic acid (benzene formation) - risiko rendah utk leave-on",
+   "source_ids": [
+    "INGREF-063"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:SODIUM_COCOYL_ISETHIONATE",
+   "inci_name": "Sodium Cocoyl Isethionate",
+   "display_name": "Sodium Cocoyl Isethionate",
+   "aliases": [
+    "sci",
+    "sodium kokoyl isetionat"
+   ],
+   "functional_classes": [
+    "surfactant_emulsifier"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": true,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 20.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-064"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:SODIUM_HYALURONATE",
+   "inci_name": "Sodium Hyaluronate",
+   "display_name": "Sodium Hyaluronate",
+   "aliases": [
+    "hyaluronic acid",
+    "ha",
+    "sodium hialuronat",
+    "hialuronat"
+   ],
+   "functional_classes": [
+    "active",
+    "humectant"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": true,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.1,
+    "max": 2.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-065"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:SODIUM_LAURETH_SULFATE",
+   "inci_name": "Sodium Laureth Sulfate",
+   "display_name": "Sodium Laureth Sulfate",
+   "aliases": [
+    "sles",
+    "sodium lauret sulfat"
+   ],
+   "functional_classes": [
+    "surfactant_emulsifier"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": true,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 15.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "lebih ringan dari SLS; cek 1,4-dioxane trace",
+   "source_ids": [
+    "INGREF-066"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:SODIUM_LAURYL_SULFATE",
+   "inci_name": "Sodium Lauryl Sulfate",
+   "display_name": "Sodium Lauryl Sulfate",
+   "aliases": [
+    "sls",
+    "sodium dodesil sulfat"
+   ],
+   "functional_classes": [
+    "surfactant_emulsifier"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": true,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 15.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "restricted",
+    "allergen_labeling_required": true
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "iritasi mukosa; hindari utk skin care wajah sensitif",
+   "source_ids": [
+    "INGREF-067"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:SORBITAN_OLIVATE",
+   "inci_name": "Sorbitan Olivate",
+   "display_name": "Sorbitan Olivate",
+   "aliases": [
+    "olivem",
+    "olive emulsifier"
+   ],
+   "functional_classes": [
+    "surfactant_emulsifier"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 4.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-068"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:SORBITOL",
+   "inci_name": "Sorbitol",
+   "display_name": "Sorbitol",
+   "aliases": [
+    "d-sorbitol"
+   ],
+   "functional_classes": [
+    "humectant"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 5.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-069"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:SQUALANE",
+   "inci_name": "Squalane",
+   "display_name": "Squalane",
+   "aliases": [
+    "skualan",
+    "olive squalane",
+    "sugarcane squalane"
+   ],
+   "functional_classes": [
+    "active",
+    "emollient"
+   ],
+   "phase_compatibility": [
+    "oil"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 10.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 1,
+   "notes": "emolien premium; verifikasi sumber nabati (olive/sugarcane)",
+   "source_ids": [
+    "INGREF-070"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:STEARIC_ACID",
+   "inci_name": "Stearic Acid",
+   "display_name": "Stearic Acid",
+   "aliases": [
+    "asam stearat",
+    "triple pressed stearin"
+   ],
+   "functional_classes": [
+    "surfactant_emulsifier",
+    "thickener_structure"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 8.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "perlu_review",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 2,
+   "notes": "sumber tallow/nabati - cek sertifikat",
+   "source_ids": [
+    "INGREF-071"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:STEARYL_ALCOHOL",
+   "inci_name": "Stearyl Alcohol",
+   "display_name": "Stearyl Alcohol",
+   "aliases": [
+    "stearyl alkohol"
+   ],
+   "functional_classes": [
+    "thickener_structure"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 6.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "perlu_review",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 2,
+   "notes": "fatty alcohol BUKAN alkohol terlarang; status tergantung sumber",
+   "source_ids": [
+    "INGREF-072"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:THEOBROMA_CACAO_BUTTER",
+   "inci_name": "Theobroma Cacao Butter",
+   "display_name": "Theobroma Cacao Butter",
+   "aliases": [
+    "cocoa butter",
+    "kakao butter"
+   ],
+   "functional_classes": [
+    "emollient"
+   ],
+   "phase_compatibility": [
+    "oil"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 15.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 4,
+   "notes": "",
+   "source_ids": [
+    "INGREF-073"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:TITANIUM_DIOXIDE",
+   "inci_name": "Titanium Dioxide",
+   "display_name": "Titanium Dioxide",
+   "aliases": [
+    "tio2",
+    "titanium dioksida",
+    "ci 77891"
+   ],
+   "functional_classes": [
+    "uv_filter"
+   ],
+   "phase_compatibility": [
+    "oil",
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 2.0,
+    "max": 25.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "nano-form: aturan deklarasi terpisah",
+   "source_ids": [
+    "INGREF-074"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:TOCOPHEROL",
+   "inci_name": "Tocopherol",
+   "display_name": "Tocopherol",
+   "aliases": [
+    "vitamin e",
+    "tokoferol",
+    "mixed tocopherols"
+   ],
+   "functional_classes": [
+    "active",
+    "emollient"
+   ],
+   "phase_compatibility": [
+    "oil"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.1,
+    "max": 1.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "perlu_review",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 2,
+   "notes": "umumnya sumber kedelai/sunflower - cek sertifikat",
+   "source_ids": [
+    "INGREF-075"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:TRANEXAMIC_ACID",
+   "inci_name": "Tranexamic Acid",
+   "display_name": "Tranexamic Acid",
+   "aliases": [
+    "txa",
+    "tranexamat"
+   ],
+   "functional_classes": [
+    "active"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.5,
+    "max": 3.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-076"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:UREA",
+   "inci_name": "Urea",
+   "display_name": "Urea",
+   "aliases": [
+    "karbamid"
+   ],
+   "functional_classes": [
+    "humectant"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 1.0,
+    "max": 10.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-077"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:XANTHAN_GUM",
+   "inci_name": "Xanthan Gum",
+   "display_name": "Xanthan Gum",
+   "aliases": [
+    "gom xanthan",
+    "zantan"
+   ],
+   "functional_classes": [
+    "thickener_structure"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": false,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.1,
+    "max": 1.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-078"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:ZINC_OXIDE",
+   "inci_name": "Zinc Oxide",
+   "display_name": "Zinc Oxide",
+   "aliases": [
+    "seng oksida",
+    "zno"
+   ],
+   "functional_classes": [
+    "active",
+    "uv_filter"
+   ],
+   "phase_compatibility": [
+    "oil",
+    "water"
+   ],
+   "is_electrolyte": true,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 2.0,
+    "max": 25.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "whitening cast pada shade gelap - relevan utk positioning",
+   "source_ids": [
+    "INGREF-079"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  },
+  {
+   "ingredient_id": "ING:ZINC_PCA",
+   "inci_name": "Zinc PCA",
+   "display_name": "Zinc PCA",
+   "aliases": [
+    "seng pca",
+    "zinc pidolate"
+   ],
+   "functional_classes": [
+    "active"
+   ],
+   "phase_compatibility": [
+    "water"
+   ],
+   "is_electrolyte": true,
+   "electrolyte_sensitive_thickener": false,
+   "concentration_range_pct_w_w": {
+    "min": 0.2,
+    "max": 2.0
+   },
+   "regulatory_prototype": {
+    "halal_mui_status": "halal",
+    "bpom_status": "diizinkan",
+    "allergen_labeling_required": false
+   },
+   "comedogenic_rating_indicative": 0,
+   "notes": "",
+   "source_ids": [
+    "INGREF-080"
+   ],
+   "provenance": {
+    "data_origin": "synthetic_demo",
+    "curated_from": "kb_bahan.json v1.0-demo",
+    "scientific_validation_status": "not_validated_for_production"
+   }
+  }
+ ]
+}

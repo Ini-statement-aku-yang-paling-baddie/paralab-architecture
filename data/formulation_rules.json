@@ -1,0 +1,2411 @@
+{
+ "meta": {
+  "rule_version": "2026.09",
+  "generated_at": "2026-09-17",
+  "disclaimer": "Data ilustratif prototipe hackathon - pendekatan data publik, BUKAN daftar resmi MUI/BPOM/CosIng. Wajib verifikasi ulang sebelum dipakai untuk keputusan nyata.",
+  "provenance": {
+   "data_origin": "synthetic_demo",
+   "curated_from": "kb_bahan.json v1.0-demo"
+  }
+ },
+ "count": 165,
+ "rules": [
+  {
+   "rule_id": "COMPAT-001",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "blocked",
+   "applies_if_pair": [
+    "ING:NIACINAMIDE",
+    "ING:ASCORBIC_ACID"
+   ],
+   "interaction_status": "konflik",
+   "rationale": "pH kerja berbeda; risiko degradasi & flush saat digabung tanpa stabilisasi",
+   "source_id": "RULESRC-001",
+   "requires_human_review": false,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-002",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "info",
+   "applies_if_pair": [
+    "ING:NIACINAMIDE",
+    "ING:ZINC_PCA"
+   ],
+   "interaction_status": "sinergetik",
+   "rationale": "oil control saling memperkuat",
+   "source_id": "RULESRC-002",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-003",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "info",
+   "applies_if_pair": [
+    "ING:NIACINAMIDE",
+    "ING:PANTHENOL"
+   ],
+   "interaction_status": "sinergetik",
+   "rationale": "soothing menutup potensi iritasi aktif",
+   "source_id": "RULESRC-003",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-004",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "blocked",
+   "applies_if_pair": [
+    "ING:RETINOL",
+    "ING:BENZOYL_PEROXIDE"
+   ],
+   "interaction_status": "konflik",
+   "rationale": "BPO mengoksidasi & menonaktifkan retinol",
+   "source_id": "RULESRC-004",
+   "requires_human_review": false,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-005",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "warning",
+   "applies_if_pair": [
+    "ING:RETINOL",
+    "ING:GLYCOLIC_ACID"
+   ],
+   "interaction_status": "hati_hati",
+   "rationale": "stacking eksfoliasi+retinoid = risiko iritasi tinggi",
+   "source_id": "RULESRC-005",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-006",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "warning",
+   "applies_if_pair": [
+    "ING:RETINOL",
+    "ING:SALICYLIC_ACID"
+   ],
+   "interaction_status": "hati_hati",
+   "rationale": "risiko iritasi kumulatif",
+   "source_id": "RULESRC-006",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-007",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "warning",
+   "applies_if_pair": [
+    "ING:RETINOL",
+    "ING:ALCOHOL_DENAT"
+   ],
+   "interaction_status": "hati_hati",
+   "rationale": "meningkatkan dryness/iritasi",
+   "source_id": "RULESRC-007",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-008",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "blocked",
+   "applies_if_pair": [
+    "ING:ASCORBIC_ACID",
+    "ING:NIACINAMIDE"
+   ],
+   "interaction_status": "konflik",
+   "rationale": "pH kerja berbeda; risiko degradasi & flush saat digabung tanpa stabilisasi",
+   "source_id": "RULESRC-008",
+   "requires_human_review": false,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-009",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "warning",
+   "applies_if_pair": [
+    "ING:ASCORBIC_ACID",
+    "ING:RETINOL"
+   ],
+   "interaction_status": "hati_hati",
+   "rationale": "pH berbeda + risiko iritasi",
+   "source_id": "RULESRC-009",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-010",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "info",
+   "applies_if_pair": [
+    "ING:ASCORBIC_ACID",
+    "ING:TOCOPHEROL"
+   ],
+   "interaction_status": "sinergetik",
+   "rationale": "vitamin C+E saling regenerasi sebagai antioksidan",
+   "source_id": "RULESRC-010",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-011",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "info",
+   "applies_if_pair": [
+    "ING:ALPHA_ARBUTIN",
+    "ING:NIACINAMIDE"
+   ],
+   "interaction_status": "sinergetik",
+   "rationale": "jalur brightening berbeda, saling mendukung",
+   "source_id": "RULESRC-011",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-012",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "warning",
+   "applies_if_pair": [
+    "ING:SALICYLIC_ACID",
+    "ING:RETINOL"
+   ],
+   "interaction_status": "hati_hati",
+   "rationale": "risiko iritasi kumulatif",
+   "source_id": "RULESRC-012",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-013",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "warning",
+   "applies_if_pair": [
+    "ING:SALICYLIC_ACID",
+    "ING:GLYCOLIC_ACID"
+   ],
+   "interaction_status": "hati_hati",
+   "rationale": "over-exfoliation bila ditumpuk",
+   "source_id": "RULESRC-013",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-014",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "info",
+   "applies_if_pair": [
+    "ING:SALICYLIC_ACID",
+    "ING:ZINC_PCA"
+   ],
+   "interaction_status": "sinergetik",
+   "rationale": "anti-acne saling memperkuat",
+   "source_id": "RULESRC-014",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-015",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "warning",
+   "applies_if_pair": [
+    "ING:GLYCOLIC_ACID",
+    "ING:RETINOL"
+   ],
+   "interaction_status": "hati_hati",
+   "rationale": "stacking eksfoliasi+retinoid = risiko iritasi tinggi",
+   "source_id": "RULESRC-015",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-016",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "warning",
+   "applies_if_pair": [
+    "ING:GLYCOLIC_ACID",
+    "ING:LACTIC_ACID"
+   ],
+   "interaction_status": "hati_hati",
+   "rationale": "over-exfoliation",
+   "source_id": "RULESRC-016",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-017",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "warning",
+   "applies_if_pair": [
+    "ING:LACTIC_ACID",
+    "ING:GLYCOLIC_ACID"
+   ],
+   "interaction_status": "hati_hati",
+   "rationale": "over-exfoliation",
+   "source_id": "RULESRC-017",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-018",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "blocked",
+   "applies_if_pair": [
+    "ING:BENZOYL_PEROXIDE",
+    "ING:RETINOL"
+   ],
+   "interaction_status": "konflik",
+   "rationale": "BPO mengoksidasi & menonaktifkan retinol",
+   "source_id": "RULESRC-018",
+   "requires_human_review": false,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-019",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "info",
+   "applies_if_pair": [
+    "ING:GLYCERIN",
+    "ING:SODIUM_HYALURONATE"
+   ],
+   "interaction_status": "sinergetik",
+   "rationale": "humektan berlapis - menarik & menahan air",
+   "source_id": "RULESRC-019",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-020",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "info",
+   "applies_if_pair": [
+    "ING:SODIUM_HYALURONATE",
+    "ING:GLYCERIN"
+   ],
+   "interaction_status": "sinergetik",
+   "rationale": "humektan berlapis",
+   "source_id": "RULESRC-020",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-021",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "info",
+   "applies_if_pair": [
+    "ING:SODIUM_HYALURONATE",
+    "ING:PANTHENOL"
+   ],
+   "interaction_status": "sinergetik",
+   "rationale": "hidrasi + soothing",
+   "source_id": "RULESRC-021",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-022",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "info",
+   "applies_if_pair": [
+    "ING:PANTHENOL",
+    "ING:NIACINAMIDE"
+   ],
+   "interaction_status": "sinergetik",
+   "rationale": "soothing menutup potensi iritasi aktif",
+   "source_id": "RULESRC-022",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-023",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "warning",
+   "applies_if_pair": [
+    "ING:MINERAL_OIL",
+    "ING:SQUALANE"
+   ],
+   "interaction_status": "hati_hati",
+   "rationale": "fungsi tumpang tindih - substitusi vs retensi perlu keputusan positioning",
+   "source_id": "RULESRC-023",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-024",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "info",
+   "applies_if_pair": [
+    "ING:ZINC_PCA",
+    "ING:NIACINAMIDE"
+   ],
+   "interaction_status": "sinergetik",
+   "rationale": "oil control saling memperkuat",
+   "source_id": "RULESRC-024",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-025",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "info",
+   "applies_if_pair": [
+    "ING:ZINC_PCA",
+    "ING:SALICYLIC_ACID"
+   ],
+   "interaction_status": "sinergetik",
+   "rationale": "anti-acne saling memperkuat",
+   "source_id": "RULESRC-025",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-026",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "info",
+   "applies_if_pair": [
+    "ING:TOCOPHEROL",
+    "ING:ASCORBIC_ACID"
+   ],
+   "interaction_status": "sinergetik",
+   "rationale": "vitamin C+E saling regenerasi sebagai antioksidan",
+   "source_id": "RULESRC-026",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-027",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "warning",
+   "applies_if_pair": [
+    "ING:MENTHOL",
+    "ING:FRAGRANCE"
+   ],
+   "interaction_status": "hati_hati",
+   "rationale": "potensi sensitisasi kumulatif",
+   "source_id": "RULESRC-027",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-028",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "warning",
+   "applies_if_pair": [
+    "ING:ALCOHOL_DENAT",
+    "ING:RETINOL"
+   ],
+   "interaction_status": "hati_hati",
+   "rationale": "meningkatkan dryness/iritasi",
+   "source_id": "RULESRC-028",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_id": "COMPAT-029",
+   "rule_version": "2026.09",
+   "rule_type": "ingredient_compatibility",
+   "severity": "warning",
+   "applies_if_pair": [
+    "ING:ALCOHOL_DENAT",
+    "ING:NIACINAMIDE"
+   ],
+   "interaction_status": "hati_hati",
+   "rationale": "solven tinggi alkohol menurunkan kestabilan dispersi",
+   "source_id": "RULESRC-029",
+   "requires_human_review": true,
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   }
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:ADAPALENE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "REG-030",
+   "rule_type": "regulatory_limit",
+   "severity": "blocked",
+   "condition": "bpom_status == \"khusus_obat\"",
+   "rationale": "tergolong bahan obat, bukan kosmetik",
+   "source_id": "RULESRC-030",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:ADAPALENE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-031",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.1 or > 0.1",
+   "rationale": "rentang umum 0.1-0.1%",
+   "source_id": "RULESRC-031",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:ALCOHOL_DENAT",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "HAL-032",
+   "rule_type": "halal_screening",
+   "severity": "warning",
+   "condition": "halal_mui_status == \"syubhat\"",
+   "rationale": "alkohol terlarang/syubhat utk halal - WAJIB review; drying & iritasi utk kulit kering/sensitif",
+   "source_id": "RULESRC-032",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:ALCOHOL_DENAT",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "REG-033",
+   "rule_type": "regulatory_limit",
+   "severity": "warning",
+   "condition": "bpom_status == \"restricted\"",
+   "rationale": "alkohol terlarang/syubhat utk halal - WAJIB review; drying & iritasi utk kulit kering/sensitif",
+   "source_id": "RULESRC-033",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:ALCOHOL_DENAT",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "ALG-034",
+   "rule_type": "allergen_labeling",
+   "severity": "warning",
+   "condition": "allergen_labeling_required == true",
+   "rationale": "wajib deklarasi alergen pada label",
+   "source_id": "RULESRC-034",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:ALCOHOL_DENAT",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-035",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 15.0",
+   "rationale": "rentang umum 1.0-15.0%",
+   "source_id": "RULESRC-035",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:ALLANTOIN",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-036",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.2 or > 2.0",
+   "rationale": "rentang umum 0.2-2.0%",
+   "source_id": "RULESRC-036",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:ALPHA_ARBUTIN",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-037",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 2.0",
+   "rationale": "rentang umum 0.5-2.0%",
+   "source_id": "RULESRC-037",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:ARGANIA_SPINOSA_KERNEL_OIL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-038",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 10.0",
+   "rationale": "rentang umum 1.0-10.0%",
+   "source_id": "RULESRC-038",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:ASCORBIC_ACID",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-039",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 5.0 or > 20.0",
+   "rationale": "rentang umum 5.0-20.0%",
+   "source_id": "RULESRC-039",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:AZELAIC_ACID",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "REG-040",
+   "rule_type": "regulatory_limit",
+   "severity": "blocked",
+   "condition": "bpom_status == \"khusus_obat\"",
+   "rationale": "tergolong bahan obat, bukan kosmetik",
+   "source_id": "RULESRC-040",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:AZELAIC_ACID",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-041",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 10.0",
+   "rationale": "rentang umum 1.0-10.0%",
+   "source_id": "RULESRC-041",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:BENZOYL_PEROXIDE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "REG-042",
+   "rule_type": "regulatory_limit",
+   "severity": "blocked",
+   "condition": "bpom_status == \"khusus_obat\"",
+   "rationale": "tergolong bahan obat, bukan kosmetik",
+   "source_id": "RULESRC-042",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:BENZOYL_PEROXIDE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "ALG-043",
+   "rule_type": "allergen_labeling",
+   "severity": "warning",
+   "condition": "allergen_labeling_required == true",
+   "rationale": "wajib deklarasi alergen pada label",
+   "source_id": "RULESRC-043",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:BENZOYL_PEROXIDE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-044",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 2.5 or > 5.0",
+   "rationale": "rentang umum 2.5-5.0%",
+   "source_id": "RULESRC-044",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:BETAINE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-045",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 5.0",
+   "rationale": "rentang umum 0.5-5.0%",
+   "source_id": "RULESRC-045",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:BISABOLOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-046",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.2 or > 1.0",
+   "rationale": "rentang umum 0.2-1.0%",
+   "source_id": "RULESRC-046",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:BUTYLENE_GLYCOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-047",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 10.0",
+   "rationale": "rentang umum 1.0-10.0%",
+   "source_id": "RULESRC-047",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:BUTYROSPERMUM_PARKII_BUTTER",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-048",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 15.0",
+   "rationale": "rentang umum 1.0-15.0%",
+   "source_id": "RULESRC-048",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:CAFFEINE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-049",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 3.0",
+   "rationale": "rentang umum 0.5-3.0%",
+   "source_id": "RULESRC-049",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:CAMELLIA_SINENSIS_LEAF_EXTRACT",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-050",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 5.0",
+   "rationale": "rentang umum 0.5-5.0%",
+   "source_id": "RULESRC-050",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:CAPRYLIC_CAPRIC_TRIGLYCERIDE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-051",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 20.0",
+   "rationale": "rentang umum 1.0-20.0%",
+   "source_id": "RULESRC-051",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:CARBOMER",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-052",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.1 or > 1.0",
+   "rationale": "rentang umum 0.1-1.0%",
+   "source_id": "RULESRC-052",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:CENTELLA_ASIATICA_EXTRACT",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-053",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 5.0",
+   "rationale": "rentang umum 0.5-5.0%",
+   "source_id": "RULESRC-053",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:CERAMIDE_NP",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "HAL-054",
+   "rule_type": "halal_screening",
+   "severity": "warning",
+   "condition": "halal_mui_status == \"perlu_review\"",
+   "rationale": "fermentasi/sintetis biasanya aman; cek sertifikat",
+   "source_id": "RULESRC-054",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:CERAMIDE_NP",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-055",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.05 or > 1.0",
+   "rationale": "rentang umum 0.05-1.0%",
+   "source_id": "RULESRC-055",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:CETEARETH_20",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "HAL-056",
+   "rule_type": "halal_screening",
+   "severity": "warning",
+   "condition": "halal_mui_status == \"perlu_review\"",
+   "rationale": "status halal: perlu_review",
+   "source_id": "RULESRC-056",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:CETEARETH_20",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-057",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 5.0",
+   "rationale": "rentang umum 0.5-5.0%",
+   "source_id": "RULESRC-057",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:CETEARYL_ALCOHOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "HAL-058",
+   "rule_type": "halal_screening",
+   "severity": "warning",
+   "condition": "halal_mui_status == \"perlu_review\"",
+   "rationale": "fatty alcohol BUKAN alkohol terlarang",
+   "source_id": "RULESRC-058",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:CETEARYL_ALCOHOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-059",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 8.0",
+   "rationale": "rentang umum 1.0-8.0%",
+   "source_id": "RULESRC-059",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:CETYL_ALCOHOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "HAL-060",
+   "rule_type": "halal_screening",
+   "severity": "warning",
+   "condition": "halal_mui_status == \"perlu_review\"",
+   "rationale": "fatty alcohol BUKAN alkohol terlarang; status tergantung sumber (nabati = halal)",
+   "source_id": "RULESRC-060",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:CETYL_ALCOHOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-061",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 6.0",
+   "rationale": "rentang umum 0.5-6.0%",
+   "source_id": "RULESRC-061",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:COCAMIDOPROPYL_BETAINE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "ALG-062",
+   "rule_type": "allergen_labeling",
+   "severity": "warning",
+   "condition": "allergen_labeling_required == true",
+   "rationale": "wajib deklarasi alergen pada label",
+   "source_id": "RULESRC-062",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:COCAMIDOPROPYL_BETAINE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-063",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 15.0",
+   "rationale": "rentang umum 1.0-15.0%",
+   "source_id": "RULESRC-063",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:COCO_GLUCOSIDE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-064",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 15.0",
+   "rationale": "rentang umum 1.0-15.0%",
+   "source_id": "RULESRC-064",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:COCOS_NUCIFERA_OIL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-065",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 20.0",
+   "rationale": "rentang umum 1.0-20.0%",
+   "source_id": "RULESRC-065",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:CYCLOPENTASILOXANE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "REG-066",
+   "rule_type": "regulatory_limit",
+   "severity": "warning",
+   "condition": "bpom_status == \"restricted\"",
+   "rationale": "D5 dalam kajian EU (batas leave-on); cek regulasi terkini",
+   "source_id": "RULESRC-066",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:CYCLOPENTASILOXANE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-067",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 15.0",
+   "rationale": "rentang umum 0.5-15.0%",
+   "source_id": "RULESRC-067",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:DECYL_GLUCOSIDE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-068",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 15.0",
+   "rationale": "rentang umum 1.0-15.0%",
+   "source_id": "RULESRC-068",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:DIMETHICONE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-069",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 10.0",
+   "rationale": "rentang umum 0.5-10.0%",
+   "source_id": "RULESRC-069",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:DMDM_HYDANTOIN",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "REG-070",
+   "rule_type": "regulatory_limit",
+   "severity": "warning",
+   "condition": "bpom_status == \"restricted\"",
+   "rationale": "formaldehyde releaser - deklarasi wajib; hindari utk positioning 'clean'",
+   "source_id": "RULESRC-070",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:DMDM_HYDANTOIN",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "ALG-071",
+   "rule_type": "allergen_labeling",
+   "severity": "warning",
+   "condition": "allergen_labeling_required == true",
+   "rationale": "wajib deklarasi alergen pada label",
+   "source_id": "RULESRC-071",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:DMDM_HYDANTOIN",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-072",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.1 or > 0.5",
+   "rationale": "rentang umum 0.1-0.5%",
+   "source_id": "RULESRC-072",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:ETHYLHEXYLGLYCERIN",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-073",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.1 or > 1.0",
+   "rationale": "rentang umum 0.1-1.0%",
+   "source_id": "RULESRC-073",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:EUGENOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "REG-074",
+   "rule_type": "regulatory_limit",
+   "severity": "warning",
+   "condition": "bpom_status == \"restricted\"",
+   "rationale": "alergen wajib deklarasi + ada batas",
+   "source_id": "RULESRC-074",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:EUGENOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "ALG-075",
+   "rule_type": "allergen_labeling",
+   "severity": "warning",
+   "condition": "allergen_labeling_required == true",
+   "rationale": "wajib deklarasi alergen pada label",
+   "source_id": "RULESRC-075",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:EUGENOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-076",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.01 or > 0.3",
+   "rationale": "rentang umum 0.01-0.3%",
+   "source_id": "RULESRC-076",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:FRAGRANCE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "HAL-077",
+   "rule_type": "halal_screening",
+   "severity": "warning",
+   "condition": "halal_mui_status == \"syubhat\"",
+   "rationale": "komposisi tidak diungkap - status halal tergantung sertifikasi blend; deklarasi alergen wajib bila >0.001% (leave-on)",
+   "source_id": "RULESRC-077",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:FRAGRANCE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "ALG-078",
+   "rule_type": "allergen_labeling",
+   "severity": "warning",
+   "condition": "allergen_labeling_required == true",
+   "rationale": "wajib deklarasi alergen pada label",
+   "source_id": "RULESRC-078",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:FRAGRANCE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-079",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.1 or > 1.0",
+   "rationale": "rentang umum 0.1-1.0%",
+   "source_id": "RULESRC-079",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:GLYCERIN",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "HAL-080",
+   "rule_type": "halal_screening",
+   "severity": "warning",
+   "condition": "halal_mui_status == \"perlu_review\"",
+   "rationale": "default halal bila bersertifikat sumber nabati; minta sertifikat supplier",
+   "source_id": "RULESRC-080",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:GLYCERIN",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-081",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 2.0 or > 10.0",
+   "rationale": "rentang umum 2.0-10.0%",
+   "source_id": "RULESRC-081",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:GLYCERYL_STEARATE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "HAL-082",
+   "rule_type": "halal_screening",
+   "severity": "warning",
+   "condition": "halal_mui_status == \"perlu_review\"",
+   "rationale": "status tergantung sumber glycerin (nabati/sintetis = aman)",
+   "source_id": "RULESRC-082",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:GLYCERYL_STEARATE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-083",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 6.0",
+   "rationale": "rentang umum 1.0-6.0%",
+   "source_id": "RULESRC-083",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:GLYCOLIC_ACID",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "REG-084",
+   "rule_type": "regulatory_limit",
+   "severity": "warning",
+   "condition": "bpom_status == \"restricted\"",
+   "rationale": "wajib peringatan SPF; batas konsentrasi & pH berlaku",
+   "source_id": "RULESRC-084",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:GLYCOLIC_ACID",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "ALG-085",
+   "rule_type": "allergen_labeling",
+   "severity": "warning",
+   "condition": "allergen_labeling_required == true",
+   "rationale": "wajib deklarasi alergen pada label",
+   "source_id": "RULESRC-085",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:GLYCOLIC_ACID",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-086",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 3.0 or > 10.0",
+   "rationale": "rentang umum 3.0-10.0%",
+   "source_id": "RULESRC-086",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:GLYCYRRHIZA_GLABRA_ROOT_EXTRACT",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-087",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 5.0",
+   "rationale": "rentang umum 0.5-5.0%",
+   "source_id": "RULESRC-087",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:HYDROXYETHYLCELLULOSE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-088",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.2 or > 2.0",
+   "rationale": "rentang umum 0.2-2.0%",
+   "source_id": "RULESRC-088",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:ISOPROPYL_ALCOHOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "HAL-089",
+   "rule_type": "halal_screening",
+   "severity": "warning",
+   "condition": "halal_mui_status == \"perlu_review\"",
+   "rationale": "terlalu keras utk skin care wajah - biasanya antiseptik/toner lama",
+   "source_id": "RULESRC-089",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:ISOPROPYL_ALCOHOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "REG-090",
+   "rule_type": "regulatory_limit",
+   "severity": "warning",
+   "condition": "bpom_status == \"restricted\"",
+   "rationale": "terlalu keras utk skin care wajah - biasanya antiseptik/toner lama",
+   "source_id": "RULESRC-090",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:ISOPROPYL_ALCOHOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "ALG-091",
+   "rule_type": "allergen_labeling",
+   "severity": "warning",
+   "condition": "allergen_labeling_required == true",
+   "rationale": "wajib deklarasi alergen pada label",
+   "source_id": "RULESRC-091",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:ISOPROPYL_ALCOHOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-092",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 10.0",
+   "rationale": "rentang umum 1.0-10.0%",
+   "source_id": "RULESRC-092",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:ISOPROPYL_MYRISTATE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-093",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 10.0",
+   "rationale": "rentang umum 0.5-10.0%",
+   "source_id": "RULESRC-093",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:KOJIC_ACID",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "REG-094",
+   "rule_type": "regulatory_limit",
+   "severity": "warning",
+   "condition": "bpom_status == \"restricted\"",
+   "rationale": "potensi iritasi/kontak alergi; batas konsentrasi berlaku",
+   "source_id": "RULESRC-094",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:KOJIC_ACID",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "ALG-095",
+   "rule_type": "allergen_labeling",
+   "severity": "warning",
+   "condition": "allergen_labeling_required == true",
+   "rationale": "wajib deklarasi alergen pada label",
+   "source_id": "RULESRC-095",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:KOJIC_ACID",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-096",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 2.0",
+   "rationale": "rentang umum 0.5-2.0%",
+   "source_id": "RULESRC-096",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:LACTIC_ACID",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "HAL-097",
+   "rule_type": "halal_screening",
+   "severity": "warning",
+   "condition": "halal_mui_status == \"perlu_review\"",
+   "rationale": "turunan susu/sintetis - perlu verifikasi sumber utk status halal",
+   "source_id": "RULESRC-097",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:LACTIC_ACID",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "REG-098",
+   "rule_type": "regulatory_limit",
+   "severity": "warning",
+   "condition": "bpom_status == \"restricted\"",
+   "rationale": "turunan susu/sintetis - perlu verifikasi sumber utk status halal",
+   "source_id": "RULESRC-098",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:LACTIC_ACID",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "ALG-099",
+   "rule_type": "allergen_labeling",
+   "severity": "warning",
+   "condition": "allergen_labeling_required == true",
+   "rationale": "wajib deklarasi alergen pada label",
+   "source_id": "RULESRC-099",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:LACTIC_ACID",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-100",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 3.0 or > 10.0",
+   "rationale": "rentang umum 3.0-10.0%",
+   "source_id": "RULESRC-100",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:LANOLIN",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "HAL-101",
+   "rule_type": "halal_screening",
+   "severity": "warning",
+   "condition": "halal_mui_status == \"syubhat\"",
+   "rationale": "asal hewan (wol) - WAJIB sertifikat halal; tanpa sertifikat = syubhat",
+   "source_id": "RULESRC-101",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:LANOLIN",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "ALG-102",
+   "rule_type": "allergen_labeling",
+   "severity": "warning",
+   "condition": "allergen_labeling_required == true",
+   "rationale": "wajib deklarasi alergen pada label",
+   "source_id": "RULESRC-102",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:LANOLIN",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-103",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 10.0",
+   "rationale": "rentang umum 0.5-10.0%",
+   "source_id": "RULESRC-103",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:LIMONENE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "ALG-104",
+   "rule_type": "allergen_labeling",
+   "severity": "warning",
+   "condition": "allergen_labeling_required == true",
+   "rationale": "wajib deklarasi alergen pada label",
+   "source_id": "RULESRC-104",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:LIMONENE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-105",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.01 or > 0.5",
+   "rationale": "rentang umum 0.01-0.5%",
+   "source_id": "RULESRC-105",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:LINALOOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "ALG-106",
+   "rule_type": "allergen_labeling",
+   "severity": "warning",
+   "condition": "allergen_labeling_required == true",
+   "rationale": "wajib deklarasi alergen pada label",
+   "source_id": "RULESRC-106",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:LINALOOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-107",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.01 or > 0.5",
+   "rationale": "rentang umum 0.01-0.5%",
+   "source_id": "RULESRC-107",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:MANDELIC_ACID",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "REG-108",
+   "rule_type": "regulatory_limit",
+   "severity": "warning",
+   "condition": "bpom_status == \"restricted\"",
+   "rationale": "AHA paling ringan - cocok kulit sensitif",
+   "source_id": "RULESRC-108",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:MANDELIC_ACID",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-109",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 2.0 or > 10.0",
+   "rationale": "rentang umum 2.0-10.0%",
+   "source_id": "RULESRC-109",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:MENTHOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "REG-110",
+   "rule_type": "regulatory_limit",
+   "severity": "warning",
+   "condition": "bpom_status == \"restricted\"",
+   "rationale": "sensitizing/irritasi mukosa; batas ketat utk wajah",
+   "source_id": "RULESRC-110",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:MENTHOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "ALG-111",
+   "rule_type": "allergen_labeling",
+   "severity": "warning",
+   "condition": "allergen_labeling_required == true",
+   "rationale": "wajib deklarasi alergen pada label",
+   "source_id": "RULESRC-111",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:MENTHOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-112",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.05 or > 1.0",
+   "rationale": "rentang umum 0.05-1.0%",
+   "source_id": "RULESRC-112",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:METHYLPARABEN",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "REG-113",
+   "rule_type": "regulatory_limit",
+   "severity": "warning",
+   "condition": "bpom_status == \"restricted\"",
+   "rationale": "paraben single ester dibatasi; variasi persepsi konsumen 'paraben-free'",
+   "source_id": "RULESRC-113",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:METHYLPARABEN",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-114",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.1 or > 0.4",
+   "rationale": "rentang umum 0.1-0.4%",
+   "source_id": "RULESRC-114",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:MINERAL_OIL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-115",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 15.0",
+   "rationale": "rentang umum 1.0-15.0%",
+   "source_id": "RULESRC-115",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:NIACINAMIDE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-116",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 2.0 or > 5.0",
+   "rationale": "rentang umum 2.0-5.0%",
+   "source_id": "RULESRC-116",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:OLEA_EUROPAEA_OIL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-117",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 20.0",
+   "rationale": "rentang umum 1.0-20.0%",
+   "source_id": "RULESRC-117",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:PANTHENOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-118",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 5.0",
+   "rationale": "rentang umum 0.5-5.0%",
+   "source_id": "RULESRC-118",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:PEG_100_STEARATE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "HAL-119",
+   "rule_type": "halal_screening",
+   "severity": "warning",
+   "condition": "halal_mui_status == \"perlu_review\"",
+   "rationale": "turunan PEG - cek 1,4-dioxane trace & sumber",
+   "source_id": "RULESRC-119",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:PEG_100_STEARATE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-120",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 5.0",
+   "rationale": "rentang umum 0.5-5.0%",
+   "source_id": "RULESRC-120",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:PETROLATUM",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "REG-121",
+   "rule_type": "regulatory_limit",
+   "severity": "warning",
+   "condition": "bpom_status == \"restricted\"",
+   "rationale": "BPOM menuntut jelas sumber refined; berat utk kulit berminyak",
+   "source_id": "RULESRC-121",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:PETROLATUM",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-122",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 20.0",
+   "rationale": "rentang umum 1.0-20.0%",
+   "source_id": "RULESRC-122",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:PHENOXYETHANOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "REG-123",
+   "rule_type": "regulatory_limit",
+   "severity": "warning",
+   "condition": "bpom_status == \"restricted\"",
+   "rationale": "BPOM max 1% untuk kosmetik",
+   "source_id": "RULESRC-123",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:PHENOXYETHANOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "ALG-124",
+   "rule_type": "allergen_labeling",
+   "severity": "warning",
+   "condition": "allergen_labeling_required == true",
+   "rationale": "wajib deklarasi alergen pada label",
+   "source_id": "RULESRC-124",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:PHENOXYETHANOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-125",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.3 or > 1.0",
+   "rationale": "rentang umum 0.3-1.0%",
+   "source_id": "RULESRC-125",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:POLYSORBATE_20",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "HAL-126",
+   "rule_type": "halal_screening",
+   "severity": "warning",
+   "condition": "halal_mui_status == \"perlu_review\"",
+   "rationale": "turunan sorbitan (bisa asal lemak hewan/nabati) - cek sertifikat",
+   "source_id": "RULESRC-126",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:POLYSORBATE_20",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-127",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 5.0",
+   "rationale": "rentang umum 0.5-5.0%",
+   "source_id": "RULESRC-127",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:POLYSORBATE_80",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "HAL-128",
+   "rule_type": "halal_screening",
+   "severity": "warning",
+   "condition": "halal_mui_status == \"perlu_review\"",
+   "rationale": "turunan sorbitan (bisa asal lemak hewan/nabati) - cek sertifikat",
+   "source_id": "RULESRC-128",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:POLYSORBATE_80",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-129",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 5.0",
+   "rationale": "rentang umum 0.5-5.0%",
+   "source_id": "RULESRC-129",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:POTASSIUM_SORBATE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-130",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.05 or > 0.3",
+   "rationale": "rentang umum 0.05-0.3%",
+   "source_id": "RULESRC-130",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:PROPYLENE_GLYCOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "HAL-131",
+   "rule_type": "halal_screening",
+   "severity": "warning",
+   "condition": "halal_mui_status == \"perlu_review\"",
+   "rationale": "sensitisasi kontak jarang tapi tercatat; umumnya sintetis/nabati",
+   "source_id": "RULESRC-131",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:PROPYLENE_GLYCOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "ALG-132",
+   "rule_type": "allergen_labeling",
+   "severity": "warning",
+   "condition": "allergen_labeling_required == true",
+   "rationale": "wajib deklarasi alergen pada label",
+   "source_id": "RULESRC-132",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:PROPYLENE_GLYCOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-133",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 10.0",
+   "rationale": "rentang umum 1.0-10.0%",
+   "source_id": "RULESRC-133",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:PROPYLPARABEN",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "REG-134",
+   "rule_type": "regulatory_limit",
+   "severity": "warning",
+   "condition": "bpom_status == \"restricted\"",
+   "rationale": "BPOM membatasi kombinasi ester paraben (total 0.8%, single 0.4%)",
+   "source_id": "RULESRC-134",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:PROPYLPARABEN",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-135",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.05 or > 0.14",
+   "rationale": "rentang umum 0.05-0.14%",
+   "source_id": "RULESRC-135",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:RETINOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "REG-136",
+   "rule_type": "regulatory_limit",
+   "severity": "warning",
+   "condition": "bpom_status == \"restricted\"",
+   "rationale": "BPOM membatasi retinoid pada kosmetik; wajib peringatan penggunaan malam + SPF",
+   "source_id": "RULESRC-136",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:RETINOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-137",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.01 or > 0.3",
+   "rationale": "rentang umum 0.01-0.3%",
+   "source_id": "RULESRC-137",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:SALICYLIC_ACID",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "REG-138",
+   "rule_type": "regulatory_limit",
+   "severity": "warning",
+   "condition": "bpom_status == \"restricted\"",
+   "rationale": "BPOM membatasi konsentrasi kosmetik; hindari pengguna hamil dalam jumlah besar",
+   "source_id": "RULESRC-138",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:SALICYLIC_ACID",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "ALG-139",
+   "rule_type": "allergen_labeling",
+   "severity": "warning",
+   "condition": "allergen_labeling_required == true",
+   "rationale": "wajib deklarasi alergen pada label",
+   "source_id": "RULESRC-139",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:SALICYLIC_ACID",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-140",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 2.0",
+   "rationale": "rentang umum 0.5-2.0%",
+   "source_id": "RULESRC-140",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:SIMMONDSIA_CHINENSIS_SEED_OIL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-141",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 10.0",
+   "rationale": "rentang umum 1.0-10.0%",
+   "source_id": "RULESRC-141",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:SODIUM_ASCORBYL_PHOSPHATE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-142",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 5.0",
+   "rationale": "rentang umum 1.0-5.0%",
+   "source_id": "RULESRC-142",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:SODIUM_BENZOATE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-143",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.2 or > 0.5",
+   "rationale": "rentang umum 0.2-0.5%",
+   "source_id": "RULESRC-143",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:SODIUM_COCOYL_ISETHIONATE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-144",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 20.0",
+   "rationale": "rentang umum 1.0-20.0%",
+   "source_id": "RULESRC-144",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:SODIUM_HYALURONATE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-145",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.1 or > 2.0",
+   "rationale": "rentang umum 0.1-2.0%",
+   "source_id": "RULESRC-145",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:SODIUM_LAURETH_SULFATE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-146",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 15.0",
+   "rationale": "rentang umum 0.5-15.0%",
+   "source_id": "RULESRC-146",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:SODIUM_LAURYL_SULFATE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "REG-147",
+   "rule_type": "regulatory_limit",
+   "severity": "warning",
+   "condition": "bpom_status == \"restricted\"",
+   "rationale": "iritasi mukosa; hindari utk skin care wajah sensitif",
+   "source_id": "RULESRC-147",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:SODIUM_LAURYL_SULFATE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "ALG-148",
+   "rule_type": "allergen_labeling",
+   "severity": "warning",
+   "condition": "allergen_labeling_required == true",
+   "rationale": "wajib deklarasi alergen pada label",
+   "source_id": "RULESRC-148",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:SODIUM_LAURYL_SULFATE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-149",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 15.0",
+   "rationale": "rentang umum 0.5-15.0%",
+   "source_id": "RULESRC-149",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:SORBITAN_OLIVATE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-150",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 4.0",
+   "rationale": "rentang umum 0.5-4.0%",
+   "source_id": "RULESRC-150",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:SORBITOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-151",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 5.0",
+   "rationale": "rentang umum 0.5-5.0%",
+   "source_id": "RULESRC-151",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:SQUALANE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-152",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 10.0",
+   "rationale": "rentang umum 1.0-10.0%",
+   "source_id": "RULESRC-152",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:STEARIC_ACID",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "HAL-153",
+   "rule_type": "halal_screening",
+   "severity": "warning",
+   "condition": "halal_mui_status == \"perlu_review\"",
+   "rationale": "sumber tallow/nabati - cek sertifikat",
+   "source_id": "RULESRC-153",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:STEARIC_ACID",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-154",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 8.0",
+   "rationale": "rentang umum 1.0-8.0%",
+   "source_id": "RULESRC-154",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:STEARYL_ALCOHOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "HAL-155",
+   "rule_type": "halal_screening",
+   "severity": "warning",
+   "condition": "halal_mui_status == \"perlu_review\"",
+   "rationale": "fatty alcohol BUKAN alkohol terlarang; status tergantung sumber",
+   "source_id": "RULESRC-155",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:STEARYL_ALCOHOL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-156",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 6.0",
+   "rationale": "rentang umum 0.5-6.0%",
+   "source_id": "RULESRC-156",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:THEOBROMA_CACAO_BUTTER",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-157",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 15.0",
+   "rationale": "rentang umum 1.0-15.0%",
+   "source_id": "RULESRC-157",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:TITANIUM_DIOXIDE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-158",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 2.0 or > 25.0",
+   "rationale": "rentang umum 2.0-25.0%",
+   "source_id": "RULESRC-158",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:TOCOPHEROL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "HAL-159",
+   "rule_type": "halal_screening",
+   "severity": "warning",
+   "condition": "halal_mui_status == \"perlu_review\"",
+   "rationale": "umumnya sumber kedelai/sunflower - cek sertifikat",
+   "source_id": "RULESRC-159",
+   "requires_human_review": true
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:TOCOPHEROL",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-160",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.1 or > 1.0",
+   "rationale": "rentang umum 0.1-1.0%",
+   "source_id": "RULESRC-160",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:TRANEXAMIC_ACID",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-161",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.5 or > 3.0",
+   "rationale": "rentang umum 0.5-3.0%",
+   "source_id": "RULESRC-161",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:UREA",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-162",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 1.0 or > 10.0",
+   "rationale": "rentang umum 1.0-10.0%",
+   "source_id": "RULESRC-162",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:XANTHAN_GUM",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-163",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.1 or > 1.0",
+   "rationale": "rentang umum 0.1-1.0%",
+   "source_id": "RULESRC-163",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:ZINC_OXIDE",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-164",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 2.0 or > 25.0",
+   "rationale": "rentang umum 2.0-25.0%",
+   "source_id": "RULESRC-164",
+   "requires_human_review": false
+  },
+  {
+   "rule_version": "2026.09",
+   "applies_to": "ING:ZINC_PCA",
+   "provenance": {
+    "data_origin": "synthetic_demo"
+   },
+   "rule_id": "CONC-165",
+   "rule_type": "concentration_range",
+   "severity": "warning",
+   "condition": "concentration_pct_w_w < 0.2 or > 2.0",
+   "rationale": "rentang umum 0.2-2.0%",
+   "source_id": "RULESRC-165",
+   "requires_human_review": false
+  }
+ ]
+}
