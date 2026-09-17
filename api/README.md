@@ -23,6 +23,7 @@ Buka dokumentasi interaktif di `http://127.0.0.1:8000/docs`.
 |---|---|
 | `GET /health` | Memastikan artifact dapat dimuat dan menyatakan provenance model/CV. |
 | `POST /v1/f3/forecasts` | Menjalankan F2, feature engineering F3, lalu forecast atau abstain. |
+| `POST /v1/f4/next-validation` | Mengubah output F2/F3 terstruktur menjadi satu langkah validasi/review berikutnya yang wajib direview manusia. |
 
 Client mengirim formula, kondisi proses, dan checkpoint domain. Client **tidak** mengirim feature vector F3 internal.
 

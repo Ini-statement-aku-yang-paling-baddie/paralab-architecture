@@ -83,6 +83,24 @@ class ApiContractTests(unittest.TestCase):
         self.assertFalse(body["early_pass_issued"])
         self.assertTrue(body["requires_human_review"])
 
+    def test_f4_endpoint_returns_a_reviewable_validation_step(self):
+        response = self.client.post("/v1/f4/next-validation", json={
+            "f3_forecast": {
+                "decision": "flag_high_risk",
+                "risk_band": "high",
+                "confidence": "high",
+                "data_origin": "synthetic_demo",
+                "f2_screening": {"derived_features": {}},
+            }
+        })
+
+        self.assertEqual(response.status_code, 200)
+        body = response.json()
+        self.assertEqual(body["recommendation_type"], "next_validation_step")
+        self.assertEqual(body["priority"], "high")
+        self.assertIn("f3_high_risk", body["reason_codes"])
+        self.assertTrue(body["requires_human_review"])
+
 
 if __name__ == "__main__":
     unittest.main()
