@@ -1,3 +1,18 @@
+---
+title: ParaLab F3 API
+emoji: 🧪
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
+<!-- Blok YAML di atas adalah metadata Hugging Face Spaces (SDK Docker, port
+     7860), dibaca hanya saat repository ini di-push ke remote Space. GitHub
+     merendernya sebagai teks biasa dan mengabaikan artinya. Jangan dihapus —
+     lihat docs/deploy/huggingface_spaces.md. -->
+
 # ParaLab
 
 ParaLab adalah prototipe local-first untuk membantu riset formulasi **moisturizer gel-cream oil-in-water bagi kulit berminyak**. Sistem menggabungkan pencarian evidence, guardrail formulasi deterministik, structured logging, dan deteksi dini risiko stabilitas.

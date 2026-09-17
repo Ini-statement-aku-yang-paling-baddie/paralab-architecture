@@ -35,6 +35,12 @@ Folder ini memisahkan dokumentasi aktif dari materi historis. Pembaca baru cukup
 | [f3_early_detection_study.md](reports/f3_early_detection_study.md) | Audit generator F3, literatur, evaluasi, dan pivot klaim |
 | [cv_pilot_report.md](reports/cv_pilot_report.md) | Kronologi run CV, bug model, hasil, dan batas integrasi |
 
+### Deployment
+
+| Dokumen | Isi |
+|---|---|
+| [huggingface_spaces.md](deploy/huggingface_spaces.md) | Deploy API F3 sebagai Docker Space gratis di Hugging Face |
+
 ## Arsip
 
 `archive/` berisi versi arsitektur terdahulu, ide awal, dan catatan riset mentah. File tersebut dipertahankan untuk jejak keputusan, tetapi bukan rujukan implementasi saat ini.

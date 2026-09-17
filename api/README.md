@@ -35,3 +35,7 @@ Client mengirim formula, kondisi proses, dan checkpoint domain. Client **tidak**
 | `PARALAB_CORS_ORIGINS` | Origin frontend yang diizinkan, dipisahkan koma. Set eksplisit di environment deploy. |
 
 Artefak hanya boleh dimuat dari build ParaLab yang dipercaya. `model_manifest.json` memverifikasi SHA-256 model, feature schema, threshold, provenance synthetic, dan status CV.
+
+## Deploy sebagai container
+
+`Dockerfile` di root repository membungkus API ini untuk platform seperti Hugging Face Spaces, memakai `requirements/serve.txt` yang versinya dipatok persis ke `model_manifest.json`. Panduan lengkap: [`docs/deploy/huggingface_spaces.md`](../docs/deploy/huggingface_spaces.md).

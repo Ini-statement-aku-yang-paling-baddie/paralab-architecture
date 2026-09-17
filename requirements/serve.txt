@@ -1,0 +1,17 @@
+# Dependency untuk image deploy (Dockerfile), bukan untuk training lokal.
+#
+# Semua versi di sini DIPATOK PERSIS ke apa yang tercatat di
+# modules/f3_stability_sentinel/outputs/1/model_manifest.json ("runtime")
+# dan yang sudah terbukti jalan di .venv-f3 lokal. Perbedaan versi
+# pandas/scikit-learn/joblib membuat validate_runtime() menolak memuat model
+# dan GET /health mengembalikan 503.
+#
+# Jangan naikkan versi di sini sendirian. Kalau perlu upgrade, latih ulang
+# model dengan requirements/f3_stability_sentinel.txt yang sudah diperbarui,
+# lalu salin versi runtime yang baru ke sini.
+fastapi==0.115.12
+uvicorn[standard]==0.53.0
+httpx==0.28.1
+pandas==3.0.5
+scikit-learn==1.9.1
+joblib==1.6.0

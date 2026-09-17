@@ -1,0 +1,30 @@
+# Lingkungan lokal, jangan pernah masuk build context.
+.git
+.venv/
+.venv-f3/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+sentence-transformer/
+
+# Materi yang tidak dibutuhkan adaptor API saat runtime.
+notebooks/
+docs/
+resources/
+sources/
+tests/
+cv/
+
+# Subset data yang tidak dibaca modules/f2_guardrail.py saat runtime.
+# ingredient_master.json dan formulation_rules.json (langsung di data/)
+# TIDAK termasuk pola di bawah, jadi tetap ikut build context.
+data/full_synthetic/
+data/training/
+data/open_sources/
+data/legacy_sources/
+data/labeling/
+data/public_observed/
+data/raw/
+data/canonical/
+data/derived/
+data/*.jsonl
