@@ -150,6 +150,16 @@ class PilotTests(unittest.TestCase):
             self.assertNotEqual(subprocess.run(check, capture_output=True).returncode, 0)
         self.assertEqual(originals, {name: m.sha(ROOT / name) for name in originals})
 
+    def test_pilot_manifest_ignores_independent_integrated_outputs(self):
+        m = api()
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "pilot"
+            m.build(out)
+            extra = out / "full_synthetic" / "metrics.json"
+            extra.parent.mkdir(parents=True)
+            extra.write_text("{}\n")
+            self.assertEqual(m.validate_directory(out), [])
+
     def test_validator_enforces_component_schema_and_provenance(self):
         m = api()
         good = m.generate()

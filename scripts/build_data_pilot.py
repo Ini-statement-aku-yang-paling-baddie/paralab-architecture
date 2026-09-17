@@ -429,7 +429,7 @@ def build(output, seed=17):
     if originals != {name: sha(ROOT / name) for name in ORIGINALS}:
         raise ValueError('Sumber asli berubah selama build')
     # Output integrasi lain adalah pipeline mandiri; tidak boleh mengubah manifest pilot sintetis.
-    excluded_roots = {'public_observed', 'training', 'open_sources'}
+    excluded_roots = {'public_observed', 'training', 'open_sources', 'full_synthetic'}
     files = {str(p.relative_to(output)): sha(p) for p in sorted(output.rglob('*'))
              if p.is_file() and p.name != 'sha256_manifest.json' and p.relative_to(output).parts[0] not in excluded_roots}
     dump(previous, {'algorithm': 'sha256', 'originals': originals, 'files': files})
@@ -448,7 +448,7 @@ def validate_directory(output):
         d, r = read_rows('canonical', TABLES), read_rows('derived', DERIVED)
         errors = validate_derived(d, r)
         manifest = json.loads((output / 'sha256_manifest.json').read_text())
-        excluded_roots = {'public_observed', 'training', 'open_sources'}
+        excluded_roots = {'public_observed', 'training', 'open_sources', 'full_synthetic'}
         actual = {str(p.relative_to(output)): sha(p) for p in sorted(output.rglob('*'))
                   if p.is_file() and p.name != 'sha256_manifest.json' and p.relative_to(output).parts[0] not in excluded_roots}
         if manifest['files'] != actual:

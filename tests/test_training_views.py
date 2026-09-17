@@ -27,9 +27,20 @@ class TrainingViewsTests(unittest.TestCase):
             forecast = [json.loads(x) for x in (out / "f3_forecast_train.jsonl").read_text().splitlines()]
             evidence = [json.loads(x) for x in (out / "f1_evidence_catalog.jsonl").read_text().splitlines()]
             report = json.loads((out / "training_report.json").read_text())
+            train_rows = [json.loads(x) for x in (out / "f3_train.jsonl").read_text().splitlines()]
+            validation_rows = [json.loads(x) for x in (out / "f3_validation.jsonl").read_text().splitlines()]
+            test_rows = [json.loads(x) for x in (out / "f3_test.jsonl").read_text().splitlines()]
+            self.assertEqual({x["split"] for x in train_rows}, {"train"})
+            self.assertEqual({x["split"] for x in validation_rows}, {"validation"})
+            self.assertEqual({x["split"] for x in test_rows}, {"test"})
+            self.assertEqual(len(train_rows) + len(validation_rows) + len(test_rows), len(forecast))
             self.assertTrue(forecast)
             self.assertEqual({x["data_origin"] for x in forecast}, {"synthetic_demo"})
+            self.assertEqual(len(forecast), 515)
             self.assertIn("observed_public", {x["data_origin"] for x in evidence})
+            self.assertEqual(report["f1"]["synthetic_demo_documents"], 420)
+            self.assertEqual(report["f1"]["observed_public_documents"], 15)
+            self.assertEqual(report["f3"]["synthetic_demo_rows_included"], 515)
             self.assertEqual(report["f3"]["public_observed_rows_included"], 0)
             self.assertEqual(m.validate_directory(out), [])
 

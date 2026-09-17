@@ -1,0 +1,19 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "canonical/checkpoints.jsonl": "9e4b4bc837b2e0a9d38c8059ce9c26c91929eb8d95d4f4db88bf7ccbea71a832",
+    "canonical/formulas.jsonl": "508ff619f7472de44f0952b4d434525efb3c5066a67ffcea1269b4d7ee340407",
+    "canonical/observation_series.jsonl": "73cf433ca33036338803128f624bf74eb27645635b77246660641c38d68ee203",
+    "canonical/outcomes.jsonl": "fff31505416ade530c1b78f4d55b02ac6e021c834418533b903adb78f3179fa1",
+    "canonical/projects.jsonl": "68dcfad7c846b50ae0a3a0af4e7da069ee8c788cffd02751432695bac941de4a",
+    "canonical/trials.jsonl": "55abd8ebbeb5fdc86f13e472b794421bfa58f74fef910edf9c36f0e720199bb5",
+    "derived/f1_train_corpus.jsonl": "592fc75d51c1e221960c9dc18850f1ef4167e1d9a17663702b47a145d1b4d183",
+    "derived/f5_examples.jsonl": "6f8f512be86015aa91a9a0eddaf1325e266e98095641e693e4b34f75abc2a1b2",
+    "derived/forecast_excluded.jsonl": "bf06b2282a53645fd657ae973e4c82539026f2c15ddfc3d96aa4e814f14d8820",
+    "derived/forecast_features.jsonl": "99498b7fc47e35dee5066fea0478100ca7fffd63447944e15269faaffd95dd30",
+    "derived/forecast_labels.jsonl": "8f65fcf5cd0115acff05c8f41a2b353f2cffdbc90c1bed9089dd7905530bc669",
+    "derived/journal_documents.jsonl": "44f0a01c608ffa3143099c9037c83276a8fd7f1be5ed94e37be18534c435d3c8",
+    "generation_contract.json": "587640b537751b09452d562c02a549b1cbf448e2769a6177a705447520084b1a",
+    "metrics.json": "1a75167010c7091b0c855fcf5a3563ce8ac6e48ecd18710d8db4dc72246ef799"
+  }
+}

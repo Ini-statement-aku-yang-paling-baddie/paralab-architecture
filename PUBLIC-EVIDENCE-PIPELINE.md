@@ -43,6 +43,7 @@ Jalankan dari root repository:
 
 ```bash
 python3 scripts/build_data_pilot.py build
+python3 scripts/build_full_dataset.py build
 python3 scripts/ingest_open_sources.py fetch-build
 python3 scripts/build_public_evidence.py build
 python3 scripts/build_training_views.py build
@@ -50,11 +51,12 @@ python3 scripts/build_training_views.py build
 
 `build_training_views.py` membangun view konsumsi bersama secara otomatis:
 
-- `data/training/f1_evidence_catalog.jsonl`: 15 dokumen evidence publik bersitasi ditambah 32 dokumen demo train.
-- `data/training/f3_forecast_train.jsonl`: feature/label yang memang eligible saja.
+- `data/training/f1_evidence_catalog.jsonl`: 15 dokumen evidence publik bersitasi ditambah 420 dokumen demo train.
+- `data/training/f3_forecast_train.jsonl`: seluruh 515 pasangan feature/label yang eligible, tetap membawa field split.
+- `data/training/f3_train.jsonl`, `f3_validation.jsonl`, dan `f3_test.jsonl`: view partition siap konsumsi model tanpa random row split ulang.
 - `data/training/training_report.json`: hitungan dan kebijakan inclusion/exclusion.
 
-Saat ini F3 berisi **19** row `synthetic_demo` dan **0** row publik. Ini disengaja dan benar: 15 record paper adalah snapshot cross-sectional proxy, tidak punya observasi hingga landmark minggu ke-4 atau outcome minggu ke-12. Mereka dicatat di `data/public_observed/f3_excluded_candidates.jsonl`, bukan dibuang atau dipalsukan menjadi label.
+Saat ini F3 berisi **515** row `synthetic_demo` dan **0** row publik. Dari 600 trajectory penuh, 85 scenario `borderline` dikeluarkan dari supervised binary forecast karena outcome-nya uncertain. Ini disengaja dan benar: 15 record paper adalah snapshot cross-sectional proxy, tidak punya observasi hingga landmark minggu ke-4 atau outcome minggu ke-12. Mereka dicatat di `data/public_observed/f3_excluded_candidates.jsonl`, bukan dibuang atau dipalsukan menjadi label.
 
 Ketika paper/dataset baru benar-benar mempunyai formula atau process, checkpoint sebelum/hingga minggu ke-4, outcome sesudahnya hingga minggu ke-12, dan unit split sumber/paper yang jelas, tambahkan adapter baru dengan `f3: eligible`. Builder train/test harus split berdasarkan **source/paper group**, bukan mengacak formulasi dari paper yang sama ke train dan test.
 

@@ -1,0 +1,36 @@
+{
+  "disclaimer": "Semua trajectory adalah simulasi seeded, bukan hasil laboratorium atau resep yang layak diracik.",
+  "scenarios": [
+    "stable",
+    "early_viscosity_drop",
+    "delayed_phase_separation",
+    "ph_drift",
+    "electrolyte_thickener_failure",
+    "process_parameter_failure",
+    "borderline"
+  ],
+  "seed": 2026,
+  "split_counts": {
+    "test_projects": 30,
+    "train_projects": 140,
+    "validation_projects": 30
+  },
+  "split_unit": "formula_family; two projects per family",
+  "target": {
+    "checkpoints": 4200,
+    "checkpoints_per_trial": 7,
+    "projects": 200,
+    "trials": 600,
+    "trials_per_project": 3
+  },
+  "version": "full-synthetic-v1",
+  "weeks": [
+    0,
+    1,
+    2,
+    4,
+    6,
+    8,
+    12
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "canonical_counts": {
+    "checkpoints": 4200,
+    "formulas": 600,
+    "observation_series": 600,
+    "outcomes": 600,
+    "projects": 200,
+    "trials": 600
+  },
+  "dataset_version": "full-synthetic-v1",
+  "derived_counts": {
+    "f1_train_corpus": 420,
+    "f5_examples": 4200,
+    "forecast_excluded": 85,
+    "forecast_features": 515,
+    "forecast_labels": 515,
+    "journal_documents": 600
+  },
+  "forecast_labels": {
+    "test:0": 26,
+    "test:1": 51,
+    "train:0": 122,
+    "train:1": 238,
+    "validation:0": 26,
+    "validation:1": 52
+  },
+  "ml_training_executed": false,
+  "outcome_counts": {
+    "failed": 341,
+    "passed": 174,
+    "uncertain": 85
+  },
+  "project_splits": {
+    "test": 30,
+    "train": 140,
+    "validation": 30
+  },
+  "scenario_counts": {
+    "borderline": 85,
+    "delayed_phase_separation": 86,
+    "early_viscosity_drop": 86,
+    "electrolyte_thickener_failure": 86,
+    "ph_drift": 86,
+    "process_parameter_failure": 85,
+    "stable": 86
+  },
+  "scope": "synthetic_demo_not_lab_validation",
+  "validation_errors": []
+}

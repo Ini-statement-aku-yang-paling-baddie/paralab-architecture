@@ -824,10 +824,10 @@ Synthetic demo data boleh memakai external teacher API hanya jika tidak memiliki
 
 ### Core data
 
-- [ ] 200 project, 600 trial, dan 4.200 checkpoint record tergenerate.
-- [ ] Semua numeric value berasal dari seeded trajectory generator.
-- [ ] Setiap synthetic record diberi provenance label.
-- [ ] Train/validation/test split dilakukan berdasarkan trial family.
+- [x] 200 project, 600 trial, dan 4.200 checkpoint record tergenerate.
+- [x] Semua numeric value berasal dari seeded trajectory generator.
+- [x] Setiap synthetic record diberi provenance label.
+- [x] Train/validation/test split dilakukan berdasarkan trial family.
 
 ### F1
 
