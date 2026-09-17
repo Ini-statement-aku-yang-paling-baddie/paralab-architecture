@@ -1,0 +1,20 @@
+{
+  "model_name": "TinyVialCNN",
+  "dataset_version": "procedural-cv-v3",
+  "data_origin": "synthetic_demo",
+  "scientific_validation_status": "not_validated_for_production",
+  "split_unit": "sample_sequence_id; stratified by visual label",
+  "labels": [
+    "stable_uniform",
+    "creaming",
+    "phase_separation",
+    "heterogeneous"
+  ],
+  "best_epoch": 1,
+  "test_accuracy": 0.2604166666666667,
+  "limitations": [
+    "Model dilatih hanya pada render procedural synthetic FormuLab.",
+    "Metric ini tidak membuktikan performa pada foto sampel kosmetik nyata.",
+    "Output hanya synthetic-demo visual screening dan tidak menggantikan stability test atau review formulator."
+  ]
+}

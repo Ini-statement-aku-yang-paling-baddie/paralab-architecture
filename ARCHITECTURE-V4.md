@@ -647,23 +647,81 @@ F5 tidak boleh menulis langsung ke F3. F5 memperbarui checkpoint kanonis setelah
 
 ---
 
-## 11. Lampiran Gambar F3, Bukan CV Prediction
+## 11. F_CV: Visual Screening sebagai Asisten Capture untuk F3
 
-F3 tetap menerima gambar sebagai evidence yang ditempel pada stability checkpoint.
+### 11.1 Peran
+
+F_CV bukan classifier yang menghasilkan keputusan final. Perannya mempercepat capture checkpoint visual: peneliti memfoto sampel, model mengusulkan label appearance beserta confidence, peneliti mengonfirmasi atau mengoreksi sebelum data masuk journal kanonis. F_CV tidak pernah menulis langsung ke checkpoint atau ke F3 — pola ini identik dengan F5 (§10), modalitas berbeda (foto, bukan suara).
+
+### 11.2 Pipeline
 
 ```text
-Upload gambar
-  → image quality check
-  → object storage
-  → attach ke checkpoint timeline
-  → human observation
+Foto sampel (kamera lab terstandarisasi)
+  → image quality check (blur, exposure, framing)
+  → CV inference (4 kelas + confidence per kelas)
+  → confidence gate
+  → proposed_appearance_patch bila confidence memenuhi threshold, kosong bila tidak
+  → user confirmation / correction
+  → write checkpoint kanonis dan audit event
+  → F3 berjalan hanya jika checkpoint valid
 ```
 
-MVP boleh mengecek blur, exposure, dan framing. Namun MVP tidak boleh mengklaim phase-separation classification tanpa model visual tervalidasi.
+### 11.3 Pemetaan taksonomi CV ke appearance kanonis
 
-Label UI:
+CV menghasilkan 4 kelas internal yang dipetakan langsung ke enum `appearance` kanonis tanpa kehilangan informasi:
 
-> **Visual evidence capture. AI visual screening menunggu validasi domain.**
+| Kelas CV | Appearance kanonis |
+|---|---|
+| `stable_uniform` | `uniform` |
+| `creaming` | `creaming` |
+| `heterogeneous` | `heterogeneous` |
+| `phase_separation` | `separated` |
+
+Mapping ini di-version terpisah dari `feature_schema_version` F3, lewat `visual_screening_contract_version`, supaya perubahan taksonomi CV tidak memaksa migrasi skema F3.
+
+### 11.4 Confidence gate dan abstention
+
+Enum `appearance` kanonis tidak mendapat nilai baru khusus untuk CV. Sebagai gantinya:
+
+- confidence kelas teratas memenuhi threshold → sistem mengisi `proposed_appearance_patch` sebagai draft yang wajib dikonfirmasi peneliti.
+- confidence di bawah threshold → sistem tidak mengisi apa pun; field `appearance` checkpoint tetap kosong dan diisi manual peneliti, identik dengan alur tanpa CV.
+
+Threshold awal adalah starting point yang wajib dikalibrasi ulang dari data foto asli, bukan angka final yang dianggap sudah tepat.
+
+### 11.5 Kontrak output F_CV
+
+```json
+{
+  "checkpoint_id": "CHK-J-2026-001-T02-W04",
+  "image_ref": "IMG-J-2026-001-T02-W04-01",
+  "model_version": "cv-visual-screening-v1",
+  "visual_screening_contract_version": "cv-appearance-map-v1",
+  "predicted_label": "heterogeneous",
+  "per_class_probabilities": {
+    "uniform": 0.05,
+    "creaming": 0.07,
+    "heterogeneous": 0.80,
+    "separated": 0.08
+  },
+  "confidence": 0.80,
+  "proposed_appearance_patch": "heterogeneous",
+  "requires_confirmation": true,
+  "data_origin": "real_capture",
+  "scientific_validation_status": "not_validated_for_production"
+}
+```
+
+Ketika confidence di bawah threshold: `proposed_appearance_patch` bernilai `null`, `requires_confirmation` tetap `true`, dan UI menampilkan foto tanpa saran label — peneliti mengisi appearance dari nol seperti alur manual biasa.
+
+### 11.6 Batas tanggung jawab dan status validasi domain
+
+F_CV tidak boleh menulis langsung ke checkpoint kanonis. F_CV mengusulkan patch; checkpoint hanya terupdate setelah user confirmation. F3 berjalan hanya setelah checkpoint tervalidasi tersimpan.
+
+Konfirmasi manusia ini punya peran ganda: memenuhi prinsip #10 (human sign-off wajib untuk semua output AI yang masuk journal), dan menjadi mitigasi interim untuk status domain yang belum tervalidasi — peneliti selalu jadi sumber kebenaran akhir, sehingga model yang belum teruji akurat di foto asli tidak bisa mencemari data checkpoint secara diam-diam. Setiap konfirmasi atau koreksi manusia direkam di audit event (§14.2) sebagai data untuk mengevaluasi akurasi CV di real-world usage — inilah dasar untuk mengkalibrasi ulang threshold confidence dan menentukan kapan gate validasi domain bisa dianggap terlewati.
+
+MVP tidak boleh mengklaim phase-separation classification sebagai kebenaran final tanpa model visual tervalidasi domain. Label UI:
+
+> **Visual evidence capture. AI visual screening menunggu validasi domain — konfirmasi peneliti wajib sebelum tersimpan.**
 
 ---
 
