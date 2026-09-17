@@ -39,7 +39,7 @@ try:
 except ImportError:
     HAS_XGBOOST = False
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT / "data" / "training"
 OUTCOMES_PATH = ROOT / "data" / "full_synthetic" / "canonical" / "outcomes.jsonl"
 OUTPUT_DIR = Path(__file__).resolve().parent / "outputs" / "1"
@@ -47,7 +47,7 @@ OUTPUT_DIR = Path(__file__).resolve().parent / "outputs" / "1"
 DEFAULT_THRESHOLD = 0.5
 
 sys.path.insert(0, str(ROOT))
-import f2_guardrail_v4 as f2  # noqa: E402
+from modules import f2_guardrail as f2  # noqa: E402
 
 
 def read_jsonl(path):

@@ -568,7 +568,7 @@ Kriteria:
 
 ## 10. Corpus and Evaluation Plan
 
-`CORPUS-PLAN.md` tetap menjadi dasar generation. Tambahkan pengamanan berikut.
+[`CORPUS-PLAN.md`](../data/corpus_plan.md) tetap menjadi dasar generation. Tambahkan pengamanan berikut.
 
 ### 10.1 Corpus tiers
 

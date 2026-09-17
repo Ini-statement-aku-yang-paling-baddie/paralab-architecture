@@ -1,7 +1,7 @@
 # ParaLab AI: Arsitektur v4
 
 > **Status:** cetak biru implementasi prototipe hackathon  
-> **Menggantikan:** `ARCHITECTURE-V3.md` untuk keputusan scope MVP dan aliran data  
+> **Menggantikan:** `architecture_v3.md` untuk keputusan scope MVP dan aliran data
 > **Mempertahankan:** prinsip v3, yaitu inferensi local-first, RAG berbasis evidence, guardrail deterministik, kontrol akses sebelum retrieval, human sign-off, dan output yang dapat diaudit.
 
 ---

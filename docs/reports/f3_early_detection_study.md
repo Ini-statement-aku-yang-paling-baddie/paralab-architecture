@@ -247,13 +247,13 @@ Perlu dibedakan derajat kesirkularan dua kelompok fitur:
   karang.
 
 Yang tetap sah adalah **arsitekturnya** — bahwa F2 memasok faktor risiko
-deterministik ke F3 (`ARCHITECTURE-V4.md` §9.6) masuk akal secara domain, karena
+deterministik ke F3 (`../architecture/architecture_v4.md` §9.6) masuk akal secara domain, karena
 inkompatibilitas elektrolit-thickener memang risiko formulasi terdokumentasi dan
 karena itulah ia ada di rule base F2 sejak awal. Yang **tidak** sah adalah
 besarannya. Seberapa kuat faktor-faktor itu benar-benar memprediksi stabilitas
 hanya dapat dijawab oleh data lab asli.
 
-Konsekuensi praktis: Mode A (`ARCHITECTURE-V4.md` §9.2) **konsisten** dengan
+Konsekuensi praktis: Mode A (`../architecture/architecture_v4.md` §9.2) **konsisten** dengan
 hasil ini, tetapi tidak dibuktikan olehnya. Kalibrasi Mode A terhadap data nyata
 tetap menjadi prasyarat sebelum klaim apa pun dibuat.
 
@@ -301,7 +301,7 @@ dari pembalikan bobot noise di generator.
 pertanyaan yang layak dijawab bukan "seberapa akurat modelnya" melainkan:
 **seandainya bobot itu salah, apakah kebijakan keputusannya tetap berdiri?**
 
-Metode (`feature_3/weight_sensitivity.py`): 30 replikat, masing-masing menarik
+Metode (`modules/f3_stability_sentinel/weight_sensitivity.py`): 30 replikat, masing-masing menarik
 vektor bobot baru, **meregenerasi seluruh dataset** dari bobot itu, melatih
 ulang, menyetel threshold di validation, lalu mengevaluasi sekali di test.
 Rentang tiap faktor sebagai kelipatan nilai yang diasumsikan:
@@ -359,7 +359,7 @@ sistemnya tervalidasi.
 | Penghematan per kegagalan | 8 minggu | 8 minggu | Minggu 4 vs readout minggu 12 |
 
 Properti `early_pass_issued = 0` ditegakkan oleh kontrak output di
-`feature_3/train_stability_sentinel.py` dan diuji di
+`modules/f3_stability_sentinel/train_stability_sentinel.py` dan diuji di
 `tests/test_f3_stability_sentinel.py::test_low_risk_never_clears_a_trial_early`,
 sehingga ia tidak bergantung pada pemilihan threshold.
 
@@ -404,7 +404,7 @@ dapat ditransfer ke dunia nyata, dan §10 adalah rencana kalibrasinya."*
    shelf life nyata (lihat §2.2).
 6. `likely_failure_mode` belum tersedia karena label masih biner.
 7. F3 tidak menggantikan formal stability validation, sesuai
-   `ARCHITECTURE-V4.md` §9.1.
+   `../architecture/architecture_v4.md` §9.1.
 
 ## 8. Roadmap
 
@@ -419,8 +419,8 @@ Diurutkan dari yang sudah dikerjakan ke yang sengaja diparkir.
 | Titik waktu selaras protokol accelerated (sampai minggu 16) | `WEEKS` |
 | Label dari spesifikasi rilis, bukan lookup skenario | `spec_violation()` |
 | Kebijakan alert satu arah, tanpa early pass | `build_sample_forecast()` + test |
-| Kurva akurasi vs lama observasi | `feature_3/landmark_sweep.py` |
-| Analisis sensitivitas bobot | `feature_3/weight_sensitivity.py` |
+| Kurva akurasi vs lama observasi | `modules/f3_stability_sentinel/landmark_sweep.py` |
+| Analisis sensitivitas bobot | `modules/f3_stability_sentinel/weight_sensitivity.py` |
 
 ### Diparkir — menunggu data nyata
 
@@ -478,9 +478,9 @@ sendiri, sehingga "probabilitas 0,8 berarti 80% gagal" belum bermakna di luar.
 ## 10. Artefak terkait
 
 - Generator dataset: `scripts/build_full_dataset.py` (`full-synthetic-v2`)
-- Kontrak dataset: `FULL-DATASET.md`
-- Model baseline F3: `feature_3/train_stability_sentinel.py`
-- Analisis landmark: `feature_3/landmark_sweep.py` → `feature_3/outputs/1/landmark_sweep.json`
-- Sensitivitas bobot: `feature_3/weight_sensitivity.py` → `feature_3/outputs/1/weight_sensitivity.json`
+- Kontrak dataset: `../data/full_dataset.md`
+- Model baseline F3: `modules/f3_stability_sentinel/train_stability_sentinel.py`
+- Analisis landmark: `modules/f3_stability_sentinel/landmark_sweep.py` → `modules/f3_stability_sentinel/outputs/1/landmark_sweep.json`
+- Sensitivitas bobot: `modules/f3_stability_sentinel/weight_sensitivity.py` → `modules/f3_stability_sentinel/outputs/1/weight_sensitivity.json`
 - Test kontrak F3: `tests/test_f3_stability_sentinel.py`
-- Arsitektur: `ARCHITECTURE-V4.md` §9 (F3), §13.3 (evaluasi)
+- Arsitektur: `../architecture/architecture_v4.md` §9 (F3), §13.3 (evaluasi)

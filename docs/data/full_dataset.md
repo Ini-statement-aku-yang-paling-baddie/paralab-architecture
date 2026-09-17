@@ -2,7 +2,7 @@
 
 ## Status
 
-Target Core Data `ARCHITECTURE-V4.md` sudah digenerasikan:
+Target Core Data [`ARCHITECTURE-V4.md`](../architecture/architecture_v4.md) sudah digenerasikan:
 
 | Entitas | Jumlah |
 |---|---:|
@@ -22,7 +22,7 @@ Seluruh record memakai `data_origin: synthetic_demo`, `human_verified: false`, d
 
 ## Model label (v2)
 
-Kajian lengkap beserta sitasinya ada di `F3-EARLY-DETECTION-STUDY.md`. Ringkasnya:
+Kajian lengkap beserta sitasinya ada di [`F3-EARLY-DETECTION-STUDY.md`](../reports/f3_early_detection_study.md). Ringkasnya:
 
 Versi `full-synthetic-v1` menentukan outcome dari lookup nama skenario, sehingga tiga skenario selalu `failed` dan dua selalu `passed`. Akibatnya laju peluruhan viskositas minggu-4 berfungsi sebagai sidik jari skenario, dan model F3 mencapai PR-AUC ~0.99 hanya dengan menebak ulang aturan generator. Hubungannya juga non-monotonik: penurunan ~7% berarti lulus sementara ~3% berarti gagal.
 
@@ -102,6 +102,6 @@ Output siap konsumsi terdapat di:
 
 Feature F3 hanya berisi formula, proses, storage, dan observasi minggu 0, 1, 2, serta 4. Label minggu ke-12 disimpan terpisah lalu dijoin oleh builder. Trial dengan outcome ambigu tidak dipaksa menjadi pass/fail dan disimpan di `forecast_excluded.jsonl`.
 
-Konsumen F3 (`feature_3/train_stability_sentinel.py`) tidak membaca persentase bahan mentah. Formula feature diturunkan lewat `f2_guardrail_v4.derive_features()` sesuai batas tanggung jawab `ARCHITECTURE-V4.md` §9.6.
+Konsumen F3 (`modules/f3_stability_sentinel/train_stability_sentinel.py`) tidak membaca persentase bahan mentah. Formula feature diturunkan lewat `modules.f2_guardrail.derive_features()` sesuai batas tanggung jawab [`ARCHITECTURE-V4.md`](../architecture/architecture_v4.md) §9.6.
 
 Data paper publik tetap dipakai sebagai evidence F1 dan konteks F2. Saat ini 0 row publik masuk supervised F3 karena belum ada sumber yang memenuhi kontrak longitudinal landmark minggu ke-4 dan outcome minggu ke-12.

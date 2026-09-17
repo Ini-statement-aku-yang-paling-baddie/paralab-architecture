@@ -67,7 +67,7 @@ def spec_violation(checkpoint, baseline):
 
 # Weight of each risk factor in the hazard sum. These values are an assumption,
 # not a measurement: nobody knows what a carbomer/electrolyte pairing is really
-# worth in hazard units. feature_3/weight_sensitivity.py exists precisely to
+# worth in hazard units. modules/f3_stability_sentinel/weight_sensitivity.py exists precisely to
 # test whether the F3 decision policy survives getting them wrong.
 HAZARD_WEIGHTS = {
     "base": 0.35,

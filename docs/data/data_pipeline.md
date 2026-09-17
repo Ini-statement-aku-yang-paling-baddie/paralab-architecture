@@ -2,7 +2,7 @@
 
 ## Status dan batas keselamatan
 
-Pipeline **sudah dijalankan**, bukan hanya rencana. Implementasi menggunakan Python 3 stdlib, seed default `17`, tanpa unduhan, training ML, pembuatan embedding, LLM, audio, atau gambar. Pilot ini menggantikan target ekspansi 600 trial pada tahap implementasi data saja; tidak mengubah `ARCHITECTURE-V4.md`.
+Pipeline **sudah dijalankan**, bukan hanya rencana. Implementasi menggunakan Python 3 stdlib, seed default `17`, tanpa unduhan, training ML, pembuatan embedding, LLM, audio, atau gambar. Pilot ini menggantikan target ekspansi 600 trial pada tahap implementasi data saja; tidak mengubah [`ARCHITECTURE-V4.md`](../architecture/architecture_v4.md).
 
 **Seluruh trajectory merupakan simulasi belum direview. Jangan meracik formula ini.** Total formula 100% hanya menjamin kelengkapan aritmetika: emulsifier dan preservative masih placeholder tanpa identitas/spesifikasi. Formula tidak menjamin emulsi O/W yang dapat dibuat, keamanan, efektivitas, kompatibilitas, atau compliance. Tidak ada `human_verified: true` yang dibuat.
 

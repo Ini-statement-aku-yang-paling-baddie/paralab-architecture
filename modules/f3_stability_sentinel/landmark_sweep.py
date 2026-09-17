@@ -20,7 +20,7 @@ from sklearn.preprocessing import StandardScaler
 
 from train_stability_sentinel import f2_formula_features, read_jsonl
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 CANONICAL = ROOT / "data" / "full_synthetic" / "canonical"
 OUTPUT_DIR = Path(__file__).resolve().parent / "outputs" / "1"
 LANDMARKS = [1, 2, 4, 6, 8]

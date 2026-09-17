@@ -1,7 +1,7 @@
 """ParaLab AI - F2 Guardrail Engine (V4 contract).
 Konsumsi data/ingredient_master.json + data/formulation_rules.json.
 Output: status vocabulary V4, rules_fired (rule_id/version/source), derived_features, sign-off flag.
-Lolos 14 acceptance tests (lihat tests/test_f2_v4.py)."""
+Lolos 14 acceptance tests (lihat tests/test_f2_guardrail.py)."""
 """F2 Guardrail Engine v4 — konsumsi ingredient_master.json + formulation_rules.json.
 Output sesuai kontrak V4 §8.3-8.5: status vocabulary, derived features, audit-ready results.
 Di-test lokal terhadap semua acceptance test lama + kasus baru V4."""
@@ -9,7 +9,7 @@ import json, re, difflib, os
 from pathlib import Path
 from datetime import datetime
 
-DATA = Path(__file__).resolve().parent / 'data'
+DATA = Path(__file__).resolve().parents[1] / 'data'
 
 # ---------- load ----------
 master_doc = json.load(open(os.path.join(DATA, 'ingredient_master.json'), encoding='utf-8'))

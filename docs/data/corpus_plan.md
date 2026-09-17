@@ -1,6 +1,6 @@
 # ParaLab AI — Rencana Korpus & Distilasi (v1.2)
 
-> **Konteks update (2026-09-17):** dokumen ini kini selaras dengan `ARCHITECTURE-V4.md` — korpus V4 (200 jurnal / 600 trial, satu vertical O/W gel-cream) ada di `data/` dan sudah terealisasi via `ParaLab-V4-Corpus-Generator.ipynb`. Bagian yang masih aktif dan menjadi kontrak distilasi: **§3 (prinsip seed-driven), §4a/§4b (template prompt tugas), §5 (volume & split), §6 (anti-pattern)**. Struktur korpus §1 mengikuti `data/evidence_corpus.jsonl` (sudah berbeda dari yang tertulis di sini — lihat `data/README.md`).
+> **Konteks update (2026-09-17):** dokumen ini kini selaras dengan [`ARCHITECTURE-V4.md`](../architecture/architecture_v4.md) — korpus V4 (200 jurnal / 600 trial, satu vertical O/W gel-cream) ada di `data/` dan sudah terealisasi via `notebooks/corpus_generator/paralab_v4_corpus_generator.ipynb`. Bagian yang masih aktif dan menjadi kontrak distilasi: **§3 (prinsip seed-driven), §4a/§4b (template prompt tugas), §5 (volume & split), §6 (anti-pattern)**. Struktur korpus §1 mengikuti `data/evidence_corpus.jsonl` (sudah berbeda dari yang tertulis di sini — lihat `data/README.md`).
 >
 > **PEMBAGIAN KERJA:** track ini (F1 + F2) sudah selesai sampai KB + korpus + F2 contract; **F5 STT = teammate**, **web UI = teammate**, **F3/trajectory = Arlen (selesai, `data/full_synthetic/`)**. **Distilasi LLM = track ini.** Teacher model: **GPT-5.5 via API** (akses disediakan teman) — hanya untuk GENERATE training set, bukan inference demo (demo = model student lokal, narasi on-premise V4 §8).
 >

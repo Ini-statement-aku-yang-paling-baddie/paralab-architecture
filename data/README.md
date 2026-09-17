@@ -1,6 +1,6 @@
 # data/ — Artefak Dataset ParaLab V4
 
-Semua file di sini dihasilkan oleh `ParaLab-V4-Corpus-Generator.ipynb` (source: `notebooks/corpus_v4_source.py`).
+Semua file di sini dihasilkan oleh `notebooks/corpus_generator/paralab_v4_corpus_generator.ipynb` (source: `notebooks/corpus_generator/generate_corpus_v4.py`).
 Regenerasi deterministik: seed `42`. Jalankan ulang notebook untuk mereproduksi persis.
 
 > ⚠️ **Semua data sintetis** (`data_origin: synthetic_demo`, `scientific_validation_status: not_validated_for_production`).
@@ -31,7 +31,7 @@ Variasi dibuat di dalam keluarga ini (sistem aktif, emulsifier, rasio fase minya
 
 1. **F1 ↔ F3**: `source_id` di evidence corpus dipakai F3 sebagai `evidence_ids` (V4 §7.3).
    Formula seed yang sama menjadi dasar trajectory, sehingga relasi evidence↔forecast konsisten *by construction*.
-2. **F2 → F3**: `derived_features` dari `f2_guardrail_v4.py` (`electrolyte_thickener_risk`, dll) memakai
+2. **F2 → F3**: `derived_features` dari `modules/f2_guardrail.py` (`electrolyte_thickener_risk`, dll) memakai
    `feature_schema_version = stability-sentinel-v1` — skema ini harus identik saat training dan inference F3.
 3. **F5 → F2**: fuzzy-match nama bahan hasil STT memakai `aliases` di `ingredient_master.json`
    (sudah diuji untuk typo seperti `niasinamida` → `ING:NIACINAMIDE`).
