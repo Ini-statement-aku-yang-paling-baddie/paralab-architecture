@@ -75,7 +75,12 @@ def create_app(artifact_loader: Callable[[], LoadedArtifact] = default_artifact_
         allow_origins=origins,
         allow_credentials=False,
         allow_methods=["GET", "POST"],
-        allow_headers=["Content-Type"],
+        # ngrok-skip-browser-warning: dikirim client saat backend ada di
+        # belakang tunnel ngrok gratis, agar halaman peringatan ngrok tidak
+        # menyisip sebelum request tembus. Header ini tidak berarti apa-apa
+        # untuk backend lain, tapi harus tetap diizinkan di sini supaya
+        # preflight CORS tidak gagal untuk client manapun.
+        allow_headers=["Content-Type", "ngrok-skip-browser-warning"],
     )
 
     @app.get("/health")
