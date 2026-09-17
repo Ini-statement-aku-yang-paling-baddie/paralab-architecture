@@ -1,5 +1,7 @@
 # REFERENCES
 
+Drive: https://drive.google.com/drive/folders/1nvLUXOZbJNaBvPAFkXlOxxnX4rDZYrq4
+
 https://pubs.acs.org/acsodf/article/10/33/36788/3655610/Current-Perspectives-on-Emulsified-Cosmetics
 
 https://www.sciencedirect.com/science/article/abs/pii/S1359029424000657?utm_source=chatgpt.com
