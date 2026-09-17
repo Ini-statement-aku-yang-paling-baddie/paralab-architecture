@@ -1,0 +1,7 @@
+# Local SentenceTransformer export and embeddings (417 MB; reproducible locally)
+sentence-transformer/
+
+# Python virtual environments and bytecode
+.venv/
+__pycache__/
+*.py[cod]
