@@ -7,6 +7,7 @@ Dependency dipisahkan agar user tidak perlu menginstal seluruh stack untuk satu 
 | `f1_dense.txt` | evaluator SentenceTransformer F1, CPU-only |
 | `f3_stability_sentinel.txt` | training dan evaluasi model tabular F3 |
 | `cv.txt` | generator gambar sintetis CV |
+| `api.txt` | adaptor FastAPI untuk deployment bundle F3 |
 
 Contoh:
 

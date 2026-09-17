@@ -1,0 +1,4 @@
+# HTTP API adapter for the F3 deployment bundle.
+fastapi==0.115.12
+uvicorn[standard]>=0.30,<1
+httpx>=0.27,<1

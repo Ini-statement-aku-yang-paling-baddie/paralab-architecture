@@ -7,7 +7,9 @@ Folder ini berisi capability yang dapat diimpor dan dijalankan sebagai bagian in
 | Path | Fungsi |
 |---|---|
 | `f2_guardrail.py` | Normalisasi bahan, eksekusi rule deterministik, dan derived feature untuk F3 |
-| `f3_stability_sentinel/train_stability_sentinel.py` | Training dan evaluasi baseline tabular F3 |
+| `f3_stability_sentinel/train_stability_sentinel.py` | Training, evaluasi, dan pembuatan deployment manifest F3 |
+| `f3_stability_sentinel/deployment.py` | Ikat model joblib ke schema, threshold, hash, provenance, dan batas CV |
+| `f3_stability_sentinel/inference.py` | Feature engineering dan forecast domain untuk adaptor API |
 | `f3_stability_sentinel/landmark_sweep.py` | Membandingkan informasi pada minggu 1, 2, 4, 6, dan 8 |
 | `f3_stability_sentinel/weight_sensitivity.py` | Menguji sensitivitas terhadap asumsi hazard sintetis |
 | `f3_stability_sentinel/outputs/1/` | Model dan laporan reproducible dari run baseline |

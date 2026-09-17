@@ -9,7 +9,7 @@
         "precision_high_risk_alert": 0.8913043478260869,
         "pr_auc": 0.9207883515729871,
         "roc_auc": 0.8679245283018867,
-        "brier_score": 0.1467300666299645,
+        "brier_score": 0.14673006662996443,
         "decision_threshold": 0.5,
         "n": 88
       },
@@ -34,12 +34,12 @@
         "n": 88
       },
       "xgboost": {
-        "recall_failed": 0.8679245283018868,
-        "false_negative_rate": 0.1320754716981132,
-        "precision_high_risk_alert": 0.7931034482758621,
-        "pr_auc": 0.9236957080443484,
-        "roc_auc": 0.8722371967654987,
-        "brier_score": 0.15947331488132477,
+        "recall_failed": 0.8301886792452831,
+        "false_negative_rate": 0.16981132075471697,
+        "precision_high_risk_alert": 0.7857142857142857,
+        "pr_auc": 0.9154971771009821,
+        "roc_auc": 0.8533692722371968,
+        "brier_score": 0.17256437242031097,
         "decision_threshold": 0.5,
         "n": 88
       }

@@ -39,7 +39,7 @@ Hasil akhir tetap diputuskan peneliti atau formulator.
 | **F3 Stability Sentinel** | Baseline tabular, landmark sweep, dan sensitivity analysis | Dilatih dan diuji hanya pada synthetic-demo |
 | **F5 Structured Logging** | Kontrak dan contoh data tersedia | STT dan workflow konfirmasi end-to-end belum dibangun |
 | **CV Visual Screening** | Pilot pada render sintetis | Belum tervalidasi pada foto kosmetik nyata |
-| **Aplikasi web/API** | Belum tersedia | Repository saat ini berfokus pada data, model baseline, dan kontrak |
+| **API F3** | Adaptor FastAPI lokal tersedia | Web, auth, database, dan deployment cloud belum dibangun |
 
 ## Quick start
 
@@ -87,6 +87,17 @@ uv pip install --python .venv/bin/python -r requirements/f1_dense.txt
 .venv/bin/python scripts/evaluate_f1_dense.py
 ```
 
+## API F3 lokal
+
+Setelah menjalankan training F3, jalankan adaptor API lokal:
+
+```bash
+uv pip install --python .venv-f3/bin/python -r requirements/api.txt
+.venv-f3/bin/python -m uvicorn api.app:app --host 127.0.0.1 --port 8000
+```
+
+Kontrak endpoint dan environment deploy ada di [`api/README.md`](api/README.md).
+
 ## Struktur repository
 
 ```text
@@ -99,6 +110,7 @@ uv pip install --python .venv/bin/python -r requirements/f1_dense.txt
 ├── tests/                    # regression, determinisme, safety, anti-leakage
 ├── requirements/             # dependency per workflow
 ├── notebooks/                # notebook dan source generator corpus
+├── api/                      # adaptor HTTP lokal untuk F3
 ├── cv/                       # pilot computer vision sintetis
 ├── resources/                # PDF dan materi referensi proyek
 └── sources/                  # snapshot sumber publik yang diaudit

@@ -1,0 +1,49 @@
+{
+  "artifact_schema_version": "f3-deployment-manifest-v1",
+  "cv_limitations": [
+    "CV is a concept-only pilot trained on procedural synthetic renders and is not validated on real laboratory photographs.",
+    "CV output must not be used as a laboratory measurement, stability result, or automatic F3 input without human confirmation."
+  ],
+  "cv_status": "concept_only_synthetic_render_pilot",
+  "data_origin": "synthetic_demo",
+  "decision_threshold": 0.321,
+  "f2_rule_version": "2026.09",
+  "feature_columns": [
+    "f2_electrolyte_load",
+    "f2_thickener_sensitivity",
+    "f2_electrolyte_thickener_risk",
+    "f2_emulsifier_balance_watch",
+    "f2_ingredient_count",
+    "oil_phase_ratio",
+    "heating_temp_c",
+    "homogenization_rpm",
+    "mixing_time_min",
+    "storage_temperature_c",
+    "viscosity_baseline_cp",
+    "viscosity_current_cp",
+    "viscosity_change_pct",
+    "viscosity_slope_per_week",
+    "ph_baseline",
+    "ph_current",
+    "ph_change",
+    "appearance_warning_count"
+  ],
+  "feature_schema_version": "stability-sentinel-v1",
+  "limitations": [
+    "Forecast dilatih dan dievaluasi menggunakan synthetic demo data dari seeded hazard model.",
+    "Forecast tidak menggantikan formal stability validation.",
+    "likely_failure_mode belum tersedia karena dataset hanya punya label biner failed_by_12.",
+    "appearance_warning_count belum informatif karena seluruh observasi synthetic berlabel 'uniform'.",
+    "evidence_ids kosong karena integrasi F1 belum dibangun di baseline ini."
+  ],
+  "model_sha256": "0dc49887450e2499561635367fa6d63b596f602147fdf984d760a4a610fe5b96",
+  "model_version": "stability-sentinel-random_forest-v1",
+  "prediction_type": "synthetic_demo_early_risk_forecast",
+  "runtime": {
+    "joblib": "1.6.0",
+    "pandas": "3.0.5",
+    "python": "3.11.16",
+    "scikit_learn": "1.9.1"
+  },
+  "training_report_sha256": "d9dfd58ab8e3b6a0bc3930521081a2df8c54a8b19744169d633e0ed7f89518e4"
+}

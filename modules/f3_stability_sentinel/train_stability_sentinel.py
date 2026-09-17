@@ -1,12 +1,11 @@
-"""F3 Predictive Stability Sentinel — tabular baseline training.
+"""F3 Predictive Stability Sentinel — training baseline tabular.
 
-Per ARCHITECTURE-V4.md section 9.4: explainable tabular baselines
-(Logistic Regression, Random Forest, Gradient Boosting) trained on
-engineered trend features, not a deep time-series model. Evaluated
-per section 13.3 and labeled synthetic-demo evaluation throughout.
+Model menggunakan baseline yang dapat dijelaskan pada trend feature, bukan deep
+time-series model. Semua evaluasi berstatus synthetic-demo. Feature formula
+hanya berasal dari F2 guardrail, bukan raw ingredient percentage.
 
-Formula features come from the F2 guardrail engine, never from raw
-ingredient percentages, per the section 9.6 responsibility boundary.
+Training menulis model joblib, laporan evaluasi, dan deployment manifest yang
+mengikat schema, threshold, provenance, serta batas klaim untuk API.
 """
 import json
 import sys
@@ -48,6 +47,7 @@ DEFAULT_THRESHOLD = 0.5
 
 sys.path.insert(0, str(ROOT))
 from modules import f2_guardrail as f2  # noqa: E402
+from modules.f3_stability_sentinel.deployment import write_model_manifest  # noqa: E402
 
 
 def read_jsonl(path):
@@ -63,7 +63,7 @@ def f2_formula_features(formula_concentrations, final_ph):
     """Formula risk snapshot from the F2 guardrail engine (section 9.6:
     only canonical F2 features enter F3, never raw warning text)."""
     results = [
-        f2.evaluate_ingredient(c.get("inci_name", c["ingredient_id"]), c["pct"])
+        f2.evaluate_ingredient(c.get("inci_name") or c["ingredient_id"], c["pct"])
         for c in formula_concentrations
     ]
     derived = f2.derive_features(results, ph=final_ph)
@@ -315,9 +315,9 @@ def main():
     selected_name = max(val_reports, key=lambda n: val_reports[n]["pr_auc"])
     base_model = candidates[selected_name]
 
-    # Calibration step (ARCHITECTURE-V4.md section 9.4): compare raw vs
-    # sigmoid-calibrated probabilities on validation, keep whichever has the
-    # lower Brier score, since displayed probabilities must be meaningful.
+    # Calibration step: compare raw vs sigmoid-calibrated probabilities on
+    # validation, keep whichever has the lower Brier score so displayed
+    # probabilities retain the best available synthetic-demo calibration.
     calibrated_model = CalibratedClassifierCV(clone(base_model), method="sigmoid", cv=3)
     calibrated_model.fit(X_train, y_train)
     calibrated_val_report = evaluate(calibrated_model, X_val, y_val)
@@ -428,8 +428,17 @@ def main():
             "evidence_ids kosong karena integrasi F1 belum dibangun di baseline ini.",
         ],
     }
-    with open(OUTPUT_DIR / "training_report.json", "w") as f:
-        json.dump(report, f, indent=2)
+    report_path = OUTPUT_DIR / "training_report.json"
+    with report_path.open("w", encoding="utf-8") as handle:
+        json.dump(report, handle, indent=2)
+
+    write_model_manifest(
+        output_path=OUTPUT_DIR / "model_manifest.json",
+        model_path=OUTPUT_DIR / "stability_sentinel_model.joblib",
+        training_report_path=report_path,
+        feature_columns=FEATURE_COLUMNS,
+        f2_rule_version=f2.META["rule_version"],
+    )
 
     print(json.dumps(report, indent=2))
 

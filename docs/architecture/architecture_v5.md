@@ -52,7 +52,7 @@ Pertanyaan riset / formula
 | F3 Stability Sentinel | Implemented sebagai baseline synthetic-demo | Baseline tabular, feature F2 + proses + tren sampai landmark, threshold one-sided alert | Prediksi stabilitas kosmetik nyata atau pengganti formal test |
 | F5 | Kontrak data dan contoh sintetis tersedia | `f5_examples.jsonl`, field confirmation, dan provenance transcript | Speech-to-text atau aplikasi voice logging end-to-end |
 | CV visual screening | Pilot terpisah | Generator gambar sintetis dan notebook training `TinyVialCNN` | Klasifikasi foto kosmetik asli atau input otomatis F3 |
-| API, UI, auth, database runtime | Belum diimplementasikan | Masih arsitektur target | Sistem aplikasi siap produksi |
+| API F3 | Implemented sebagai adaptor lokal | FastAPI memuat model hash-verified, menjalankan F2 + feature engineering, lalu forecast/abstain | Web, auth, database runtime, dan sistem siap produksi |
 
 Arsitektur v5 membedakan **yang berjalan dalam kode** dari **desain target**, agar demo tidak memberi kesan kapabilitas yang belum tersedia.
 
@@ -272,6 +272,14 @@ Angka ini hanya menunjukkan baseline berjalan terhadap generator sintetis. Ia bu
 
 Kajian alasan keputusan one-sided alert tersedia di [`../reports/f3_early_detection_study.md`](../reports/f3_early_detection_study.md).
 
+### Deployment bundle dan API lokal
+
+Setiap training F3 menghasilkan `model_manifest.json` di samping model `joblib`. Manifest mengikat model pada hash, urutan feature, threshold hasil validation, versi rule F2, provenance `synthetic_demo`, dan batas CV `concept_only_synthetic_render_pilot`.
+
+Adaptor `api/app.py` menyediakan `GET /health` dan `POST /v1/f3/forecasts`. Ia hanya memuat model jika hash dan feature schema sesuai manifest. Input menggunakan istilah domain, lalu F2 dan feature engineering menghitung feature internal. Jika formula blocked/unknown atau checkpoint tidak lengkap, API mengembalikan `abstain_human_review_required` tanpa skor risiko.
+
+API ini lokal untuk integrasi web dan demonstrasi. Auth, database, rate limiting, audit persistence, dan deployment cloud tetap belum diimplementasikan.
+
 ---
 
 ## 9. F5 dan pilot CV
@@ -356,6 +364,7 @@ ParaLab/
 │   ├── f2_guardrail.py           # F2 deterministic guardrail
 │   └── f3_stability_sentinel/    # training dan analisis F3
 ├── scripts/                      # builder, validator, evaluator
+├── api/                          # adaptor FastAPI lokal untuk F3
 ├── cv/                           # pilot visual synthetic, belum terintegrasi
 ├── notebooks/corpus_generator/   # generator corpus F1
 ├── tests/                        # kontrak dan regression tests
@@ -385,7 +394,7 @@ Konvensi nama file baru adalah lowercase `snake_case` untuk portability dan kemu
 
 ### Integrasi software berikutnya
 
-1. API/modular monolith local-first untuk F1, F2, checkpoint, F3, dan audit event.
+1. Integrasikan API F3 dengan UI researcher serta persistence trial/checkpoint/audit event local-first.
 2. UI researcher yang menampilkan evidence, status rule, limitation, dan human sign-off secara eksplisit.
 3. Implementasi F5 speech-to-text dan halaman konfirmasi field.
 4. Sambungkan evidence ID F1 sebagai explanation layer F3 tanpa menjadi feature model.
