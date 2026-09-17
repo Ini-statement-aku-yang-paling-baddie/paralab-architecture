@@ -11,6 +11,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 from modules.f3_stability_sentinel.inference import LoadedArtifact, forecast, load_artifact
+from modules.f4_next_validation import recommend_next_validation
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_ARTIFACT_DIR = ROOT / "modules" / "f3_stability_sentinel" / "outputs" / "1"
@@ -42,6 +43,12 @@ class ForecastRequest(BaseModel):
     landmark_week: int = Field(ge=1)
     observations: list[Observation] = Field(min_length=1)
     context: dict[str, str] | None = None
+
+
+class F4RecommendationRequest(BaseModel):
+    """Structured F3/F2 output plus optional confirmed checkpoint for F4."""
+    f3_forecast: dict
+    checkpoint: dict | None = None
 
 
 @lru_cache(maxsize=1)
@@ -92,6 +99,13 @@ def create_app(artifact_loader: Callable[[], LoadedArtifact] = default_artifact_
             return forecast(artifact, request.model_dump(exclude_none=True))
         except (KeyError, TypeError, ValueError) as exc:
             raise HTTPException(status_code=422, detail=str(exc)) from exc
+
+    @app.post("/v1/f4/next-validation")
+    def create_f4_recommendation(request: F4RecommendationRequest) -> dict:
+        return recommend_next_validation(
+            request.f3_forecast,
+            request.checkpoint,
+        )
 
     return app
 
