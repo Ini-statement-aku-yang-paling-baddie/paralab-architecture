@@ -7,7 +7,7 @@
     "policy": "F3 hanya menerima source rows yang secara eksplisit eligible, longitudinal sampai landmark, punya outcome horizon, dan split per source group.",
     "public_observed_rows_excluded": 15,
     "public_observed_rows_included": 0,
-    "synthetic_demo_rows_included": 515
+    "synthetic_demo_rows_included": 579
   },
   "limitations": [
     "F3 saat ini belum memakai data publik karena paper yang diingest adalah proxy cross-sectional.",

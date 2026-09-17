@@ -14,7 +14,7 @@
   "best_epoch": 23,
   "test_accuracy": 1.0,
   "limitations": [
-    "Model dilatih hanya pada render procedural synthetic FormuLab.",
+    "Model dilatih hanya pada render procedural synthetic ParaLab.",
     "Metric ini tidak membuktikan performa pada foto sampel kosmetik nyata.",
     "Output hanya synthetic-demo visual screening dan tidak menggantikan stability test atau review formulator."
   ]

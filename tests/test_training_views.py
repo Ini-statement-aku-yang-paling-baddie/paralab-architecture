@@ -36,11 +36,11 @@ class TrainingViewsTests(unittest.TestCase):
             self.assertEqual(len(train_rows) + len(validation_rows) + len(test_rows), len(forecast))
             self.assertTrue(forecast)
             self.assertEqual({x["data_origin"] for x in forecast}, {"synthetic_demo"})
-            self.assertEqual(len(forecast), 515)
+            self.assertEqual(len(forecast), 579)
             self.assertIn("observed_public", {x["data_origin"] for x in evidence})
             self.assertEqual(report["f1"]["synthetic_demo_documents"], 420)
             self.assertEqual(report["f1"]["observed_public_documents"], 15)
-            self.assertEqual(report["f3"]["synthetic_demo_rows_included"], 515)
+            self.assertEqual(report["f3"]["synthetic_demo_rows_included"], 579)
             self.assertEqual(report["f3"]["public_observed_rows_included"], 0)
             self.assertEqual(m.validate_directory(out), [])
 

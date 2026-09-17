@@ -3,5 +3,6 @@ sentence-transformer/
 
 # Python virtual environments and bytecode
 .venv/
+.venv-f3/
 __pycache__/
 *.py[cod]

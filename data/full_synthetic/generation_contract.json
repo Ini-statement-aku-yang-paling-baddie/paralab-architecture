@@ -17,13 +17,13 @@
   },
   "split_unit": "formula_family; two projects per family",
   "target": {
-    "checkpoints": 4200,
-    "checkpoints_per_trial": 7,
+    "checkpoints": 4800,
+    "checkpoints_per_trial": 8,
     "projects": 200,
     "trials": 600,
     "trials_per_project": 3
   },
-  "version": "full-synthetic-v1",
+  "version": "full-synthetic-v2",
   "weeks": [
     0,
     1,
@@ -31,6 +31,7 @@
     4,
     6,
     8,
-    12
+    12,
+    16
   ]
 }

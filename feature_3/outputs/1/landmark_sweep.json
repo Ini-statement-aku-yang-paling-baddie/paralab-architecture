@@ -1,0 +1,79 @@
+{
+  "question": "Berapa minggu siklus reformulasi yang bisa dihemat tanpa pernah mengeluarkan early pass?",
+  "horizon_week": 12,
+  "alert_precision_floor": 0.6,
+  "policy": "one-sided alert; F3 never issues an early pass",
+  "evaluation_label": "synthetic-demo evaluation",
+  "landmarks": [
+    {
+      "landmark_week": 1,
+      "weeks_gained_per_caught_failure": 11,
+      "roc_auc": 0.7853009259259258,
+      "alert_threshold": 0.2,
+      "recall_failed": 0.9444,
+      "alert_precision": 0.6986,
+      "alerts_issued": 73,
+      "failures_caught_early": 51,
+      "failures_total": 54,
+      "early_pass_issued": 0,
+      "reformulation_weeks_saved": 561,
+      "n_test": 86
+    },
+    {
+      "landmark_week": 2,
+      "weeks_gained_per_caught_failure": 10,
+      "roc_auc": 0.8657407407407407,
+      "alert_threshold": 0.2,
+      "recall_failed": 0.963,
+      "alert_precision": 0.7429,
+      "alerts_issued": 70,
+      "failures_caught_early": 52,
+      "failures_total": 54,
+      "early_pass_issued": 0,
+      "reformulation_weeks_saved": 520,
+      "n_test": 86
+    },
+    {
+      "landmark_week": 4,
+      "weeks_gained_per_caught_failure": 8,
+      "roc_auc": 0.8935185185185185,
+      "alert_threshold": 0.2,
+      "recall_failed": 0.9259,
+      "alert_precision": 0.7692,
+      "alerts_issued": 65,
+      "failures_caught_early": 50,
+      "failures_total": 54,
+      "early_pass_issued": 0,
+      "reformulation_weeks_saved": 400,
+      "n_test": 86
+    },
+    {
+      "landmark_week": 6,
+      "weeks_gained_per_caught_failure": 6,
+      "roc_auc": 0.9421296296296297,
+      "alert_threshold": 0.2,
+      "recall_failed": 0.8889,
+      "alert_precision": 0.8421,
+      "alerts_issued": 57,
+      "failures_caught_early": 48,
+      "failures_total": 54,
+      "early_pass_issued": 0,
+      "reformulation_weeks_saved": 288,
+      "n_test": 86
+    },
+    {
+      "landmark_week": 8,
+      "weeks_gained_per_caught_failure": 4,
+      "roc_auc": 0.9722222222222222,
+      "alert_threshold": 0.2,
+      "recall_failed": 0.9444,
+      "alert_precision": 0.9444,
+      "alerts_issued": 54,
+      "failures_caught_early": 51,
+      "failures_total": 54,
+      "early_pass_issued": 0,
+      "reformulation_weeks_saved": 204,
+      "n_test": 86
+    }
+  ]
+}

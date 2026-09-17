@@ -28,7 +28,7 @@ class FullDatasetTests(unittest.TestCase):
         self.assertEqual(len(data["formulas"]), 600)
         self.assertEqual(len(data["trials"]), 600)
         self.assertEqual(len(data["observation_series"]), 600)
-        self.assertEqual(len(data["checkpoints"]), 4200)
+        self.assertEqual(len(data["checkpoints"]), 4800)
         self.assertEqual(len(data["outcomes"]), 600)
         self.assertEqual(m.validate(data), [])
 
@@ -38,7 +38,7 @@ class FullDatasetTests(unittest.TestCase):
         derived = m.derive(data)
         self.assertEqual(len(derived["journal_documents"]), 600)
         self.assertEqual(len(derived["f1_train_corpus"]), 420)
-        self.assertEqual(len(derived["f5_examples"]), 4200)
+        self.assertEqual(len(derived["f5_examples"]), 4800)
         self.assertEqual(len(derived["forecast_features"]), len(derived["forecast_labels"]))
         self.assertGreater(len(derived["forecast_features"]), 400)
         self.assertGreater(len(derived["forecast_excluded"]), 0)
@@ -63,7 +63,7 @@ class FullDatasetTests(unittest.TestCase):
             second = {str(path.relative_to(output)): path.read_bytes() for path in output.rglob("*") if path.is_file()}
             self.assertEqual(first, second)
             report = json.loads((output / "metrics.json").read_text())
-            self.assertEqual(report["canonical_counts"]["checkpoints"], 4200)
+            self.assertEqual(report["canonical_counts"]["checkpoints"], 4800)
             self.assertEqual(report["validation_errors"], [])
             validate = subprocess.run([sys.executable, str(SCRIPT), "validate", "--output", str(output)], capture_output=True, text=True)
             self.assertEqual(validate.returncode, 0, validate.stdout + validate.stderr)

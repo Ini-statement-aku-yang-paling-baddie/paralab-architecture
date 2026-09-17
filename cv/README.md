@@ -1,6 +1,6 @@
-# FormuLab CV
+# ParaLab CV
 
-Folder ini memuat seluruh artefak computer vision FormuLab.
+Folder ini memuat seluruh artefak computer vision ParaLab.
 
 ## Dataset sintetis prosedural
 

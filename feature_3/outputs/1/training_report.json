@@ -1,0 +1,194 @@
+{
+  "feature_schema_version": "stability-sentinel-v1",
+  "model_version": "stability-sentinel-random_forest-v1",
+  "model_selection": {
+    "candidates_evaluated_on_validation": {
+      "logistic_regression": {
+        "recall_failed": 0.7735849056603774,
+        "false_negative_rate": 0.22641509433962265,
+        "precision_high_risk_alert": 0.8913043478260869,
+        "pr_auc": 0.9207883515729871,
+        "roc_auc": 0.8679245283018867,
+        "brier_score": 0.1467300666299645,
+        "decision_threshold": 0.5,
+        "n": 88
+      },
+      "random_forest": {
+        "recall_failed": 0.7735849056603774,
+        "false_negative_rate": 0.22641509433962265,
+        "precision_high_risk_alert": 0.8541666666666666,
+        "pr_auc": 0.939750993967452,
+        "roc_auc": 0.9008086253369272,
+        "brier_score": 0.1309890818896155,
+        "decision_threshold": 0.5,
+        "n": 88
+      },
+      "gradient_boosting": {
+        "recall_failed": 0.7924528301886793,
+        "false_negative_rate": 0.20754716981132076,
+        "precision_high_risk_alert": 0.7636363636363637,
+        "pr_auc": 0.9199835554269625,
+        "roc_auc": 0.8587601078167116,
+        "brier_score": 0.15460901175466363,
+        "decision_threshold": 0.5,
+        "n": 88
+      },
+      "xgboost": {
+        "recall_failed": 0.8679245283018868,
+        "false_negative_rate": 0.1320754716981132,
+        "precision_high_risk_alert": 0.7931034482758621,
+        "pr_auc": 0.9236957080443484,
+        "roc_auc": 0.8722371967654987,
+        "brier_score": 0.15947331488132477,
+        "decision_threshold": 0.5,
+        "n": 88
+      }
+    },
+    "selected_model": "random_forest",
+    "selection_rule": "max pr_auc on validation split",
+    "xgboost_available": true
+  },
+  "calibration": {
+    "calibration_applied": false,
+    "raw_brier_score_validation": 0.1309890818896155,
+    "calibrated_brier_score_validation": 0.1398721571596926,
+    "reliability_curve_test": [
+      {
+        "mean_predicted_risk": 0.22745561098122152,
+        "observed_failure_rate": 0.16666666666666666
+      },
+      {
+        "mean_predicted_risk": 0.40283868105333337,
+        "observed_failure_rate": 0.5882352941176471
+      },
+      {
+        "mean_predicted_risk": 0.5848596619077094,
+        "observed_failure_rate": 0.5294117647058824
+      },
+      {
+        "mean_predicted_risk": 0.8307158012943858,
+        "observed_failure_rate": 0.8823529411764706
+      },
+      {
+        "mean_predicted_risk": 0.9781989398487224,
+        "observed_failure_rate": 1.0
+      }
+    ]
+  },
+  "test_report": {
+    "recall_failed": 0.9444444444444444,
+    "false_negative_rate": 0.05555555555555555,
+    "precision_high_risk_alert": 0.75,
+    "pr_auc": 0.9231958171454683,
+    "roc_auc": 0.8582175925925927,
+    "brier_score": 0.14785828317060554,
+    "decision_threshold": 0.321,
+    "n": 86,
+    "threshold_selection_rule": "max F-beta (beta=2) on validation",
+    "evaluation_label": "synthetic-demo evaluation"
+  },
+  "lead_time_proxy_weeks": {
+    "mean_weeks_before_failure": 3.764705882352941,
+    "n_true_positive_with_known_failure_week": 51
+  },
+  "coverage": {
+    "train": {
+      "total_rows": 405,
+      "abstained_rows": 0,
+      "abstention_rate": 0.0
+    },
+    "validation": {
+      "total_rows": 88,
+      "abstained_rows": 0,
+      "abstention_rate": 0.0
+    },
+    "test": {
+      "total_rows": 86,
+      "abstained_rows": 0,
+      "abstention_rate": 0.0
+    }
+  },
+  "top_features_native_importance": [
+    {
+      "feature": "ph_change",
+      "weight": 0.28081201094463354
+    },
+    {
+      "feature": "viscosity_slope_per_week",
+      "weight": 0.1413621226674506
+    },
+    {
+      "feature": "viscosity_change_pct",
+      "weight": 0.09988190710529422
+    },
+    {
+      "feature": "ph_current",
+      "weight": 0.08904293967237446
+    },
+    {
+      "feature": "oil_phase_ratio",
+      "weight": 0.045567910648358696
+    },
+    {
+      "feature": "viscosity_current_cp",
+      "weight": 0.04465467807118973
+    },
+    {
+      "feature": "f2_electrolyte_thickener_risk",
+      "weight": 0.040793862178837924
+    },
+    {
+      "feature": "ph_baseline",
+      "weight": 0.0402391107232483
+    }
+  ],
+  "top_features_permutation_importance": [
+    {
+      "feature": "ph_change",
+      "mean_importance": 0.17697757434931802,
+      "std": 0.03620164788475323
+    },
+    {
+      "feature": "f2_electrolyte_thickener_risk",
+      "mean_importance": 0.019303129516468204,
+      "std": 0.006677690159370319
+    },
+    {
+      "feature": "storage_temperature_c",
+      "mean_importance": 0.008282416614140397,
+      "std": 0.0058400120103906435
+    },
+    {
+      "feature": "ph_current",
+      "mean_importance": 0.007840517491563559,
+      "std": 0.007055958954011181
+    },
+    {
+      "feature": "f2_emulsifier_balance_watch",
+      "mean_importance": 0.006469221772737383,
+      "std": 0.0033262143559114185
+    },
+    {
+      "feature": "viscosity_change_pct",
+      "mean_importance": -0.005330285525098616,
+      "std": 0.005357194149565365
+    },
+    {
+      "feature": "mixing_time_min",
+      "mean_importance": -0.004463874746431296,
+      "std": 0.0015062903714828091
+    },
+    {
+      "feature": "viscosity_slope_per_week",
+      "mean_importance": 0.0026218186706816584,
+      "std": 0.007086053282777488
+    }
+  ],
+  "limitations": [
+    "Forecast dilatih dan dievaluasi menggunakan synthetic demo data dari seeded hazard model.",
+    "Forecast tidak menggantikan formal stability validation.",
+    "likely_failure_mode belum tersedia karena dataset hanya punya label biner failed_by_12.",
+    "appearance_warning_count belum informatif karena seluruh observasi synthetic berlabel 'uniform'.",
+    "evidence_ids kosong karena integrasi F1 belum dibangun di baseline ini."
+  ]
+}

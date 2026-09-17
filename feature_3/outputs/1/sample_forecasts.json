@@ -1,0 +1,146 @@
+[
+  {
+    "trial_id": "TRAIN-FULL-FEAT-FULL-P-199-T3-SERIES",
+    "forecast_week": 4,
+    "forecast_horizon": "week_12",
+    "prediction_type": "synthetic_demo_early_risk_forecast",
+    "failure_risk": 0.9965,
+    "risk_band": "high",
+    "decision": "flag_high_risk",
+    "early_pass_issued": false,
+    "likely_failure_mode": "unsupported_no_multiclass_label",
+    "confidence": "high",
+    "key_signals": [
+      {
+        "feature": "viscosity_change_pct",
+        "value": -11.37,
+        "interpretation": "Viskositas turun dari baseline."
+      },
+      {
+        "feature": "ph_change",
+        "value": 0.359,
+        "interpretation": "Perubahan pH dari baseline ke checkpoint saat ini."
+      },
+      {
+        "feature": "emulsifier_balance_status",
+        "value": "watch",
+        "source": "f2-guardrail-derived-features",
+        "interpretation": "Tidak ada emulsifier terdeteksi pada formula."
+      }
+    ],
+    "evidence_ids": [],
+    "recommended_action": "Mulai reformulasi paralel; uji stabilitas tetap berjalan penuh.",
+    "limitations": [
+      "Forecast dilatih dan dievaluasi menggunakan synthetic demo data dari seeded hazard model.",
+      "Forecast tidak menggantikan formal stability validation.",
+      "evidence_ids kosong karena integrasi F1 belum dibangun di baseline ini.",
+      "F3 tidak pernah menyatakan formula lolos lebih awal; uji stabilitas tetap berjalan penuh."
+    ],
+    "model_version": "stability-sentinel-random_forest-v1"
+  },
+  {
+    "trial_id": "TRAIN-FULL-FEAT-FULL-P-198-T2-SERIES",
+    "forecast_week": 4,
+    "forecast_horizon": "week_12",
+    "prediction_type": "synthetic_demo_early_risk_forecast",
+    "failure_risk": 0.9928,
+    "risk_band": "high",
+    "decision": "flag_high_risk",
+    "early_pass_issued": false,
+    "likely_failure_mode": "unsupported_no_multiclass_label",
+    "confidence": "high",
+    "key_signals": [
+      {
+        "feature": "viscosity_change_pct",
+        "value": -11.14,
+        "interpretation": "Viskositas turun dari baseline."
+      },
+      {
+        "feature": "ph_change",
+        "value": 0.219,
+        "interpretation": "Perubahan pH dari baseline ke checkpoint saat ini."
+      }
+    ],
+    "evidence_ids": [],
+    "recommended_action": "Mulai reformulasi paralel; uji stabilitas tetap berjalan penuh.",
+    "limitations": [
+      "Forecast dilatih dan dievaluasi menggunakan synthetic demo data dari seeded hazard model.",
+      "Forecast tidak menggantikan formal stability validation.",
+      "evidence_ids kosong karena integrasi F1 belum dibangun di baseline ini.",
+      "F3 tidak pernah menyatakan formula lolos lebih awal; uji stabilitas tetap berjalan penuh."
+    ],
+    "model_version": "stability-sentinel-random_forest-v1"
+  },
+  {
+    "trial_id": "TRAIN-FULL-FEAT-FULL-P-197-T1-SERIES",
+    "forecast_week": 4,
+    "forecast_horizon": "week_12",
+    "prediction_type": "synthetic_demo_early_risk_forecast",
+    "failure_risk": 0.9924,
+    "risk_band": "high",
+    "decision": "flag_high_risk",
+    "early_pass_issued": false,
+    "likely_failure_mode": "unsupported_no_multiclass_label",
+    "confidence": "high",
+    "key_signals": [
+      {
+        "feature": "viscosity_change_pct",
+        "value": -13.04,
+        "interpretation": "Viskositas turun dari baseline."
+      },
+      {
+        "feature": "ph_change",
+        "value": 0.588,
+        "interpretation": "Perubahan pH dari baseline ke checkpoint saat ini."
+      },
+      {
+        "feature": "electrolyte_thickener_risk",
+        "value": "high",
+        "source": "f2-guardrail-derived-features",
+        "interpretation": "Elektrolit hadir bersama thickener yang sensitif elektrolit."
+      }
+    ],
+    "evidence_ids": [],
+    "recommended_action": "Mulai reformulasi paralel; uji stabilitas tetap berjalan penuh.",
+    "limitations": [
+      "Forecast dilatih dan dievaluasi menggunakan synthetic demo data dari seeded hazard model.",
+      "Forecast tidak menggantikan formal stability validation.",
+      "evidence_ids kosong karena integrasi F1 belum dibangun di baseline ini.",
+      "F3 tidak pernah menyatakan formula lolos lebih awal; uji stabilitas tetap berjalan penuh."
+    ],
+    "model_version": "stability-sentinel-random_forest-v1"
+  },
+  {
+    "trial_id": "TRAIN-FULL-FEAT-FULL-P-176-T3-SERIES",
+    "forecast_week": 4,
+    "forecast_horizon": "week_12",
+    "prediction_type": "synthetic_demo_early_risk_forecast",
+    "failure_risk": 0.1114,
+    "risk_band": "low",
+    "decision": "continue_observation",
+    "early_pass_issued": false,
+    "likely_failure_mode": "unsupported_no_multiclass_label",
+    "confidence": "medium",
+    "key_signals": [
+      {
+        "feature": "viscosity_change_pct",
+        "value": 2.63,
+        "interpretation": "Viskositas naik dari baseline."
+      },
+      {
+        "feature": "ph_change",
+        "value": 0.001,
+        "interpretation": "Perubahan pH dari baseline ke checkpoint saat ini."
+      }
+    ],
+    "evidence_ids": [],
+    "recommended_action": "Lanjutkan observasi sesuai protokol; belum ada dasar untuk eskalasi.",
+    "limitations": [
+      "Forecast dilatih dan dievaluasi menggunakan synthetic demo data dari seeded hazard model.",
+      "Forecast tidak menggantikan formal stability validation.",
+      "evidence_ids kosong karena integrasi F1 belum dibangun di baseline ini.",
+      "F3 tidak pernah menyatakan formula lolos lebih awal; uji stabilitas tetap berjalan penuh."
+    ],
+    "model_version": "stability-sentinel-random_forest-v1"
+  }
+]

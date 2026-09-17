@@ -1,0 +1,633 @@
+{
+  "question": "Apakah kebijakan alert F3 bertahan bila bobot hazard yang kami asumsikan ternyata salah?",
+  "method": "Tiap replikat menarik vektor bobot baru dalam rentang WEIGHT_RANGES, meregenerasi seluruh dataset dari bobot itu, melatih ulang, menyetel threshold di validation, lalu mengevaluasi sekali di test.",
+  "landmark_week": 4,
+  "replicates": 30,
+  "replicates_scored": 30,
+  "replicates_degenerate": 0,
+  "recall_target": 0.8,
+  "precision_floor": 0.6,
+  "weight_ranges_as_multiple_of_assumed": {
+    "electrolyte_thickener_risk": [
+      0.1,
+      2.0
+    ],
+    "emulsifier_missing": [
+      0.1,
+      2.0
+    ],
+    "electrolyte_load": [
+      0.1,
+      2.0
+    ],
+    "storage_40c": [
+      0.3,
+      2.0
+    ],
+    "process_penalty": [
+      0.3,
+      2.0
+    ],
+    "ph_deviation": [
+      0.3,
+      2.0
+    ]
+  },
+  "evaluation_label": "synthetic-demo evaluation",
+  "summary": {
+    "roc_auc": {
+      "min": 0.8193,
+      "median": 0.8882,
+      "max": 0.9348
+    },
+    "recall_failed": {
+      "min": 0.8298,
+      "median": 0.9152,
+      "max": 0.9615
+    },
+    "alert_precision": {
+      "min": 0.7377,
+      "median": 0.7857,
+      "max": 0.875
+    },
+    "failure_rate": {
+      "min": 0.4629,
+      "median": 0.6164,
+      "max": 0.7369
+    },
+    "replicates_meeting_recall_target": 30,
+    "total_early_passes_issued": 0
+  },
+  "replicate_detail": [
+    {
+      "replicate": 1,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 0.715,
+        "emulsifier_missing": 0.387,
+        "electrolyte_load": 1.337,
+        "storage_40c": 0.423,
+        "process_penalty": 1.211,
+        "ph_deviation": 0.922
+      },
+      "failure_rate": 0.5697,
+      "degenerate": false,
+      "roc_auc": 0.8836,
+      "recall_failed": 0.8909,
+      "alert_precision": 0.7656,
+      "alert_threshold": 0.21,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 2,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 0.21,
+        "emulsifier_missing": 1.064,
+        "electrolyte_load": 0.171,
+        "storage_40c": 1.037,
+        "process_penalty": 0.419,
+        "ph_deviation": 0.454
+      },
+      "failure_rate": 0.4654,
+      "degenerate": false,
+      "roc_auc": 0.9231,
+      "recall_failed": 0.9231,
+      "alert_precision": 0.766,
+      "alert_threshold": 0.27,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 3,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 0.907,
+        "emulsifier_missing": 1.671,
+        "electrolyte_load": 0.335,
+        "storage_40c": 0.68,
+        "process_penalty": 1.367,
+        "ph_deviation": 1.911
+      },
+      "failure_rate": 0.6167,
+      "degenerate": false,
+      "roc_auc": 0.9099,
+      "recall_failed": 0.9074,
+      "alert_precision": 0.875,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 4,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 1.196,
+        "emulsifier_missing": 0.854,
+        "electrolyte_load": 1.955,
+        "storage_40c": 0.379,
+        "process_penalty": 1.759,
+        "ph_deviation": 0.792
+      },
+      "failure_rate": 0.6419,
+      "degenerate": false,
+      "roc_auc": 0.8858,
+      "recall_failed": 0.9107,
+      "alert_precision": 0.7727,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 5,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 0.374,
+        "emulsifier_missing": 0.324,
+        "electrolyte_load": 0.686,
+        "storage_40c": 1.687,
+        "process_penalty": 0.607,
+        "ph_deviation": 1.289
+      },
+      "failure_rate": 0.5913,
+      "degenerate": false,
+      "roc_auc": 0.8716,
+      "recall_failed": 0.9423,
+      "alert_precision": 0.7778,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 6,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 1.314,
+        "emulsifier_missing": 0.808,
+        "electrolyte_load": 1.141,
+        "storage_40c": 0.407,
+        "process_penalty": 0.401,
+        "ph_deviation": 0.65
+      },
+      "failure_rate": 0.5786,
+      "degenerate": false,
+      "roc_auc": 0.9289,
+      "recall_failed": 0.9216,
+      "alert_precision": 0.7705,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 7,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 1.393,
+        "emulsifier_missing": 0.912,
+        "electrolyte_load": 0.697,
+        "storage_40c": 1.295,
+        "process_penalty": 1.07,
+        "ph_deviation": 0.81
+      },
+      "failure_rate": 0.6301,
+      "degenerate": false,
+      "roc_auc": 0.9066,
+      "recall_failed": 0.9615,
+      "alert_precision": 0.7937,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 8,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 1.609,
+        "emulsifier_missing": 1.428,
+        "electrolyte_load": 0.564,
+        "storage_40c": 1.277,
+        "process_penalty": 1.193,
+        "ph_deviation": 1.788
+      },
+      "failure_rate": 0.6753,
+      "degenerate": false,
+      "roc_auc": 0.8996,
+      "recall_failed": 0.9464,
+      "alert_precision": 0.8281,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 9,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 1.486,
+        "emulsifier_missing": 0.647,
+        "electrolyte_load": 1.962,
+        "storage_40c": 0.501,
+        "process_penalty": 1.011,
+        "ph_deviation": 1.587
+      },
+      "failure_rate": 0.6661,
+      "degenerate": false,
+      "roc_auc": 0.8865,
+      "recall_failed": 0.9138,
+      "alert_precision": 0.791,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 10,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 0.389,
+        "emulsifier_missing": 1.029,
+        "electrolyte_load": 0.174,
+        "storage_40c": 1.436,
+        "process_penalty": 1.6,
+        "ph_deviation": 1.274
+      },
+      "failure_rate": 0.5729,
+      "degenerate": false,
+      "roc_auc": 0.9248,
+      "recall_failed": 0.9583,
+      "alert_precision": 0.7931,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 11,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 1.763,
+        "emulsifier_missing": 0.696,
+        "electrolyte_load": 1.421,
+        "storage_40c": 1.31,
+        "process_penalty": 1.286,
+        "ph_deviation": 1.076
+      },
+      "failure_rate": 0.6901,
+      "degenerate": false,
+      "roc_auc": 0.8673,
+      "recall_failed": 0.9167,
+      "alert_precision": 0.7746,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 12,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 1.696,
+        "emulsifier_missing": 1.895,
+        "electrolyte_load": 1.001,
+        "storage_40c": 1.429,
+        "process_penalty": 0.403,
+        "ph_deviation": 1.493
+      },
+      "failure_rate": 0.7067,
+      "degenerate": false,
+      "roc_auc": 0.8933,
+      "recall_failed": 0.9322,
+      "alert_precision": 0.8462,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 13,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 1.33,
+        "emulsifier_missing": 1.987,
+        "electrolyte_load": 1.662,
+        "storage_40c": 0.784,
+        "process_penalty": 0.956,
+        "ph_deviation": 1.437
+      },
+      "failure_rate": 0.7038,
+      "degenerate": false,
+      "roc_auc": 0.8839,
+      "recall_failed": 0.9138,
+      "alert_precision": 0.803,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 14,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 0.143,
+        "emulsifier_missing": 0.977,
+        "electrolyte_load": 0.419,
+        "storage_40c": 0.499,
+        "process_penalty": 0.4,
+        "ph_deviation": 1.606
+      },
+      "failure_rate": 0.4938,
+      "degenerate": false,
+      "roc_auc": 0.8899,
+      "recall_failed": 0.8298,
+      "alert_precision": 0.78,
+      "alert_threshold": 0.25,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 15,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 0.346,
+        "emulsifier_missing": 0.57,
+        "electrolyte_load": 0.843,
+        "storage_40c": 1.781,
+        "process_penalty": 0.437,
+        "ph_deviation": 1.064
+      },
+      "failure_rate": 0.6162,
+      "degenerate": false,
+      "roc_auc": 0.8851,
+      "recall_failed": 0.9444,
+      "alert_precision": 0.8095,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 16,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 1.144,
+        "emulsifier_missing": 1.778,
+        "electrolyte_load": 1.657,
+        "storage_40c": 1.769,
+        "process_penalty": 0.773,
+        "ph_deviation": 1.006
+      },
+      "failure_rate": 0.7369,
+      "degenerate": false,
+      "roc_auc": 0.865,
+      "recall_failed": 0.8871,
+      "alert_precision": 0.8333,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 17,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 0.782,
+        "emulsifier_missing": 1.78,
+        "electrolyte_load": 1.92,
+        "storage_40c": 0.557,
+        "process_penalty": 0.6,
+        "ph_deviation": 0.694
+      },
+      "failure_rate": 0.6593,
+      "degenerate": false,
+      "roc_auc": 0.8843,
+      "recall_failed": 0.8966,
+      "alert_precision": 0.8125,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 18,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 0.543,
+        "emulsifier_missing": 1.021,
+        "electrolyte_load": 1.219,
+        "storage_40c": 0.747,
+        "process_penalty": 0.307,
+        "ph_deviation": 1.012
+      },
+      "failure_rate": 0.6137,
+      "degenerate": false,
+      "roc_auc": 0.8927,
+      "recall_failed": 0.9074,
+      "alert_precision": 0.7538,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 19,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 0.802,
+        "emulsifier_missing": 1.176,
+        "electrolyte_load": 1.911,
+        "storage_40c": 1.474,
+        "process_penalty": 1.176,
+        "ph_deviation": 1.35
+      },
+      "failure_rate": 0.7153,
+      "degenerate": false,
+      "roc_auc": 0.844,
+      "recall_failed": 0.8852,
+      "alert_precision": 0.7826,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 20,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 1.385,
+        "emulsifier_missing": 0.203,
+        "electrolyte_load": 1.809,
+        "storage_40c": 1.626,
+        "process_penalty": 1.787,
+        "ph_deviation": 1.656
+      },
+      "failure_rate": 0.7059,
+      "degenerate": false,
+      "roc_auc": 0.8434,
+      "recall_failed": 0.9016,
+      "alert_precision": 0.7639,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 21,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 0.846,
+        "emulsifier_missing": 0.858,
+        "electrolyte_load": 0.297,
+        "storage_40c": 1.378,
+        "process_penalty": 0.406,
+        "ph_deviation": 0.414
+      },
+      "failure_rate": 0.5476,
+      "degenerate": false,
+      "roc_auc": 0.9102,
+      "recall_failed": 0.9375,
+      "alert_precision": 0.7377,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 22,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 0.497,
+        "emulsifier_missing": 0.408,
+        "electrolyte_load": 0.746,
+        "storage_40c": 0.389,
+        "process_penalty": 0.3,
+        "ph_deviation": 0.557
+      },
+      "failure_rate": 0.4629,
+      "degenerate": false,
+      "roc_auc": 0.9111,
+      "recall_failed": 0.9111,
+      "alert_precision": 0.8039,
+      "alert_threshold": 0.22,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 23,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 0.293,
+        "emulsifier_missing": 0.791,
+        "electrolyte_load": 0.148,
+        "storage_40c": 1.786,
+        "process_penalty": 1.344,
+        "ph_deviation": 0.553
+      },
+      "failure_rate": 0.5354,
+      "degenerate": false,
+      "roc_auc": 0.9255,
+      "recall_failed": 0.9362,
+      "alert_precision": 0.7857,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 24,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 0.579,
+        "emulsifier_missing": 0.76,
+        "electrolyte_load": 0.792,
+        "storage_40c": 0.509,
+        "process_penalty": 1.743,
+        "ph_deviation": 1.988
+      },
+      "failure_rate": 0.6045,
+      "degenerate": false,
+      "roc_auc": 0.8821,
+      "recall_failed": 0.9464,
+      "alert_precision": 0.7681,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 25,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 0.985,
+        "emulsifier_missing": 1.019,
+        "electrolyte_load": 0.263,
+        "storage_40c": 0.474,
+        "process_penalty": 0.882,
+        "ph_deviation": 0.75
+      },
+      "failure_rate": 0.48,
+      "degenerate": false,
+      "roc_auc": 0.9249,
+      "recall_failed": 0.9048,
+      "alert_precision": 0.7451,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 26,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 1.675,
+        "emulsifier_missing": 0.407,
+        "electrolyte_load": 0.144,
+        "storage_40c": 1.917,
+        "process_penalty": 1.198,
+        "ph_deviation": 0.549
+      },
+      "failure_rate": 0.5746,
+      "degenerate": false,
+      "roc_auc": 0.9348,
+      "recall_failed": 0.9565,
+      "alert_precision": 0.8302,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 27,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 1.132,
+        "emulsifier_missing": 0.151,
+        "electrolyte_load": 1.103,
+        "storage_40c": 1.963,
+        "process_penalty": 1.768,
+        "ph_deviation": 1.484
+      },
+      "failure_rate": 0.6831,
+      "degenerate": false,
+      "roc_auc": 0.8498,
+      "recall_failed": 0.8814,
+      "alert_precision": 0.7647,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 28,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 0.596,
+        "emulsifier_missing": 0.797,
+        "electrolyte_load": 0.417,
+        "storage_40c": 1.612,
+        "process_penalty": 1.205,
+        "ph_deviation": 1.624
+      },
+      "failure_rate": 0.6168,
+      "degenerate": false,
+      "roc_auc": 0.8828,
+      "recall_failed": 0.9286,
+      "alert_precision": 0.8125,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 29,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 0.726,
+        "emulsifier_missing": 0.524,
+        "electrolyte_load": 1.642,
+        "storage_40c": 1.974,
+        "process_penalty": 1.749,
+        "ph_deviation": 1.67
+      },
+      "failure_rate": 0.714,
+      "degenerate": false,
+      "roc_auc": 0.8193,
+      "recall_failed": 0.873,
+      "alert_precision": 0.7857,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    },
+    {
+      "replicate": 30,
+      "weight_scales": {
+        "electrolyte_thickener_risk": 1.655,
+        "emulsifier_missing": 1.506,
+        "electrolyte_load": 0.531,
+        "storage_40c": 1.18,
+        "process_penalty": 0.904,
+        "ph_deviation": 0.349
+      },
+      "failure_rate": 0.6052,
+      "degenerate": false,
+      "roc_auc": 0.9257,
+      "recall_failed": 0.9388,
+      "alert_precision": 0.8214,
+      "alert_threshold": 0.2,
+      "early_pass_issued": 0,
+      "meets_recall_target": true
+    }
+  ]
+}
