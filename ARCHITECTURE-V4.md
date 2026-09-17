@@ -1,124 +1,124 @@
-# FormuLab AI: Architecture v4
+# FormuLab AI: Arsitektur v4
 
-> **Status:** implementation blueprint for the hackathon prototype  
-> **Supersedes:** `ARCHITECTURE-V3.md` for MVP scope and data-flow decisions  
-> **Preserves:** v3 principles of local-first inference, evidence-grounded RAG, deterministic guardrails, access control before retrieval, human sign-off, and auditable outputs.
+> **Status:** cetak biru implementasi prototipe hackathon  
+> **Menggantikan:** `ARCHITECTURE-V3.md` untuk keputusan scope MVP dan aliran data  
+> **Mempertahankan:** prinsip v3, yaitu inferensi local-first, RAG berbasis evidence, guardrail deterministik, kontrol akses sebelum retrieval, human sign-off, dan output yang dapat diaudit.
 
 ---
 
-## 1. Product Decision
+## 1. Keputusan Produk
 
-### 1.1 MVP domain
+### 1.1 Domain MVP
 
-The MVP validates one coherent vertical:
+MVP memvalidasi satu vertical yang konsisten:
 
-> **Oil-in-water gel-cream moisturizer for oily skin.**
+> **Moisturizer gel-cream oil-in-water untuk kulit berminyak.**
 
-The product vision remains broader than this vertical, but the prototype does not claim to model every cosmetic category. One formulation family allows F1, F2, F3, F5, the knowledge pool, and the dataset to share one ontology.
+Visi produk tetap mencakup kategori kosmetik yang lebih luas. Namun, prototipe tidak mengklaim dapat memodelkan seluruh kategori produk. Satu keluarga formulasi membuat F1, F2, F3, F5, knowledge pool, dan dataset memakai ontology yang sama.
 
-### 1.2 Product positioning
+### 1.2 Posisi produk
 
-FormuLab AI is not a replacement for Smart Lab. It is a researcher-facing evidence, guardrail, and experimental-memory layer that can sit within a Smart Lab workflow.
+FormuLab AI bukan pengganti Smart Lab. FormuLab adalah lapisan evidence, guardrail, dan memori eksperimen yang menghadap langsung kepada peneliti dan dapat diintegrasikan ke workflow Smart Lab.
 
-> **FormuLab turns a lab journal into an evidence-grounded co-pilot. It retrieves prior experiments, catches known formulation risks, monitors early stability signals, and preserves the learning from every trial.**
+> **FormuLab mengubah jurnal lab menjadi co-pilot berbasis evidence: menemukan eksperimen terdahulu, menangkap risiko formula yang sudah dikenal, memantau sinyal stabilitas awal, dan menjaga pembelajaran dari setiap trial.**
 
-### 1.3 Core user loop
+### 1.3 Siklus pengguna utama
 
 ```text
-Research brief
-  → F1 finds evidence and similar trials
-  → researcher drafts a formula
-  → F2 normalizes ingredients and applies auditable guardrails
-  → researcher runs a trial and records checkpoints
-  → F3 forecasts long-horizon failure risk from early trends
-  → F1 retrieves similar historical failure patterns as evidence
-  → researcher decides continue, reformulate, or request review
-  → verified outcome becomes a new journal evidence record
+Brief riset
+  → F1 mencari evidence dan trial serupa
+  → peneliti menyusun formula
+  → F2 menormalisasi bahan dan menerapkan guardrail yang dapat diaudit
+  → peneliti menjalankan trial dan mencatat checkpoint
+  → F3 memprediksi risiko gagal jangka panjang dari tren awal
+  → F1 mengambil pola kegagalan historis untuk menjelaskan prediksi
+  → peneliti memutuskan lanjut, reformulasi, atau review
+  → outcome terverifikasi menjadi evidence jurnal berikutnya
 ```
 
-### 1.4 Scope decision
+### 1.4 Keputusan scope
 
-| Priority | Module | MVP role |
+| Prioritas | Modul | Peran MVP |
 |---|---|---|
-| P0 | F1: Evidence Research Copilot | Hybrid RAG with citations and abstention |
-| P0 | F2: Formulation Guardrail | Deterministic ingredient/rule screening |
-| P0 | F3: Predictive Stability Sentinel | Scenario-based early-risk forecast from longitudinal data |
-| P0 | F5: Voice-to-Structured Logging | Confirmed low-friction lab notes |
-| P1 | F3 visual upload | Evidence attachment and image quality check only |
-| P2 | Computer-vision instability classifier | Deferred pending an appropriate labeled dataset |
-| P2 | Active learning / next-best experiment | Roadmap after real historical trajectories are available |
+| P0 | F1: Copilot Evidence Riset | Hybrid RAG dengan sitasi dan abstention |
+| P0 | F2: Guardrail Formulasi | Screening bahan dan rule deterministik |
+| P0 | F3: Predictive Stability Sentinel | Forecast risiko awal dari data longitudinal |
+| P0 | F5: Voice-to-Structured Logging | Pencatatan lab cepat yang wajib dikonfirmasi |
+| P1 | Upload gambar F3 | Lampiran evidence dan quality check gambar saja |
+| P2 | Classifier CV ketidakstabilan | Ditunda sampai memperoleh dataset gambar berlabel yang sesuai |
+| P2 | Active learning / next-best experiment | Roadmap setelah ada trajectory stability historis nyata |
 
 ---
 
-## 2. Non-Negotiable Principles
+## 2. Prinsip yang Tidak Dapat Ditawar
 
-1. **One canonical journal schema.** Modules exchange typed fields, not free-form text.
-2. **F1 retrieves evidence.** Its prose does not become an unverified numerical model feature.
-3. **F2 produces normalized inputs and guardrail-derived features.** It does not predict scientific truth.
-4. **F3 forecasts from formula, process, and actual checkpoint trends.** It must state whether its domain is supported.
-5. **RAG evidence explains a forecast after it is made.** It does not silently override the predictive model.
-6. **Synthetic data proves integration and workflow, not scientific performance.** Every synthetic record is labelled clearly.
-7. **A teacher LLM may generate prose only from controlled seeds.** It must not invent numeric trajectories, measurements, or labels.
-8. **Every user-facing claim has provenance.** Rule version, source IDs, model version, confidence, and human review state are stored.
-9. **The system may abstain.** Unsupported domain, insufficient observations, or contradictory evidence produce an explicit limitation rather than false precision.
-10. **Human sign-off is mandatory.** No AI output automatically finalizes a formula, observation, or compliance decision.
+1. **Satu schema jurnal kanonis.** Modul bertukar field terstruktur, bukan teks bebas.
+2. **F1 mengambil evidence.** Narasi F1 tidak menjadi fitur numerik tanpa validasi bagi F3.
+3. **F2 menghasilkan input ternormalisasi dan fitur dari guardrail.** F2 tidak memprediksi kebenaran ilmiah.
+4. **F3 membuat forecast dari formula, proses, dan tren checkpoint aktual.** F3 harus menyatakan status coverage domainnya.
+5. **Evidence RAG menjelaskan forecast setelah forecast dibuat.** RAG tidak menggantikan model prediktif secara diam-diam.
+6. **Data sintetis membuktikan integrasi dan workflow, bukan performa ilmiah.** Semua record sintetis diberi label jelas.
+7. **Teacher LLM hanya boleh menghasilkan narasi dari seed terkontrol.** LLM tidak boleh mengarang trajectory numerik, measurement, atau label.
+8. **Setiap klaim dapat ditelusuri.** Rule version, source ID, model version, confidence, dan status review manusia disimpan.
+9. **Sistem boleh abstain.** Domain tidak didukung, observasi kurang, atau evidence bertentangan harus menghasilkan limitation eksplisit.
+10. **Human sign-off wajib.** Tidak ada output AI yang otomatis memfinalkan formula, observasi, atau keputusan compliance.
 
 ---
 
-## 3. Logical Architecture
+## 3. Arsitektur Logis
 
 ```text
 ┌────────────────────────────────────────────────────────────────────────────┐
 │                         RESEARCHER WORKSPACE                               │
-│ Dashboard · Journal Editor · Formula Table · Stability Timeline · Voice UI │
+│ Dashboard · Editor Jurnal · Tabel Formula · Timeline Stabilitas · Voice UI │
 └──────────────────────────────────┬─────────────────────────────────────────┘
-                                   │ authenticated API
+                                   │ API terautentikasi
                                    ▼
 ┌────────────────────────────────────────────────────────────────────────────┐
-│                     FORMULAB MODULAR BACKEND                               │
+│                     BACKEND MODULAR FORMULAB                                │
 │                                                                            │
 │ ┌─────────────┐  ┌──────────────┐  ┌────────────────┐  ┌────────────────┐ │
 │ │ Journal API │  │ Access/Audit │  │ Ingest/Index   │  │ Model Adapter  │ │
-│ │ canonical   │  │ ACL/proven.  │  │ background job │  │ local runtime  │ │
+│ │ data kanonis│  │ ACL/proven.  │  │ background job │  │ runtime lokal  │ │
 │ └──────┬──────┘  └──────┬───────┘  └──────┬─────────┘  └──────┬─────────┘ │
 │        │                │                 │                   │           │
 │ ┌──────▼──────┐ ┌───────▼──────┐ ┌────────▼─────────┐ ┌──────▼─────────┐ │
 │ │ F1 Evidence │ │ F2 Guardrail │ │ F3 Stability     │ │ F5 Voice       │ │
-│ │ Hybrid RAG  │ │ Rule Engine │ │ Sentinel          │ │ Structuring    │ │
+│ │ Hybrid RAG  │ │ Rule Engine  │ │ Sentinel          │ │ Structuring    │ │
 │ └──────┬──────┘ └───────┬──────┘ └────────┬─────────┘ └──────┬─────────┘ │
 │        └────────────────┴──────────────────┴──────────────────┘           │
 │                                  │                                         │
-│                  schema validation · coverage gate · explanation layer     │
+│            validasi schema · coverage gate · explanation layer             │
 └──────────────────────────────────┬─────────────────────────────────────────┘
                                    │
                                    ▼
 ┌────────────────────────────────────────────────────────────────────────────┐
-│                              DATA LAYER                                    │
-│ Canonical journal DB · ingredient KB · rule KB · evidence corpus · audit  │
-│ Derived indexes: full-text index · vector index · model feature snapshots  │
+│                              LAPISAN DATA                                  │
+│ DB jurnal kanonis · KB bahan · KB aturan · corpus evidence · audit event   │
+│ Index turunan: full-text · vector · feature snapshot model                 │
 └────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### 3.1 Deployment decision
+### 3.1 Keputusan deployment
 
-Use a modular monolith in the hackathon:
+Gunakan modular monolith untuk hackathon:
 
-- web frontend chosen by the team;
-- one Python backend for API, ML, and background jobs;
-- PostgreSQL for canonical records;
-- PostgreSQL full-text search plus pgvector for the MVP retrieval layer;
-- local or S3-compatible object storage for permitted audio/images;
-- adapter interface for embedding, reranker, LLM, STT, and F3 model.
+- frontend web dengan framework yang dikuasai tim;
+- satu backend Python untuk API, ML, dan background job;
+- PostgreSQL untuk record kanonis;
+- PostgreSQL full-text search plus pgvector untuk retrieval MVP;
+- object storage lokal atau S3-compatible untuk audio/gambar yang diizinkan;
+- adapter untuk embedding, reranker, LLM, STT, dan model F3.
 
-Microservices are explicitly out of scope.
+Microservices secara eksplisit di luar scope.
 
 ---
 
-## 4. Canonical Ontology
+## 4. Ontology Kanonis
 
-### 4.1 Ingredient identity
+### 4.1 Identitas bahan
 
-Every ingredient has a stable internal ID. Aliases, supplier names, and spelling variants map to that ID.
+Setiap bahan memiliki internal ID yang stabil. Alias, nama supplier, dan variasi ejaan dipetakan ke ID tersebut.
 
 ```json
 {
@@ -134,7 +134,7 @@ Every ingredient has a stable internal ID. Aliases, supplier names, and spelling
 
 ### 4.2 Formula snapshot
 
-A formula snapshot is immutable once saved. Any edit creates a new version.
+Formula snapshot tidak dapat diubah setelah disimpan. Setiap perubahan membuat versi baru.
 
 ```json
 {
@@ -186,7 +186,7 @@ A formula snapshot is immutable once saved. Any edit creates a new version.
 }
 ```
 
-### 4.4 Final outcome
+### 4.4 Outcome final
 
 ```json
 {
@@ -203,63 +203,63 @@ A formula snapshot is immutable once saved. Any edit creates a new version.
 
 ## 5. Knowledge Pool
 
-The knowledge pool is not one undifferentiated database. Every record has a source type, domain, quality state, visibility level, and limitation.
+Knowledge pool bukan satu database campur-aduk. Setiap record memiliki source type, domain, quality state, visibility level, dan limitation.
 
 ```text
 Knowledge Pool
 ├── ingredient_master
-│   ├── canonical INCI and aliases
-│   ├── functional classes and formulation metadata
-│   └── source/version metadata
+│   ├── INCI kanonis dan alias
+│   ├── functional class serta metadata formulasi
+│   └── source dan version metadata
 ├── formulation_rule_base
 │   ├── compatibility rules
-│   ├── pH and concentration constraints
-│   ├── allergen and regulatory screening references
-│   └── supplier-document / verification state
+│   ├── pH dan concentration constraints
+│   ├── allergen serta regulatory screening reference
+│   └── supplier-document / verification status
 ├── evidence_corpus
-│   ├── structured synthetic moisturizer journals
-│   ├── public formulation dataset summaries
-│   ├── public scientific references
-│   └── approved source metadata
+│   ├── jurnal moisturizer sintetis terstruktur
+│   ├── ringkasan dataset formulasi publik
+│   ├── referensi ilmiah publik
+│   └── source metadata yang disetujui
 ├── stability_dataset
-│   ├── synthetic formula/process seeds
-│   ├── generated numeric checkpoint trajectories
-│   ├── verified final outcome labels
-│   └── scenario provenance
+│   ├── formula/process seed sintetis
+│   ├── trajectory checkpoint numerik
+│   ├── final outcome label terverifikasi skenario
+│   └── provenance skenario
 ├── model_registry
-│   ├── F3 feature schema
-│   ├── model version and training provenance
-│   └── metrics and domain coverage
+│   ├── feature schema F3
+│   ├── model version dan training provenance
+│   └── metric serta domain coverage
 └── journal_store
-    ├── user journal/trial records
-    ├── saved AI outputs
-    └── audit events
+    ├── record jurnal/trial pengguna
+    ├── output AI tersimpan
+    └── audit event
 ```
 
-### 5.1 Public data usage
+### 5.1 Penggunaan data publik
 
-Public data is used only for the role it supports:
+Data publik digunakan hanya untuk peran yang didukungnya.
 
-| Source class | Correct use |
+| Kelas sumber | Penggunaan yang benar |
 |---|---|
-| INCI and ingredient references | Canonical names, aliases, functional metadata |
-| Regulatory references | Prototype guardrail source, versioned and human-reviewed |
-| Public cosmetic/formulation datasets | Methodology reference, feature inspiration, evidence corpus if domain-fit |
-| Shampoo formulation dataset | External reference for formulation ML patterns, not a moisturizer model training source |
-| mAb longitudinal stability dataset | Reference for early-to-final forecasting methodology, not a cosmetic model training source |
-| Synthetic moisturizer data | Demo training and workflow validation only |
+| Referensi INCI dan bahan | Nama kanonis, alias, functional metadata |
+| Regulatory reference | Sumber guardrail prototipe yang versioned dan direview manusia |
+| Dataset formulasi publik | Referensi metodologi, feature inspiration, evidence corpus bila domain sesuai |
+| Shampoo Formulations Dataset | Referensi pola formulation ML, bukan data training model moisturizer |
+| Dataset mAb longitudinal | Referensi metodologi forecast awal-ke-akhir, bukan data training kosmetik |
+| Data moisturizer sintetis | Training demo dan validasi workflow saja |
 
-No public source is silently represented as Paragon data.
+Tidak ada sumber publik yang disamarkan sebagai data Paragon.
 
 ---
 
-## 6. Synthetic Longitudinal Dataset
+## 6. Dataset Longitudinal Sintetis
 
-### 6.1 Purpose
+### 6.1 Tujuan
 
-The synthetic dataset proves the end-to-end integration of retrieval, rules, forecasting, voice capture, and auditability. It does not prove that the predictive model is scientifically validated for production.
+Dataset sintetis membuktikan integrasi retrieval, rules, forecasting, voice capture, dan auditability. Dataset ini tidak membuktikan bahwa model prediktif telah tervalidasi secara ilmiah untuk produksi.
 
-Every record has:
+Setiap record memiliki:
 
 ```json
 {
@@ -269,103 +269,103 @@ Every record has:
 }
 ```
 
-### 6.2 Dataset size
+### 6.2 Ukuran dataset
 
-| Entity | Count |
+| Entitas | Jumlah |
 |---|---:|
-| Journal projects | 200 |
-| Trials per project | 3 |
-| Total trials | 600 |
-| Checkpoints per trial | 7: week 0, 1, 2, 4, 6, 8, 12 |
-| Total checkpoint records | 4,200 |
+| Journal project | 200 |
+| Trial per project | 3 |
+| Total trial | 600 |
+| Checkpoint per trial | 7: minggu 0, 1, 2, 4, 6, 8, 12 |
+| Total checkpoint record | 4.200 |
 
-### 6.3 Scenario families
+### 6.3 Scenario family
 
-Each trial seed belongs to a controlled trajectory family.
+Setiap trial seed berada dalam satu trajectory family terkontrol.
 
-| Scenario family | Intended final outcome |
+| Scenario family | Outcome yang dituju |
 |---|---|
-| `stable` | Passes through week 12 |
-| `early_viscosity_drop` | Early decline that may be recoverable or fail later |
-| `delayed_phase_separation` | Appears acceptable early, fails after intermediate checkpoints |
-| `ph_drift` | Progressive pH movement linked to risk condition |
-| `electrolyte_thickener_failure` | High electrolyte load plus sensitive thickener leads to viscosity failure |
-| `process_parameter_failure` | Unfavorable mixing/heating process leads to instability pattern |
-| `borderline` | Evidence remains insufficient and human review is preferred |
+| `stable` | Lulus sampai minggu ke-12 |
+| `early_viscosity_drop` | Penurunan awal yang dapat pulih atau gagal kemudian |
+| `delayed_phase_separation` | Terlihat baik pada awal, gagal setelah checkpoint menengah |
+| `ph_drift` | Pergeseran pH bertahap yang terhubung ke risk condition |
+| `electrolyte_thickener_failure` | Elektrolit tinggi dan thickener sensitif memicu kegagalan viskositas |
+| `process_parameter_failure` | Proses mixing/heating tidak ideal memicu pola instability |
+| `borderline` | Evidence belum cukup, human review lebih tepat |
 
-The distribution must include both stable and failed trials. The generator must avoid a trivial rule where a single feature perfectly predicts the final label.
+Distribusi harus mencakup trial stabil dan gagal. Generator harus menghindari pola trivial ketika satu feature langsung menentukan final label dengan sempurna.
 
 ### 6.4 Numeric trajectory generator
 
-A deterministic or seeded stochastic generator creates numeric fields.
+Generator deterministik atau seeded stochastic membuat field numerik.
 
 ```text
-Structured formula + process seed
-  → scenario assignment
-  → latent risk factors
-  → baseline pH and viscosity
-  → timepoint-specific drift / noise
-  → observation state transitions
-  → final outcome and failure week
+Seed formula + proses terstruktur
+  → assignment skenario
+  → latent risk factor
+  → baseline pH dan viskositas
+  → drift/noise per checkpoint
+  → transition status observasi
+  → final outcome dan failure week
 ```
 
-Example conceptual relationships:
+Contoh hubungan konseptual:
 
 ```text
-high electrolyte load
-+ electrolyte-sensitive thickener
-+ negative viscosity slope at early checkpoints
-→ elevated probability of viscosity-collapse trajectory
+electrolyte load tinggi
++ thickener sensitif elektrolit
++ negative viscosity slope pada checkpoint awal
+→ probabilitas trajectory viscosity collapse meningkat
 ```
 
 ```text
 process deviation
-+ unstable emulsifier balance
-→ elevated probability of delayed visual separation trajectory
++ emulsifier balance tidak ideal
+→ probabilitas delayed visual separation meningkat
 ```
 
-These are demo assumptions, not universal cosmetic laws.
+Ini adalah asumsi demo, bukan hukum universal formulasi kosmetik.
 
-### 6.5 LLM boundary
+### 6.5 Batas penggunaan LLM
 
-The teacher LLM may generate only:
+Teacher LLM hanya boleh membuat:
 
-- journal titles;
-- researcher observation phrasing;
-- short lesson-learned text;
-- natural-language query variants;
-- explanation drafts constrained by structured values.
+- judul jurnal;
+- phrasing observasi peneliti;
+- teks lesson learned singkat;
+- variasi query natural language;
+- draft penjelasan yang dibatasi oleh value terstruktur.
 
-The teacher LLM must never generate:
+Teacher LLM tidak boleh membuat:
 
-- pH values;
-- viscosity values;
-- failure weeks;
-- final labels;
-- concentration values;
-- regulatory decisions.
+- nilai pH;
+- nilai viskositas;
+- failure week;
+- final label;
+- concentration value;
+- keputusan regulatory.
 
 ---
 
-## 7. F1: Evidence Research Copilot
+## 7. F1: Copilot Evidence Riset
 
-### 7.1 Role
+### 7.1 Peran
 
-F1 finds historical trial evidence, including failure patterns, and exposes evidence coverage. It does not make the stability forecast itself.
+F1 menemukan evidence trial historis, termasuk failure pattern, lalu menunjukkan evidence coverage. F1 tidak membuat stability forecast itu sendiri.
 
-### 7.2 Retrieval pipeline
+### 7.2 Pipeline retrieval
 
 ```text
 Natural-language query
-  → product/ingredient/failure-mode normalization
-  → access control filter
-  → parallel lexical retrieval + dense retrieval + metadata filters
+  → normalisasi product / ingredient / failure mode
+  → access-control filter
+  → lexical retrieval + dense retrieval + metadata filter paralel
   → reciprocal-rank fusion / reranking
   → evidence sufficiency gate
-  → grounded summary with source cards
+  → grounded summary dengan source card
 ```
 
-### 7.3 Structured F1 output
+### 7.3 Output F1 terstruktur
 
 ```json
 {
@@ -388,46 +388,46 @@ Natural-language query
   ],
   "summary_for_user": "...",
   "limitations": [
-    "Demo evidence is scenario-based synthetic data."
+    "Evidence demo menggunakan data sintetis berbasis skenario."
   ]
 }
 ```
 
-### 7.4 F1 to F3 integration rule
+### 7.4 Aturan integrasi F1 ke F3
 
-F1 source IDs and failure patterns are stored as evidence references. F1 prose and raw relevance scores do **not** enter the numerical F3 feature vector.
+Source ID dan failure pattern dari F1 disimpan sebagai evidence reference. Prosa F1 dan raw relevance score tidak masuk ke feature vector numerik F3.
 
-This prevents the predictive model from depending on unstable RAG behavior or leaking final outcomes through retrieval.
+Aturan ini mencegah model prediktif bergantung pada perilaku RAG yang berubah-ubah atau mengalami leakage final outcome melalui retrieval.
 
-### 7.5 Acceptance criteria
+### 7.5 Acceptance criteria F1
 
-- Exact ingredients, aliases, and trial IDs are retrievable.
-- Paraphrased natural-language queries retrieve relevant trials in top-5.
-- Every factual sentence includes an evidence card/source ID.
-- Insufficient evidence produces abstention.
-- Restricted evidence never reaches the candidate set or LLM prompt.
+- Ingredient exact-match, alias, dan trial ID dapat diambil.
+- Query natural-language yang diparafrase dapat menemukan evidence relevan pada top-5.
+- Setiap klaim faktual memiliki evidence card/source ID.
+- Evidence yang kurang memicu abstention.
+- Evidence restricted tidak masuk candidate set atau prompt LLM.
 
 ---
 
-## 8. F2: Deterministic Formulation Guardrail
+## 8. F2: Guardrail Formulasi Deterministik
 
-### 8.1 Role
+### 8.1 Peran
 
-F2 validates formula inputs and emits a stable feature snapshot for F3. F2 is not a regulatory approval engine.
+F2 memvalidasi input formula dan mengeluarkan feature snapshot stabil untuk F3. F2 bukan regulatory approval engine.
 
 ### 8.2 Pipeline
 
 ```text
-Ingredient input
+Input bahan
   → alias / INCI normalization
-  → concentration and schema validation
+  → validasi concentration dan schema
   → compatibility rules
   → pH / emulsifier / electrolyte checks
-  → regulatory and supplier-document screening
-  → warnings, actions, feature snapshot, audit event
+  → regulatory serta supplier-document screening
+  → warning, action, feature snapshot, audit event
 ```
 
-### 8.3 F2 output contract
+### 8.3 Kontrak output F2
 
 ```json
 {
@@ -453,57 +453,57 @@ Ingredient input
   ],
   "model_coverage": {
     "status": "supported_demo_domain",
-    "reason": "Formula maps to the O/W gel-cream synthetic feature schema."
+    "reason": "Formula dapat dipetakan ke O/W gel-cream synthetic feature schema."
   }
 }
 ```
 
-### 8.4 F2 to F3 integration rule
+### 8.4 Aturan integrasi F2 ke F3
 
-Only canonical formula/process features and deterministic derived features enter F3. A raw warning message does not become an input feature. The feature schema must be versioned and identical during model training and inference.
+Hanya formula/process feature kanonis dan derived feature deterministik yang masuk F3. Raw warning message tidak menjadi input feature. Feature schema wajib versioned dan harus identik antara training serta inference.
 
-### 8.5 Safe statuses
+### 8.5 Status aman
 
-| Status | Meaning |
+| Status | Makna |
 |---|---|
-| `clear_for_current_screening` | No available prototype rule was triggered, not final approval |
-| `warning` | Risk or evidence gap exists |
-| `blocked_by_rule` | Explicit prototype constraint is violated |
-| `unknown` | Insufficient data, human review required |
+| `clear_for_current_screening` | Tidak ada prototype rule yang aktif, bukan final approval |
+| `warning` | Ada risiko atau evidence gap |
+| `blocked_by_rule` | Explicit prototype constraint dilanggar |
+| `unknown` | Data kurang, human review wajib |
 
 ---
 
 ## 9. F3: Predictive Stability Sentinel
 
-### 9.1 Product promise
+### 9.1 Janji produk
 
-> **F3 uses early formula and checkpoint signals to estimate the risk that a batch will fail before week 12. It prioritizes researcher attention and earlier reformulation. It does not replace formal stability validation.**
+> **F3 memakai sinyal formula dan checkpoint awal untuk mengestimasi risiko batch gagal sebelum minggu ke-12. F3 memprioritaskan perhatian peneliti dan reformulasi lebih awal. F3 tidak menggantikan formal stability validation.**
 
-### 9.2 Two F3 modes
+### 9.2 Dua mode F3
 
-#### Mode A: pre-trial risk context
+#### Mode A: konteks risiko sebelum trial
 
-Before lab execution, F3 can expose F2-derived risk context:
-
-```text
-High electrolyte-thickener risk detected.
-The model cannot make a long-horizon forecast until checkpoints exist.
-Recommended action: record baseline measurements and follow the stability test plan.
-```
-
-This is not a model probability yet.
-
-#### Mode B: longitudinal early-risk forecast
-
-After sufficient observations, F3 predicts:
+Sebelum lab execution, F3 dapat menampilkan risk context dari F2.
 
 ```text
-P(failure by week 12 | formula, process, data observed through current week)
+Risiko electrolyte-thickener tinggi terdeteksi.
+Model belum dapat membuat long-horizon forecast sebelum checkpoint tersedia.
+Aksi: catat baseline measurement dan jalankan stability test plan.
 ```
 
-At minimum, require baseline plus one post-baseline checkpoint. For the strongest MVP forecast, use data through week 4.
+Ini belum berupa model probability.
 
-### 9.3 F3 feature vector
+#### Mode B: forecast risiko longitudinal
+
+Setelah observasi cukup, F3 memprediksi:
+
+```text
+P(gagal pada atau sebelum minggu 12 | formula, proses, data sampai minggu saat ini)
+```
+
+Minimum input adalah baseline dan satu checkpoint setelah baseline. Forecast MVP terkuat memakai data sampai minggu ke-4.
+
+### 9.3 Feature vector F3
 
 ```json
 {
@@ -534,19 +534,19 @@ At minimum, require baseline plus one post-baseline checkpoint. For the stronges
 }
 ```
 
-### 9.4 MVP model
+### 9.4 Model MVP
 
-Use a transparent tabular baseline before deep time-series models:
+Gunakan baseline tabular yang explainable sebelum deep time-series model:
 
-1. Logistic Regression baseline;
-2. Random Forest baseline;
-3. XGBoost or LightGBM candidate model;
-4. calibration step if probabilities are shown;
-5. SHAP or feature-contribution explanation for the chosen model.
+1. Logistic Regression sebagai baseline;
+2. Random Forest sebagai baseline;
+3. XGBoost atau LightGBM sebagai candidate model;
+4. calibration step jika probability ditampilkan;
+5. SHAP atau feature contribution untuk menjelaskan model terpilih.
 
-An LSTM, GRU, TCN, or Transformer is not part of the MVP. The dataset contains 600 scenario trajectories, so engineered trend features are more appropriate and explainable.
+LSTM, GRU, TCN, dan Transformer tidak masuk MVP. Dataset hanya memiliki 600 trajectory skenario, sehingga engineered trend feature lebih sesuai dan lebih mudah dijelaskan.
 
-### 9.5 F3 output contract
+### 9.5 Kontrak output F3
 
 ```json
 {
@@ -562,7 +562,7 @@ An LSTM, GRU, TCN, or Transformer is not part of the MVP. The dataset contains 6
     {
       "feature": "viscosity_change_pct",
       "value": -19.33,
-      "interpretation": "Viscosity declined materially from baseline."
+      "interpretation": "Viskositas turun material dari baseline."
     },
     {
       "feature": "electrolyte_thickener_risk",
@@ -571,37 +571,37 @@ An LSTM, GRU, TCN, or Transformer is not part of the MVP. The dataset contains 6
     }
   ],
   "evidence_ids": ["J-2025-044-T02", "J-2025-102-T01"],
-  "recommended_action": "Request formulator review before continuing to the next test cycle.",
+  "recommended_action": "Minta review formulator sebelum melanjutkan siklus uji berikutnya.",
   "limitations": [
-    "Forecast is trained and evaluated on scenario-based synthetic demo data.",
-    "It does not replace formal stability validation."
+    "Forecast dilatih dan dievaluasi menggunakan synthetic demo data berbasis skenario.",
+    "Forecast tidak menggantikan formal stability validation."
   ],
   "model_version": "stability-sentinel-xgb-v1"
 }
 ```
 
-### 9.6 F1, F2, F3 responsibility boundary
+### 9.6 Batas tanggung jawab F1, F2, F3
 
 ```text
 F2:
-Normalizes formula and states deterministic risks.
+Menormalisasi formula dan menyatakan risk factor deterministik.
 
 F3:
-Forecasts risk from F2 features plus observed checkpoint trends.
+Membuat forecast risiko dari F2 feature serta observed checkpoint trend.
 
 F1:
-Finds the historical cases and evidence cards that explain why the F3 warning deserves attention.
+Mencari trial historis dan evidence card yang menjelaskan mengapa warning F3 perlu diperhatikan.
 ```
 
-### 9.7 F3 safe fallback
+### 9.7 Fallback aman F3
 
-| Condition | Behavior |
+| Kondisi | Perilaku |
 |---|---|
-| No post-baseline checkpoint | Show test plan, no forecast |
-| Unsupported formula domain | Show `unsupported_domain`, no probability |
-| Missing critical measurement | Show `insufficient_observation`, request missing field |
-| Contradictory signals | Lower confidence and request human review |
-| Model unavailable | Show deterministic trend deltas and F1 evidence only |
+| Tidak ada post-baseline checkpoint | Tampilkan test plan, tanpa forecast |
+| Formula di luar domain | Tampilkan `unsupported_domain`, tanpa probability |
+| Measurement kritis kosong | Tampilkan `insufficient_observation`, minta field yang kurang |
+| Sinyal saling bertentangan | Turunkan confidence dan minta human review |
+| Model tidak tersedia | Tampilkan trend delta deterministik dan evidence F1 saja |
 
 ---
 
@@ -612,15 +612,15 @@ Finds the historical cases and evidence cards that explain why the F3 warning de
 ```text
 Push-to-talk audio
   → local speech-to-text
-  → ingredient alias and number normalization
+  → normalisasi nama bahan dan angka
   → structured extraction
-  → JSON/range validation
+  → validasi JSON/range
   → confidence per field
   → user confirmation
-  → journal write and audit event
+  → write jurnal dan audit event
 ```
 
-### 10.2 F5 output must target canonical fields
+### 10.2 Output F5 harus menargetkan field kanonis
 
 ```json
 {
@@ -643,60 +643,58 @@ Push-to-talk audio
 }
 ```
 
-F5 must not write directly to F3. It updates the canonical checkpoint after user confirmation. F3 runs only after the checkpoint is valid.
+F5 tidak boleh menulis langsung ke F3. F5 memperbarui checkpoint kanonis setelah user confirmation. F3 berjalan hanya jika checkpoint valid.
 
 ---
 
-## 11. F3 Image Attachment, Not CV Prediction
+## 11. Lampiran Gambar F3, Bukan CV Prediction
 
-F3 still accepts images as evidence attached to a stability checkpoint.
+F3 tetap menerima gambar sebagai evidence yang ditempel pada stability checkpoint.
 
 ```text
-Image upload
+Upload gambar
   → image quality check
   → object storage
-  → attach to checkpoint timeline
+  → attach ke checkpoint timeline
   → human observation
 ```
 
-The MVP may check blur, exposure, and framing, but it must not claim to classify phase separation unless a properly validated visual model is later activated.
+MVP boleh mengecek blur, exposure, dan framing. Namun MVP tidak boleh mengklaim phase-separation classification tanpa model visual tervalidasi.
 
-UI label:
+Label UI:
 
-> **Visual evidence capture. AI visual screening is pending domain validation.**
+> **Visual evidence capture. AI visual screening menunggu validasi domain.**
 
 ---
 
-## 12. Dataset Generation and Corpus Generation
+## 12. Dataset Generation dan Corpus Generation
 
-### 12.1 Generation order
+### 12.1 Urutan generation
 
 ```text
-1. Ingredient master and rule KB
-2. Structured formula/process seeds
-3. Numeric stability trajectories and final outcomes
+1. Ingredient master dan rule KB
+2. Formula/process seed terstruktur
+3. Numeric stability trajectory serta final outcome
 4. Synthetic journal metadata
-5. LLM-generated narrative fields constrained by seeds
-6. F1 query variants and synthetic voice transcripts
-7. Embedding/index creation
-8. Train/validation/test split by trial family
+5. Narrative field dari LLM yang dibatasi seed
+6. Query RAG dan synthetic voice transcript
+7. Embedding/index generation
+8. Train/validation/test split berdasarkan trial family
 ```
 
-### 12.2 Required split discipline
+### 12.2 Split discipline
 
-Never split checkpoint rows randomly. All timepoints from one trial must remain in one partition.
+Jangan pernah melakukan split checkpoint row secara random. Semua timepoint dari satu trial harus tetap berada dalam partition yang sama.
 
 ```text
-Train: trial families A–N
-Validation: separate trial families
-Test: separate trial families and human-authored queries
+Train: trial family A–N
+Validation: trial family terpisah
+Test: trial family terpisah dan query yang ditulis manusia
 ```
 
-This prevents the model from seeing the same latent trajectory in train and test.
+Ini mencegah model melihat latent trajectory yang sama pada train dan test.
 
-### 12.3 Dataset records
-
-Recommended files:
+### 12.3 File dataset
 
 ```text
 data/
@@ -712,56 +710,56 @@ data/
 └── metadata.json
 ```
 
-### 12.4 Synthetic-data guardrail
+### 12.4 Guardrail data sintetis
 
-All synthetic UI content and API responses include a hidden machine-readable field and an available user-visible disclaimer. The demo script must say that the prototype uses scenario-based synthetic data because Paragon's historical formulation data is proprietary and unavailable to participants.
+Seluruh synthetic UI content dan API response memiliki field machine-readable tersembunyi dan disclaimer user-visible. Demo script wajib menjelaskan bahwa prototype menggunakan scenario-based synthetic data karena data formulasi Paragon bersifat proprietary dan tidak tersedia untuk peserta.
 
 ---
 
-## 13. Evaluation
+## 13. Evaluasi
 
-### 13.1 F1 evaluation
+### 13.1 Evaluasi F1
 
-| Metric | Requirement |
+| Metrik | Requirement |
 |---|---|
-| Recall@5 | Relevant evidence is retrieved in top 5 |
-| MRR@5 or nDCG@5 | Relevance ranking quality |
-| Citation precision | Claims map to source IDs |
-| Unsupported-claim rate | Must be measured |
-| Correct abstention rate | Must be measured |
-| Permission leakage | Must be zero in access-control tests |
+| Recall@5 | Evidence relevan ditemukan pada top-5 |
+| MRR@5 atau nDCG@5 | Kualitas ranking relevance |
+| Citation precision | Klaim dipetakan ke source ID |
+| Unsupported-claim rate | Wajib diukur |
+| Correct abstention rate | Wajib diukur |
+| Permission leakage | Wajib nol pada access-control test |
 
-### 13.2 F2 evaluation
+### 13.2 Evaluasi F2
 
 | Test | Requirement |
 |---|---|
-| Rule determinism | Same input produces same output |
-| Alias normalization | Ambiguous cases request confirmation |
-| Source provenance | Every warning includes rule/source/version |
-| Override audit | Human overrides are stored |
+| Rule determinism | Input sama menghasilkan output sama |
+| Alias normalization | Kasus ambigu meminta confirmation |
+| Source provenance | Setiap warning memiliki rule/source/version |
+| Override audit | Human override disimpan |
 
-### 13.3 F3 evaluation
+### 13.3 Evaluasi F3
 
-Evaluate retrospective forecasts at a fixed landmark, such as week 4.
+Lakukan retrospective forecast pada landmark tetap, misalnya minggu ke-4.
 
 ```text
-Input: formula/process + week 0–4 checkpoints
-Target: final pass/fail outcome by week 12
+Input: formula/process + checkpoint minggu 0–4
+Target: final pass/fail sampai minggu ke-12
 ```
 
-| Metric | Why it matters |
+| Metrik | Alasan |
 |---|---|
-| Recall for failed trials | High-risk batches should not be missed |
-| False-negative rate | Most costly forecasting failure |
-| Precision for high-risk alert | Avoid stopping healthy trials too often |
+| Recall untuk failed trial | Batch high-risk tidak boleh terlewat |
+| False-negative rate | Kesalahan forecast paling mahal |
+| Precision high-risk alert | Jangan menghentikan trial sehat terlalu banyak |
 | PR-AUC / ROC-AUC | Classification discrimination |
-| Brier score / calibration curve | Whether displayed probability is meaningful |
-| Lead-time proxy | Whether warnings occur before final failure |
-| Coverage/abstention rate | Whether model admits unsupported situations |
+| Brier score / calibration curve | Probability yang ditampilkan bermakna atau tidak |
+| Lead-time proxy | Warning muncul sebelum failure final |
+| Coverage/abstention rate | Model mengakui kondisi unsupported |
 
-Every reported metric must say `synthetic-demo evaluation`, not production validation.
+Setiap metric wajib diberi label `synthetic-demo evaluation`, bukan production validation.
 
-### 13.4 F5 evaluation
+### 13.4 Evaluasi F5
 
 - ingredient normalization accuracy;
 - exact concentration extraction accuracy;
@@ -772,53 +770,53 @@ Every reported metric must say `synthetic-demo evaluation`, not production valid
 
 ---
 
-## 14. Security, Privacy, and Auditability
+## 14. Security, Privacy, dan Auditability
 
 ### 14.1 Access control
 
-Apply permission filtering before lexical retrieval, vector retrieval, reranking, and prompt construction.
+Permission filtering diterapkan sebelum lexical retrieval, vector retrieval, reranking, dan prompt construction.
 
-| Visibility level | Access |
+| Visibility level | Akses |
 |---|---|
-| Private | Named researcher only |
-| Team | Project team members |
-| Cross-team summary | Aggregated lesson, no formula detail |
-| Restricted | Explicit role and approval |
+| Private | Peneliti tertentu |
+| Team | Anggota project team |
+| Cross-team summary | Lesson agregat tanpa detail formula |
+| Restricted | Role dan approval eksplisit |
 
-### 14.2 Audit events
+### 14.2 Audit event
 
-Store:
+Simpan:
 
 - input formula version;
-- F2 rules triggered and rule versions;
+- F2 rule yang aktif dan rule version;
 - F3 feature-schema/model version;
-- checkpoint IDs used in each forecast;
-- F1 evidence source IDs;
+- checkpoint ID yang dipakai setiap forecast;
+- F1 evidence source ID;
 - generated output;
-- user corrections, acceptance, override, and sign-off.
+- user correction, acceptance, override, serta sign-off.
 
 ### 14.3 Privacy boundary
 
-Synthetic demo data may use external teacher APIs only if it contains no proprietary or personal information. Future internal Paragon data requires an approved private environment.
+Synthetic demo data boleh memakai external teacher API hanya jika tidak memiliki proprietary atau personal information. Data internal Paragon di masa depan membutuhkan environment privat yang disetujui.
 
 ---
 
 ## 15. Demo Flow
 
-### Three-minute primary story
+### Cerita utama tiga menit
 
-1. Researcher enters an oily-skin gel-cream brief.
-2. F1 retrieves two relevant prior trials, including a delayed viscosity-collapse case.
-3. Researcher creates a formula based on the journal context.
-4. F2 flags an electrolyte-thickener risk and stores a normalized formula snapshot.
-5. Researcher records a week-4 checkpoint by voice, then confirms parsed pH, viscosity, and observation.
-6. F3 detects an early downward viscosity trend, forecasts elevated week-12 failure risk, and states its synthetic-demo limitation.
-7. F1 opens historical evidence cards supporting the warning.
-8. Researcher requests review/reformulation instead of waiting for the final test window.
+1. Peneliti memasukkan brief gel-cream untuk kulit berminyak.
+2. F1 mengambil dua trial terdahulu yang relevan, termasuk kasus delayed viscosity collapse.
+3. Peneliti membuat formula berdasarkan konteks jurnal.
+4. F2 memberi warning electrolyte-thickener risk dan menyimpan normalized formula snapshot.
+5. Peneliti mencatat checkpoint minggu ke-4 lewat suara, lalu mengonfirmasi pH, viscosity, dan observation hasil parsing.
+6. F3 membaca penurunan viscosity awal, membuat forecast risiko gagal pada minggu ke-12, dan menunjukkan limitation synthetic-demo.
+7. F1 membuka historical evidence card yang mendukung warning tersebut.
+8. Peneliti meminta review/reformulasi, alih-alih menunggu final test window.
 
-### Judge-facing statement
+### Pernyataan untuk juri
 
-> FormuLab does not replace formal stability testing. It brings the go/no-go decision forward for high-risk batches by combining structured formula constraints, early measurement trends, and institutional evidence. The prototype validates this workflow on a clearly labelled scenario-based dataset and is designed to retrain on Paragon historical stability trajectories.
+> FormuLab tidak menggantikan formal stability test. FormuLab membawa keputusan go/no-go lebih awal untuk batch berisiko tinggi dengan menggabungkan formulation constraint terstruktur, trend measurement awal, dan institutional evidence. Prototype memvalidasi workflow ini dengan dataset berbasis skenario yang diberi label jelas, lalu dirancang untuk dilatih ulang memakai historical stability trajectory Paragon.
 
 ---
 
@@ -826,68 +824,68 @@ Synthetic demo data may use external teacher APIs only if it contains no proprie
 
 ### Core data
 
-- [ ] 200 projects, 600 trials, and 4,200 checkpoint records generated.
-- [ ] All numeric values come from a seeded trajectory generator.
-- [ ] Every synthetic record is labelled with provenance.
-- [ ] Train/validation/test split is by trial family.
+- [ ] 200 project, 600 trial, dan 4.200 checkpoint record tergenerate.
+- [ ] Semua numeric value berasal dari seeded trajectory generator.
+- [ ] Setiap synthetic record diberi provenance label.
+- [ ] Train/validation/test split dilakukan berdasarkan trial family.
 
 ### F1
 
-- [ ] Hybrid lexical+dense retrieval works.
-- [ ] Evidence cards with source IDs are shown.
-- [ ] Insufficient evidence abstains.
-- [ ] Synthetic source status is shown.
+- [ ] Hybrid lexical+dense retrieval berjalan.
+- [ ] Evidence card dengan source ID tampil.
+- [ ] Evidence kurang menghasilkan abstention.
+- [ ] Synthetic source status tampil.
 
 ### F2
 
-- [ ] Ingredient aliases normalize to canonical IDs.
-- [ ] Deterministic rules return source/versioned warnings.
-- [ ] A versioned F3 feature snapshot is emitted.
-- [ ] Human override is audited.
+- [ ] Ingredient alias ternormalisasi ke canonical ID.
+- [ ] Deterministic rule menghasilkan source/versioned warning.
+- [ ] Versioned F3 feature snapshot keluar.
+- [ ] Human override tercatat.
 
 ### F3
 
-- [ ] Inputs use only versioned F2 features and verified checkpoints.
-- [ ] Week-4 forecast runs against week-12 outcome labels.
-- [ ] Output includes risk, confidence, signals, action, evidence IDs, and limitation.
-- [ ] Unsupported/missing-data cases abstain.
-- [ ] Evaluation is labelled synthetic-demo.
+- [ ] Input memakai F2 feature versioned dan checkpoint terverifikasi.
+- [ ] Forecast minggu ke-4 berjalan terhadap outcome minggu ke-12.
+- [ ] Output memiliki risk, confidence, signal, action, evidence ID, dan limitation.
+- [ ] Kasus unsupported/missing data melakukan abstention.
+- [ ] Evaluasi diberi label synthetic-demo.
 
 ### F5
 
-- [ ] Voice extraction proposes structured checkpoint updates.
-- [ ] User confirmation is mandatory before writing.
-- [ ] F3 only runs after valid checkpoint storage.
+- [ ] Voice extraction mengusulkan structured checkpoint update.
+- [ ] User confirmation wajib sebelum write.
+- [ ] F3 hanya berjalan sesudah checkpoint valid tersimpan.
 
 ---
 
-## 17. Deferred Roadmap
+## 17. Roadmap yang Ditunda
 
-1. Replace synthetic trajectories with permissioned Paragon historical stability data.
-2. Calibrate F3 against true product-family-specific failure labels.
-3. Add survival analysis or dynamic landmark models for time-to-failure.
-4. Add active-learning recommendations for the next measurement or trial.
-5. Add validated visual instability classification after a domain-appropriate labeled image dataset is obtained.
-6. Expand from O/W gel-cream to other product families only after model coverage tests.
+1. Ganti trajectory sintetis dengan historical stability data Paragon yang permissioned.
+2. Kalibrasi F3 terhadap product-family-specific failure label nyata.
+3. Tambahkan survival analysis atau dynamic landmark model untuk time-to-failure.
+4. Tambahkan active-learning recommendation untuk measurement atau trial berikutnya.
+5. Tambahkan visual instability classification setelah memperoleh dataset gambar berlabel yang sesuai domain.
+6. Ekspansi dari O/W gel-cream ke product family lain hanya setelah model coverage test.
 
 ---
 
-## 18. Final Architecture Decision
+## 18. Keputusan Arsitektur Final
 
-FormuLab v4 chooses **one coherent end-to-end demo universe** rather than several disconnected models:
+FormuLab v4 memilih satu end-to-end demo universe yang koheren, bukan beberapa model terpisah:
 
 ```text
-Synthetic O/W gel-cream formulation trajectories
+Synthetic trajectory O/W gel-cream
     ↓
-F1 retrieves structured historical evidence
+F1 mengambil historical evidence terstruktur
     ↓
-F2 creates a deterministic and versioned feature snapshot
+F2 menghasilkan feature snapshot deterministik dan versioned
     ↓
-F3 forecasts week-12 failure risk from early checkpoints
+F3 memprediksi risiko gagal minggu ke-12 dari checkpoint awal
     ↓
-F5 captures valid observations that update the forecast
+F5 menangkap observasi valid yang memperbarui forecast
     ↓
-Human review owns every consequential decision
+Human review memegang semua keputusan konsekuensial
 ```
 
-This architecture demonstrates the real product loop without pretending that synthetic data provides production-grade cosmetic stability validation.
+Arsitektur ini mendemonstrasikan product loop yang nyata tanpa berpura-pura bahwa synthetic data sudah memberikan production-grade cosmetic stability validation.
