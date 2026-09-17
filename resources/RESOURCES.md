@@ -16,28 +16,6 @@ https://pubmed.ncbi.nlm.nih.gov/31979051/
 
 https://aocs.onlinelibrary.wiley.com/doi/10.1002/jsde.12852?utm_source=chatgpt.com
 
-# DATASET COSMETIC
-
-Accelerating Formulation Design via Machine Learning: Generating a High-throughput Shampoo Formulations Dataset - PMC 
-
-INCIDB/cosmetics-skincare-inci-database: Comprehensive, multi-source skincare and cosmetic formulation database unifying 19,846 products, 43,097 canonical INCI compounds, 5,994 brands, 319,989 composition mappings 
-
-cosmetics-skincare-inci-database/DATA_DICTIONARY.md at master · INCIDB/cosmetics-skincare-inci-database 
-
-A dataset of formulation compositions for self-emulsifying drug delivery systems | Scientific Data 
-
-Cosmetic ingredient database - Internal Market, Industry, Entrepreneurship and SMEs 
-
-INCIDB — Skincare & Cosmetics INCI Database for Developers 
-
-world.openbeautyfacts.org 
-
-CosIng - Cosmetics - GROWTH - European Commission 
-
-Cek Bahan Kosmetik — Apakah Aman? | CekBahan 
-
-https://www.bing.com/search?q=inci+cari+data+kosmetik&cvid=86fb8e236c6a48e39334
-
 
 # PROBLEMS
 
@@ -59,3 +37,63 @@ Mengapa ini menjadi penyebab nomor tiga: Formulator modern dituntut memasukkan b
 Efek Domino: Ketidakmampuan memprediksi interaksi molekuler dan muatan ionik ini di atas kertas membuat formulator baru menyadari formula mereka mencair atau menggumpal setelah batch diracik di lab, memaksa mereka mengulang arsitektur formula berkali-kali.
 
 PENDAPAT PENELITI: "Aku jawab setau ku ya karena aku RnD packaging bukan RnD formula. Menurut sepengathuanku, klo di rnd formula paling basic knowledgenya sebenernya harus paham reaksi kimia sih, mungkin singkatnya lebih ke reaksi antar bahan baku untuk suatu formula, tipe formulanya juga (water in oil, oil in water, dsb), sama claim apa yang mau kita bawa ke konsumen gitu jd hrs nyesuaiin pembuatan formulanya. Yang berasa masih cukup chalenging klo aku denger” dr tmn” formulator sih ttg 3 phase formula yaa, misal water in oil in water -> yg secara claim akan jauh lebih menjawab consumer needs, itu masih banyak tantangan dlm developmentnya krn emg susah."
+
+
+# DATASET COSMETIC
+
+[Accelerating Formulation Design via Machine Learning: Generating a High-throughput Shampoo Formulations Dataset - PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11222379/?utm_source=chatgpt.com)
+
+[INCIDB/cosmetics-skincare-inci-database: Comprehensive, multi-source skincare and cosmetic formulation database unifying 19,846 products, 43,097 canonical INCI compounds, 5,994 brands, 319,989 composition mappings ](https://github.com/INCIDB/cosmetics-skincare-inci-database?utm_source=chatgpt.com)
+
+[cosmetics-skincare-inci-database/DATA_DICTIONARY.md at master · INCIDB/cosmetics-skincare-inci-database](https://github.com/INCIDB/cosmetics-skincare-inci-database/blob/master/DATA_DICTIONARY.md?utm_source=chatgpt.com)
+
+[A dataset of formulation compositions for self-emulsifying drug delivery systems | Scientific Data](https://www.nature.com/articles/s41597-023-02812-w?utm_source=chatgpt.com) 
+
+[Cosmetic ingredient database - Internal Market, Industry, Entrepreneurship and SMEs](https://single-market-economy.ec.europa.eu/sectors/cosmetics/cosmetic-ingredient-database_en?utm_source=chatgpt.com) 
+
+[INCIDB — Skincare & Cosmetics INCI Database for Developers](https://incidb.dataengineered.io/) 
+
+[world.openbeautyfacts.org](https://world.openbeautyfacts.org/) 
+
+[CosIng - Cosmetics - GROWTH - European Commission](https://ec.europa.eu/growth/tools-databases/cosing/) 
+
+[Cek Bahan Kosmetik — Apakah Aman? | CekBahan](https://cekbahan.id/) 
+
+https://www.bing.com/search?q=inci+cari+data+kosmetik&cvid=86fb8e236c6a48e39334
+
+https://www.bing.com/search?q=inci+cari+data+kosmetik&cvid=86fb8e236c6a48e393348a7f50c40a47&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOdIBCDc1NDRqMGo0qAIIsAIB&FORM=ANAB01&PC=HCTS
+
+[INCI Database: International Nomenclature of Cosmetic Ingredients](https://www.specialchem.com/cosmetics/all-inci-ingredients) 
+
+[INCI Database: Look Up 24,000+ Cosmetic Raw Materials | INCIkit](https://www.incikit.com/en/inci-datenbank) 
+
+[The Beauty API | REST API for 180,000 Skincare & Beauty Products + Ingredient Data](https://thebeautyapi.com/) 
+
+[Cosmetic Ingredient API for INCI Analysis](https://www.dermalytics.dev/) 
+
+https://www.bing.com/search?q=inci+cari+data+kosmetik&cvid=86fb8e236c6a48e393348a7f50c40a47&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOdIBCDc1NDRqMGo0qAIIsAIB&FORM=ANAB01&PC=HCTS
+
+[ingredient.cloud — Cosmetic Ingredient Intelligence](https://ingredient.cloud/)
+
+[INKEEDecoder - Decode your skincare ingredients](https://inkeedecoder.com/) 
+
+[apple/foundationdb: FoundationDB - the open source, distributed, transactional key-value store](https://github.com/apple/foundationdb) 
+
+[FoundationDB · Database of Databases ](https://dbdb.io/db/foundationdb)
+
+
+# RAW MATERIAL DATASET
+
+[Coptis PLM Cosmetics](https://www.coptis.com/) 
+
+[yfarids/coptis-formula-analyzer: Comprehensive cosmetic formula analysis tool built with .NET 8, Blazor Server, and Entity Framework Core](https://github.com/yfarids/coptis-formula-analyzer) 
+
+[Coptisine Dataset & API for Coptis Spp](https://ethno-api.com/coptisine-coptis-spp.html)
+
+https://www.bing.com/search?q=api%20cas%20finder&qs=n&form=QBRE&sp=-1&lq=0&pq=api%20cas%20finde&sc=0-13&sk=&cvid=E22E2EE111B74FB48A2A1B1835ECF497
+
+[scifinder-api/README.md at main · acs-cas/scifinder-api](https://github.com/acs-cas/scifinder-api/blob/main/README.md) 
+
+[CAS Common Chemistry API — IUPAC FAIR Chemistry Cookbook](https://iupac.github.io/WFChemCookbook/datasources/cas_commonchem.html) 
+
+[acs-cas/scifinder-api: Documentation and sample code for using the CAS SciFinder API](https://github.com/acs-cas/scifinder-api) 
