@@ -1,0 +1,1 @@
+Ini adalah project hackathon 24 jam dengan tema "AI untuk Riset & Prediksi Formulasi. Peranku sebagai AI/ML/Data Engineer.  Ide inisial tim kami akan mengembangkan web/app dashboard jurnal penelitian terintegrasi AI untuk membantu dan mengefisienkan kerja peneliti.
