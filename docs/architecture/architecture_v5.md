@@ -16,6 +16,7 @@ ParaLab menyatukan empat alur yang saling terkait:
 2. **F2, Formulation Guardrail:** menormalkan bahan dan menjalankan aturan yang hasilnya dapat diaudit.
 3. **F3, Stability Sentinel:** memakai formula, proses, dan tren checkpoint awal untuk menandai risiko kegagalan sebelum minggu ke-12.
 4. **F5, Structured Logging:** kontrak data untuk mengubah catatan lab menjadi draft checkpoint yang wajib dikonfirmasi manusia.
+5. **F4, Next Validation Step:** heuristic deterministik yang memprioritaskan observasi atau review berikutnya dari output F2/F3 terstruktur.
 
 Ada juga **pilot CV** terpisah. Pilot ini dapat mengusulkan observasi visual dari gambar sintetis, tetapi belum dihubungkan ke pipeline utama dan tidak tervalidasi untuk foto kosmetik nyata.
 
@@ -51,6 +52,7 @@ Pertanyaan riset / formula
 | F2 Guardrail | Implemented | Normalisasi INCI/alias, rule versioned, warning/blocked/unknown, dan derived feature | Approval BPOM, halal, atau formulasi otomatis |
 | F3 Stability Sentinel | Implemented sebagai baseline synthetic-demo | Baseline tabular, feature F2 + proses + tren sampai landmark, threshold one-sided alert | Prediksi stabilitas kosmetik nyata atau pengganti formal test |
 | F5 | Kontrak data dan contoh sintetis tersedia | `f5_examples.jsonl`, field confirmation, dan provenance transcript | Speech-to-text atau aplikasi voice logging end-to-end |
+| F4 Next Validation Step | Implemented sebagai heuristic API | `modules/f4_next_validation.py` dan `POST /v1/f4/next-validation` memakai field F2/F3 terstruktur | Formula optimizer, instruksi reformulasi, atau autonomous experiment design |
 | CV visual screening | Pilot terpisah | Generator gambar sintetis dan notebook training `TinyVialCNN` | Klasifikasi foto kosmetik asli atau input otomatis F3 |
 | API F3 | Implemented sebagai adaptor lokal | FastAPI memuat model hash-verified, menjalankan F2 + feature engineering, lalu forecast/abstain | Web, auth, database runtime, dan sistem siap produksi |
 
