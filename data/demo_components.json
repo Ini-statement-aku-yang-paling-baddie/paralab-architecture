@@ -1,0 +1,92 @@
+[
+  {
+    "alias_candidate": null,
+    "data_origin": "synthetic_demo",
+    "human_verified": false,
+    "id": "DEMO:WATER",
+    "name": "Air demo",
+    "properties": null,
+    "provenance": {
+      "assumption_id": "SIM-001",
+      "generator": "pilot-v1",
+      "seed": 17
+    },
+    "scientific_validation_status": "not_validated_for_production",
+    "verification": "unverified_demo_component"
+  },
+  {
+    "alias_candidate": "ALIAS name-match only; unverified",
+    "data_origin": "synthetic_demo",
+    "human_verified": false,
+    "id": "DEMO:GLYCERIN",
+    "name": "Glycerin",
+    "properties": null,
+    "provenance": {
+      "assumption_id": "SIM-001",
+      "generator": "pilot-v1",
+      "seed": 17
+    },
+    "scientific_validation_status": "not_validated_for_production",
+    "verification": "unverified_demo_component"
+  },
+  {
+    "alias_candidate": "ALIAS name-match only; unverified",
+    "data_origin": "synthetic_demo",
+    "human_verified": false,
+    "id": "DEMO:SQUALANE",
+    "name": "Squalane",
+    "properties": null,
+    "provenance": {
+      "assumption_id": "SIM-001",
+      "generator": "pilot-v1",
+      "seed": 17
+    },
+    "scientific_validation_status": "not_validated_for_production",
+    "verification": "unverified_demo_component"
+  },
+  {
+    "alias_candidate": "ALIAS name-match only; unverified",
+    "data_origin": "synthetic_demo",
+    "human_verified": false,
+    "id": "DEMO:NIACINAMIDE",
+    "name": "Niacinamide",
+    "properties": null,
+    "provenance": {
+      "assumption_id": "SIM-001",
+      "generator": "pilot-v1",
+      "seed": 17
+    },
+    "scientific_validation_status": "not_validated_for_production",
+    "verification": "unverified_demo_component"
+  },
+  {
+    "alias_candidate": null,
+    "data_origin": "synthetic_demo",
+    "human_verified": false,
+    "id": "DEMO:EMULSIFIER_UNSPECIFIED",
+    "name": "Placeholder emulsifier",
+    "properties": null,
+    "provenance": {
+      "assumption_id": "SIM-001",
+      "generator": "pilot-v1",
+      "seed": 17
+    },
+    "scientific_validation_status": "not_validated_for_production",
+    "verification": "unverified_demo_component"
+  },
+  {
+    "alias_candidate": null,
+    "data_origin": "synthetic_demo",
+    "human_verified": false,
+    "id": "DEMO:PRESERVATIVE_UNSPECIFIED",
+    "name": "Placeholder preservative",
+    "properties": null,
+    "provenance": {
+      "assumption_id": "SIM-001",
+      "generator": "pilot-v1",
+      "seed": 17
+    },
+    "scientific_validation_status": "not_validated_for_production",
+    "verification": "unverified_demo_component"
+  }
+]

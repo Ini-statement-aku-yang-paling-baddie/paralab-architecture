@@ -1,0 +1,17 @@
+{
+  "article_doi": "10.6084/m9.figshare.25451878.v1",
+  "collection_doi": "10.6084/m9.figshare.c.7132624.v1",
+  "license": {
+    "name": "CC0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "value": 2
+  },
+  "raw_sha256": {
+    "fetch_metadata.json": "3643c2c429e3350a2e989a868e237068043ac015ea124e3c40c6a3a41f1a675e",
+    "figshare_article_25451878.json": "50d4c436a58120b52f388e2ab417eb77f991946888a066cee710905b90a8f5cf",
+    "figshare_collection_7132624.json": "fde7c233fc2207ff8a245e07e735940a3cd86b022dc53e376f0ea066e1f13628",
+    "liquid_formulations_dataset_2023.json": "3a195870782e6fd87bdd7499cbb4fe201d025b2cda05f9eee9fb9477f34b58bd"
+  },
+  "record_count": 812,
+  "unique_source_ids": 812
+}

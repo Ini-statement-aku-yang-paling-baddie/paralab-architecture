@@ -1,0 +1,15 @@
+{
+  "f1_document_count": 15,
+  "f3_eligible_count": 0,
+  "f3_excluded_count": 15,
+  "observed_formulation_count": 15,
+  "source_count": 1,
+  "sources": [
+    {
+      "doi": "10.3390/pharmaceutics12070647",
+      "license": "CC-BY-4.0",
+      "source_id": "PUB-PMC7407566",
+      "source_sha256": "eb1dca365846fd1aa5733aa2efd28cef6020cef70655f6e878b30153d144a829"
+    }
+  ]
+}

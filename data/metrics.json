@@ -1,0 +1,47 @@
+{
+  "canonical_counts": {
+    "checkpoints": 282,
+    "formulas": 24,
+    "observation_series": 48,
+    "outcomes": 48,
+    "projects": 12,
+    "trials": 24
+  },
+  "derived_counts": {
+    "f1_train_corpus": 32,
+    "f5_examples": 282,
+    "forecast_censored": 6,
+    "forecast_excluded": 23,
+    "forecast_features": 19,
+    "forecast_labels": 19,
+    "image_manifest": 0,
+    "journal_documents": 48
+  },
+  "evaluation_scope": "synthetic-demo structural validation only; bukan metrik model",
+  "measurement_quality_counts": {
+    "invalid": 8,
+    "missing": 8,
+    "observed": 548
+  },
+  "ml_training_executed": false,
+  "outcome_counts": {
+    "failed": 18,
+    "passed": 17,
+    "right_censored": 6,
+    "uncertain": 7
+  },
+  "project_splits": {
+    "test": 2,
+    "train": 8,
+    "validation": 2
+  },
+  "supervised_by_split_label": {
+    "test:0": 3,
+    "test:1": 1,
+    "train:0": 5,
+    "train:1": 7,
+    "validation:0": 1,
+    "validation:1": 2
+  },
+  "validation_errors": []
+}

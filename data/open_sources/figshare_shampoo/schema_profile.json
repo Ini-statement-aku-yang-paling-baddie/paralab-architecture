@@ -1,0 +1,158 @@
+{
+  "fields": {
+    "Arlypon F": {
+      "missing_count": 0,
+      "value_type_counts": {
+        "float": 812
+      }
+    },
+    "Arlypon TT": {
+      "missing_count": 0,
+      "value_type_counts": {
+        "float": 812
+      }
+    },
+    "Dehyquart A-CA": {
+      "missing_count": 0,
+      "value_type_counts": {
+        "float": 812
+      }
+    },
+    "Dehyquart CC6": {
+      "missing_count": 0,
+      "value_type_counts": {
+        "float": 812
+      }
+    },
+    "Dehyquart CC7 Benz": {
+      "missing_count": 0,
+      "value_type_counts": {
+        "float": 812
+      }
+    },
+    "Dehyton AB 30": {
+      "missing_count": 0,
+      "value_type_counts": {
+        "float": 812
+      }
+    },
+    "Dehyton MC": {
+      "missing_count": 0,
+      "value_type_counts": {
+        "float": 812
+      }
+    },
+    "Dehyton ML": {
+      "missing_count": 0,
+      "value_type_counts": {
+        "float": 812
+      }
+    },
+    "Dehyton PK 45": {
+      "missing_count": 0,
+      "value_type_counts": {
+        "float": 812
+      }
+    },
+    "ID": {
+      "missing_count": 0,
+      "value_type_counts": {
+        "int": 812
+      }
+    },
+    "Luviquat Excellence": {
+      "missing_count": 0,
+      "value_type_counts": {
+        "float": 812
+      }
+    },
+    "Plantacare 2000": {
+      "missing_count": 0,
+      "value_type_counts": {
+        "float": 812
+      }
+    },
+    "Plantacare 818": {
+      "missing_count": 0,
+      "value_type_counts": {
+        "float": 812
+      }
+    },
+    "Plantapon ACG 50": {
+      "missing_count": 0,
+      "value_type_counts": {
+        "float": 812
+      }
+    },
+    "Plantapon Amino KG-L": {
+      "missing_count": 0,
+      "value_type_counts": {
+        "float": 812
+      }
+    },
+    "Plantapon Amino SCG-L": {
+      "missing_count": 0,
+      "value_type_counts": {
+        "float": 812
+      }
+    },
+    "Plantapon LC 7": {
+      "missing_count": 0,
+      "value_type_counts": {
+        "float": 812
+      }
+    },
+    "Rheology_Data": {
+      "missing_count": 518,
+      "value_type_counts": {
+        "list": 294,
+        "str": 518
+      }
+    },
+    "Rheology_Type": {
+      "missing_count": 518,
+      "value_type_counts": {
+        "str": 812
+      }
+    },
+    "Salcare Super 7": {
+      "missing_count": 0,
+      "value_type_counts": {
+        "float": 812
+      }
+    },
+    "Stability_Test": {
+      "missing_count": 0,
+      "value_type_counts": {
+        "bool": 812
+      }
+    },
+    "Texapon SB 3 KC": {
+      "missing_count": 0,
+      "value_type_counts": {
+        "float": 812
+      }
+    },
+    "Turbidity_Error": {
+      "missing_count": 518,
+      "value_type_counts": {
+        "int": 294,
+        "str": 518
+      }
+    },
+    "Turbidity_NTU": {
+      "missing_count": 518,
+      "value_type_counts": {
+        "int": 294,
+        "str": 518
+      }
+    },
+    "Viscosity": {
+      "missing_count": 518,
+      "value_type_counts": {
+        "str": 812
+      }
+    }
+  },
+  "record_count": 812
+}

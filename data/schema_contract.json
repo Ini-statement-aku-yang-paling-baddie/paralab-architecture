@@ -1,0 +1,172 @@
+{
+  "common_required": {
+    "data_origin": "synthetic_demo",
+    "human_verified": false,
+    "id": "string unik global",
+    "provenance": {
+      "assumption_id": "SIM-001",
+      "generator": "pilot-v1",
+      "seed": "integer"
+    },
+    "scientific_validation_status": "not_validated_for_production",
+    "split": "train|validation|test"
+  },
+  "contract_version": "pilot-v1",
+  "derived_tables": [
+    "journal_documents",
+    "f1_train_corpus",
+    "forecast_features",
+    "forecast_labels",
+    "forecast_censored",
+    "forecast_excluded",
+    "f5_examples",
+    "image_manifest"
+  ],
+  "forecast_contract": {
+    "exclusions": [
+      "failure_week<=4",
+      "right_censored",
+      "uncertain",
+      "missing/invalid measurement through week4"
+    ],
+    "feature_columns": [
+      "temperature_c",
+      "formula_concentrations",
+      "process",
+      "observations"
+    ],
+    "feature_file": "derived/forecast_features.jsonl",
+    "horizon_week": 12,
+    "join": "features.id = labels.feature_id",
+    "label_file": "derived/forecast_labels.jsonl",
+    "landmark_week": 4,
+    "metadata_not_model_features": [
+      "id",
+      "project_id",
+      "series_id",
+      "formula_id",
+      "split",
+      "provenance",
+      "checkpoint_ids"
+    ],
+    "target": "failed_by_12: 0|1; known terminal event after week4 counts even if stopped before week12"
+  },
+  "format": "JSONL, satu objek per baris; UTF-8",
+  "invariants": [
+    "family/project/trial/storage/checkpoint tetap satu split",
+    "tanggal ISO sesuai started_at + week*7 hari; jadwal berurutan tanpa data sesudah stop",
+    "observed: finite dan raw sama; missing: null/null; invalid: null/raw string; alasan wajib",
+    "catatan tepat dari checkpoint yang sama; turunan direplay untuk validasi",
+    "bukan JSON Schema resmi: kontrak semantik dijalankan validate CLI"
+  ],
+  "tables": {
+    "checkpoints": {
+      "foreign_keys": {
+        "series_id": "observation_series.id"
+      },
+      "measurements": {
+        "ph": "number [0,14] | null",
+        "viscosity_cp": "number [0,1000000] | null"
+      },
+      "quality": [
+        "observed",
+        "missing",
+        "invalid"
+      ],
+      "required": [
+        "project_id",
+        "series_id",
+        "week",
+        "observed_at",
+        "measurements",
+        "raw_measurements",
+        "quality",
+        "missing_reasons",
+        "appearance",
+        "note"
+      ],
+      "weeks": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        8,
+        12
+      ]
+    },
+    "formulas": {
+      "foreign_keys": {
+        "ingredients[].ingredient_id": "demo_components.id",
+        "project_id": "projects.id"
+      },
+      "ingredients": {
+        "ingredient_id": "string",
+        "pct": "finite number [0,100]; total 100±1e-6"
+      },
+      "required": [
+        "project_id",
+        "ingredients",
+        "process",
+        "created_at",
+        "review_status"
+      ]
+    },
+    "observation_series": {
+      "foreign_keys": {
+        "trial_id": "trials.id"
+      },
+      "required": [
+        "project_id",
+        "trial_id",
+        "temperature_c",
+        "humidity_pct"
+      ],
+      "temperature_c": [
+        25,
+        40
+      ]
+    },
+    "outcomes": {
+      "foreign_keys": {
+        "endpoint_checkpoint_id": "checkpoints.id",
+        "series_id": "observation_series.id"
+      },
+      "required": [
+        "project_id",
+        "series_id",
+        "status",
+        "last_week",
+        "failure_week",
+        "endpoint_checkpoint_id",
+        "stopped",
+        "horizon_week",
+        "censor_reason"
+      ],
+      "status": [
+        "passed",
+        "failed",
+        "right_censored",
+        "uncertain"
+      ]
+    },
+    "projects": {
+      "required": [
+        "family_id",
+        "product_family",
+        "target_skin"
+      ]
+    },
+    "trials": {
+      "foreign_keys": {
+        "formula_id": "formulas.id"
+      },
+      "required": [
+        "project_id",
+        "formula_id",
+        "started_at"
+      ]
+    }
+  },
+  "validator_command": "python3 scripts/build_data_pilot.py validate"
+}

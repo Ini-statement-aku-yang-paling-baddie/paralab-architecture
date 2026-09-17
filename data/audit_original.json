@@ -1,0 +1,819 @@
+{
+  "entries": 200,
+  "formula_totals": [
+    {
+      "source_id": "J-2024-000",
+      "total_pct": 6.52
+    },
+    {
+      "source_id": "J-2024-001",
+      "total_pct": 12.17
+    },
+    {
+      "source_id": "J-2022-002",
+      "total_pct": 9.41
+    },
+    {
+      "source_id": "J-2023-003",
+      "total_pct": 5.43
+    },
+    {
+      "source_id": "J-2024-004",
+      "total_pct": 13.89
+    },
+    {
+      "source_id": "J-2024-005",
+      "total_pct": 12.56
+    },
+    {
+      "source_id": "J-2024-006",
+      "total_pct": 3.96
+    },
+    {
+      "source_id": "J-2022-007",
+      "total_pct": 12.18
+    },
+    {
+      "source_id": "J-2023-008",
+      "total_pct": 5.39
+    },
+    {
+      "source_id": "J-2022-009",
+      "total_pct": 3.45
+    },
+    {
+      "source_id": "J-2021-010",
+      "total_pct": 7.71
+    },
+    {
+      "source_id": "J-2024-011",
+      "total_pct": 12.32
+    },
+    {
+      "source_id": "J-2024-012",
+      "total_pct": 8.91
+    },
+    {
+      "source_id": "J-2024-013",
+      "total_pct": 12.89
+    },
+    {
+      "source_id": "J-2023-014",
+      "total_pct": 10.88
+    },
+    {
+      "source_id": "J-2024-015",
+      "total_pct": 14.64
+    },
+    {
+      "source_id": "J-2022-016",
+      "total_pct": 22.26
+    },
+    {
+      "source_id": "J-2023-017",
+      "total_pct": 16.38
+    },
+    {
+      "source_id": "J-2024-018",
+      "total_pct": 18.32
+    },
+    {
+      "source_id": "J-2022-019",
+      "total_pct": 17.79
+    },
+    {
+      "source_id": "J-2022-020",
+      "total_pct": 5.08
+    },
+    {
+      "source_id": "J-2024-021",
+      "total_pct": 22.14
+    },
+    {
+      "source_id": "J-2024-022",
+      "total_pct": 13.47
+    },
+    {
+      "source_id": "J-2023-023",
+      "total_pct": 4.09
+    },
+    {
+      "source_id": "J-2024-024",
+      "total_pct": 18.26
+    },
+    {
+      "source_id": "J-2023-025",
+      "total_pct": 12.17
+    },
+    {
+      "source_id": "J-2024-026",
+      "total_pct": 6.06
+    },
+    {
+      "source_id": "J-2023-027",
+      "total_pct": 8.67
+    },
+    {
+      "source_id": "J-2024-028",
+      "total_pct": 5.23
+    },
+    {
+      "source_id": "J-2023-029",
+      "total_pct": 9.58
+    },
+    {
+      "source_id": "J-2021-030",
+      "total_pct": 4.27
+    },
+    {
+      "source_id": "J-2024-031",
+      "total_pct": 15.85
+    },
+    {
+      "source_id": "J-2024-032",
+      "total_pct": 5.27
+    },
+    {
+      "source_id": "J-2024-033",
+      "total_pct": 11.24
+    },
+    {
+      "source_id": "J-2023-034",
+      "total_pct": 13.42
+    },
+    {
+      "source_id": "J-2021-035",
+      "total_pct": 14.82
+    },
+    {
+      "source_id": "J-2023-036",
+      "total_pct": 15.84
+    },
+    {
+      "source_id": "J-2021-037",
+      "total_pct": 5.11
+    },
+    {
+      "source_id": "J-2024-038",
+      "total_pct": 9.54
+    },
+    {
+      "source_id": "J-2024-039",
+      "total_pct": 25.69
+    },
+    {
+      "source_id": "J-2024-040",
+      "total_pct": 15.92
+    },
+    {
+      "source_id": "J-2024-041",
+      "total_pct": 17.12
+    },
+    {
+      "source_id": "J-2024-042",
+      "total_pct": 9.8
+    },
+    {
+      "source_id": "J-2023-043",
+      "total_pct": 12.65
+    },
+    {
+      "source_id": "J-2023-044",
+      "total_pct": 18.67
+    },
+    {
+      "source_id": "J-2024-045",
+      "total_pct": 11.39
+    },
+    {
+      "source_id": "J-2024-046",
+      "total_pct": 10.17
+    },
+    {
+      "source_id": "J-2024-047",
+      "total_pct": 13.55
+    },
+    {
+      "source_id": "J-2023-048",
+      "total_pct": 13.12
+    },
+    {
+      "source_id": "J-2023-049",
+      "total_pct": 9.56
+    },
+    {
+      "source_id": "J-2023-050",
+      "total_pct": 6.97
+    },
+    {
+      "source_id": "J-2022-051",
+      "total_pct": 16.08
+    },
+    {
+      "source_id": "J-2024-052",
+      "total_pct": 16.03
+    },
+    {
+      "source_id": "J-2024-053",
+      "total_pct": 21.58
+    },
+    {
+      "source_id": "J-2022-054",
+      "total_pct": 14.15
+    },
+    {
+      "source_id": "J-2024-055",
+      "total_pct": 19.14
+    },
+    {
+      "source_id": "J-2023-056",
+      "total_pct": 16.17
+    },
+    {
+      "source_id": "J-2021-057",
+      "total_pct": 10.62
+    },
+    {
+      "source_id": "J-2023-058",
+      "total_pct": 15.57
+    },
+    {
+      "source_id": "J-2022-059",
+      "total_pct": 19.34
+    },
+    {
+      "source_id": "J-2024-060",
+      "total_pct": 22.12
+    },
+    {
+      "source_id": "J-2024-061",
+      "total_pct": 16.25
+    },
+    {
+      "source_id": "J-2023-062",
+      "total_pct": 16.97
+    },
+    {
+      "source_id": "J-2024-063",
+      "total_pct": 9.95
+    },
+    {
+      "source_id": "J-2022-064",
+      "total_pct": 13.57
+    },
+    {
+      "source_id": "J-2023-065",
+      "total_pct": 11.65
+    },
+    {
+      "source_id": "J-2024-066",
+      "total_pct": 11.53
+    },
+    {
+      "source_id": "J-2023-067",
+      "total_pct": 5.94
+    },
+    {
+      "source_id": "J-2024-068",
+      "total_pct": 13.82
+    },
+    {
+      "source_id": "J-2023-069",
+      "total_pct": 17.42
+    },
+    {
+      "source_id": "J-2023-070",
+      "total_pct": 12.03
+    },
+    {
+      "source_id": "J-2023-071",
+      "total_pct": 13.41
+    },
+    {
+      "source_id": "J-2024-072",
+      "total_pct": 8.06
+    },
+    {
+      "source_id": "J-2024-073",
+      "total_pct": 10.49
+    },
+    {
+      "source_id": "J-2023-074",
+      "total_pct": 25.19
+    },
+    {
+      "source_id": "J-2023-075",
+      "total_pct": 28.58
+    },
+    {
+      "source_id": "J-2024-076",
+      "total_pct": 9.69
+    },
+    {
+      "source_id": "J-2022-077",
+      "total_pct": 8.41
+    },
+    {
+      "source_id": "J-2024-078",
+      "total_pct": 3.67
+    },
+    {
+      "source_id": "J-2024-079",
+      "total_pct": 9.15
+    },
+    {
+      "source_id": "J-2023-080",
+      "total_pct": 15.67
+    },
+    {
+      "source_id": "J-2023-081",
+      "total_pct": 9.15
+    },
+    {
+      "source_id": "J-2024-082",
+      "total_pct": 23.17
+    },
+    {
+      "source_id": "J-2021-083",
+      "total_pct": 9.35
+    },
+    {
+      "source_id": "J-2024-084",
+      "total_pct": 23.97
+    },
+    {
+      "source_id": "J-2024-085",
+      "total_pct": 11.48
+    },
+    {
+      "source_id": "J-2024-086",
+      "total_pct": 7.28
+    },
+    {
+      "source_id": "J-2024-087",
+      "total_pct": 13.25
+    },
+    {
+      "source_id": "J-2024-088",
+      "total_pct": 13.48
+    },
+    {
+      "source_id": "J-2021-089",
+      "total_pct": 8.74
+    },
+    {
+      "source_id": "J-2024-090",
+      "total_pct": 25.62
+    },
+    {
+      "source_id": "J-2023-091",
+      "total_pct": 20.31
+    },
+    {
+      "source_id": "J-2023-092",
+      "total_pct": 5.57
+    },
+    {
+      "source_id": "J-2024-093",
+      "total_pct": 8.52
+    },
+    {
+      "source_id": "J-2024-094",
+      "total_pct": 6.48
+    },
+    {
+      "source_id": "J-2023-095",
+      "total_pct": 17.34
+    },
+    {
+      "source_id": "J-2021-096",
+      "total_pct": 3.67
+    },
+    {
+      "source_id": "J-2023-097",
+      "total_pct": 10.15
+    },
+    {
+      "source_id": "J-2024-098",
+      "total_pct": 13.1
+    },
+    {
+      "source_id": "J-2024-099",
+      "total_pct": 11.16
+    },
+    {
+      "source_id": "J-2023-100",
+      "total_pct": 12.47
+    },
+    {
+      "source_id": "J-2023-101",
+      "total_pct": 14.91
+    },
+    {
+      "source_id": "J-2023-102",
+      "total_pct": 15.92
+    },
+    {
+      "source_id": "J-2022-103",
+      "total_pct": 17.86
+    },
+    {
+      "source_id": "J-2022-104",
+      "total_pct": 17.16
+    },
+    {
+      "source_id": "J-2021-105",
+      "total_pct": 3.17
+    },
+    {
+      "source_id": "J-2023-106",
+      "total_pct": 12.45
+    },
+    {
+      "source_id": "J-2022-107",
+      "total_pct": 11.23
+    },
+    {
+      "source_id": "J-2022-108",
+      "total_pct": 13.56
+    },
+    {
+      "source_id": "J-2024-109",
+      "total_pct": 12.34
+    },
+    {
+      "source_id": "J-2022-110",
+      "total_pct": 27.32
+    },
+    {
+      "source_id": "J-2024-111",
+      "total_pct": 8.79
+    },
+    {
+      "source_id": "J-2022-112",
+      "total_pct": 12.12
+    },
+    {
+      "source_id": "J-2022-113",
+      "total_pct": 3.4
+    },
+    {
+      "source_id": "J-2021-114",
+      "total_pct": 12.37
+    },
+    {
+      "source_id": "J-2023-115",
+      "total_pct": 17.58
+    },
+    {
+      "source_id": "J-2022-116",
+      "total_pct": 7.59
+    },
+    {
+      "source_id": "J-2024-117",
+      "total_pct": 11.91
+    },
+    {
+      "source_id": "J-2022-118",
+      "total_pct": 7.24
+    },
+    {
+      "source_id": "J-2023-119",
+      "total_pct": 13.72
+    },
+    {
+      "source_id": "J-2024-120",
+      "total_pct": 22.94
+    },
+    {
+      "source_id": "J-2024-121",
+      "total_pct": 9.78
+    },
+    {
+      "source_id": "J-2022-122",
+      "total_pct": 13.51
+    },
+    {
+      "source_id": "J-2024-123",
+      "total_pct": 28.9
+    },
+    {
+      "source_id": "J-2024-124",
+      "total_pct": 10.32
+    },
+    {
+      "source_id": "J-2023-125",
+      "total_pct": 25.04
+    },
+    {
+      "source_id": "J-2024-126",
+      "total_pct": 12.63
+    },
+    {
+      "source_id": "J-2023-127",
+      "total_pct": 30.48
+    },
+    {
+      "source_id": "J-2023-128",
+      "total_pct": 17.08
+    },
+    {
+      "source_id": "J-2023-129",
+      "total_pct": 17.37
+    },
+    {
+      "source_id": "J-2024-130",
+      "total_pct": 21.09
+    },
+    {
+      "source_id": "J-2024-131",
+      "total_pct": 6.57
+    },
+    {
+      "source_id": "J-2023-132",
+      "total_pct": 10.39
+    },
+    {
+      "source_id": "J-2021-133",
+      "total_pct": 3.13
+    },
+    {
+      "source_id": "J-2022-134",
+      "total_pct": 15.47
+    },
+    {
+      "source_id": "J-2023-135",
+      "total_pct": 11.64
+    },
+    {
+      "source_id": "J-2024-136",
+      "total_pct": 4.87
+    },
+    {
+      "source_id": "J-2022-137",
+      "total_pct": 8.52
+    },
+    {
+      "source_id": "J-2023-138",
+      "total_pct": 10.87
+    },
+    {
+      "source_id": "J-2023-139",
+      "total_pct": 14.82
+    },
+    {
+      "source_id": "J-2021-140",
+      "total_pct": 22.61
+    },
+    {
+      "source_id": "J-2024-141",
+      "total_pct": 29.75
+    },
+    {
+      "source_id": "J-2024-142",
+      "total_pct": 15.3
+    },
+    {
+      "source_id": "J-2022-143",
+      "total_pct": 5.11
+    },
+    {
+      "source_id": "J-2024-144",
+      "total_pct": 6.25
+    },
+    {
+      "source_id": "J-2023-145",
+      "total_pct": 13.65
+    },
+    {
+      "source_id": "J-2023-146",
+      "total_pct": 8.38
+    },
+    {
+      "source_id": "J-2021-147",
+      "total_pct": 22.25
+    },
+    {
+      "source_id": "J-2024-148",
+      "total_pct": 12.58
+    },
+    {
+      "source_id": "J-2021-149",
+      "total_pct": 18.6
+    },
+    {
+      "source_id": "J-2021-150",
+      "total_pct": 10.34
+    },
+    {
+      "source_id": "J-2021-151",
+      "total_pct": 15.9
+    },
+    {
+      "source_id": "J-2023-152",
+      "total_pct": 10.5
+    },
+    {
+      "source_id": "J-2024-153",
+      "total_pct": 11.22
+    },
+    {
+      "source_id": "J-2024-154",
+      "total_pct": 16.69
+    },
+    {
+      "source_id": "J-2024-155",
+      "total_pct": 20.97
+    },
+    {
+      "source_id": "J-2023-156",
+      "total_pct": 11.47
+    },
+    {
+      "source_id": "J-2023-157",
+      "total_pct": 23.58
+    },
+    {
+      "source_id": "J-2022-158",
+      "total_pct": 16.87
+    },
+    {
+      "source_id": "J-2023-159",
+      "total_pct": 24.05
+    },
+    {
+      "source_id": "J-2021-160",
+      "total_pct": 6.11
+    },
+    {
+      "source_id": "J-2022-161",
+      "total_pct": 8.32
+    },
+    {
+      "source_id": "J-2022-162",
+      "total_pct": 10.42
+    },
+    {
+      "source_id": "J-2022-163",
+      "total_pct": 10.25
+    },
+    {
+      "source_id": "J-2023-164",
+      "total_pct": 24.95
+    },
+    {
+      "source_id": "J-2022-165",
+      "total_pct": 4.98
+    },
+    {
+      "source_id": "J-2023-166",
+      "total_pct": 6.8
+    },
+    {
+      "source_id": "J-2024-167",
+      "total_pct": 10.67
+    },
+    {
+      "source_id": "J-2024-168",
+      "total_pct": 9.61
+    },
+    {
+      "source_id": "J-2024-169",
+      "total_pct": 11.84
+    },
+    {
+      "source_id": "J-2023-170",
+      "total_pct": 8.71
+    },
+    {
+      "source_id": "J-2022-171",
+      "total_pct": 16.85
+    },
+    {
+      "source_id": "J-2024-172",
+      "total_pct": 14.49
+    },
+    {
+      "source_id": "J-2024-173",
+      "total_pct": 11.39
+    },
+    {
+      "source_id": "J-2024-174",
+      "total_pct": 11.13
+    },
+    {
+      "source_id": "J-2022-175",
+      "total_pct": 9.61
+    },
+    {
+      "source_id": "J-2024-176",
+      "total_pct": 8.56
+    },
+    {
+      "source_id": "J-2021-177",
+      "total_pct": 13.2
+    },
+    {
+      "source_id": "J-2024-178",
+      "total_pct": 11.21
+    },
+    {
+      "source_id": "J-2022-179",
+      "total_pct": 12.3
+    },
+    {
+      "source_id": "J-2024-180",
+      "total_pct": 10.89
+    },
+    {
+      "source_id": "J-2023-181",
+      "total_pct": 11.07
+    },
+    {
+      "source_id": "J-2024-182",
+      "total_pct": 15.36
+    },
+    {
+      "source_id": "J-2023-183",
+      "total_pct": 7.24
+    },
+    {
+      "source_id": "J-2023-184",
+      "total_pct": 11.49
+    },
+    {
+      "source_id": "J-2023-185",
+      "total_pct": 4.51
+    },
+    {
+      "source_id": "J-2024-186",
+      "total_pct": 17.76
+    },
+    {
+      "source_id": "J-2024-187",
+      "total_pct": 10.09
+    },
+    {
+      "source_id": "J-2022-188",
+      "total_pct": 17.97
+    },
+    {
+      "source_id": "J-2023-189",
+      "total_pct": 15.47
+    },
+    {
+      "source_id": "J-2024-190",
+      "total_pct": 17.83
+    },
+    {
+      "source_id": "J-2024-191",
+      "total_pct": 9.66
+    },
+    {
+      "source_id": "J-2021-192",
+      "total_pct": 22.29
+    },
+    {
+      "source_id": "J-2024-193",
+      "total_pct": 5.22
+    },
+    {
+      "source_id": "J-2024-194",
+      "total_pct": 12.1
+    },
+    {
+      "source_id": "J-2022-195",
+      "total_pct": 7.1
+    },
+    {
+      "source_id": "J-2024-196",
+      "total_pct": 9.97
+    },
+    {
+      "source_id": "J-2024-197",
+      "total_pct": 13.85
+    },
+    {
+      "source_id": "J-2024-198",
+      "total_pct": 9.99
+    },
+    {
+      "source_id": "J-2021-199",
+      "total_pct": 12.18
+    }
+  ],
+  "generator_counts": {
+    "template": 200
+  },
+  "ingredient_alias_count": 23,
+  "moisturizer": 90,
+  "partial_formulas": 200,
+  "source_sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
+  "trials": 492,
+  "unique_ids": 200,
+  "warnings": [
+    "Corpus template sintetis; bukan evidence ilmiah.",
+    "Formula parsial tidak dilengkapi atau dianggap resep.",
+    "Alias, fungsi, narasi, hasil trial belum diverifikasi; bukan trajectory longitudinal."
+  ]
+}

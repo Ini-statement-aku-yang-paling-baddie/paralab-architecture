@@ -1,0 +1,12 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "normalized/liquid_formulations.jsonl": "e9267ad55f61b24e2ed841ce4626c69d4aaeb35f2635daed0bbcd67b97382f12",
+    "quality_audit.json": "9e87253f30bb1acd8c680cf690fef3840740a0e505ae279c65f703c3fd63fe6e",
+    "raw/fetch_metadata.json": "3643c2c429e3350a2e989a868e237068043ac015ea124e3c40c6a3a41f1a675e",
+    "raw/figshare_article_25451878.json": "50d4c436a58120b52f388e2ab417eb77f991946888a066cee710905b90a8f5cf",
+    "raw/figshare_collection_7132624.json": "fde7c233fc2207ff8a245e07e735940a3cd86b022dc53e376f0ea066e1f13628",
+    "raw/liquid_formulations_dataset_2023.json": "3a195870782e6fd87bdd7499cbb4fe201d025b2cda05f9eee9fb9477f34b58bd",
+    "schema_profile.json": "e5b88b0188c6e2021893b511ec0713edc34a0c675ded3cef383a37ecbb6b05a6"
+  }
+}
