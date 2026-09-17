@@ -1,4 +1,4 @@
-# FormuLab AI: Arsitektur v4
+# ParaLab AI: Arsitektur v4
 
 > **Status:** cetak biru implementasi prototipe hackathon  
 > **Menggantikan:** `ARCHITECTURE-V3.md` untuk keputusan scope MVP dan aliran data  
@@ -18,9 +18,9 @@ Visi produk tetap mencakup kategori kosmetik yang lebih luas. Namun, prototipe t
 
 ### 1.2 Posisi produk
 
-FormuLab AI bukan pengganti Smart Lab. FormuLab adalah lapisan evidence, guardrail, dan memori eksperimen yang menghadap langsung kepada peneliti dan dapat diintegrasikan ke workflow Smart Lab.
+ParaLab AI bukan pengganti Smart Lab. ParaLab adalah lapisan evidence, guardrail, dan memori eksperimen yang menghadap langsung kepada peneliti dan dapat diintegrasikan ke workflow Smart Lab.
 
-> **FormuLab mengubah jurnal lab menjadi co-pilot berbasis evidence: menemukan eksperimen terdahulu, menangkap risiko formula yang sudah dikenal, memantau sinyal stabilitas awal, dan menjaga pembelajaran dari setiap trial.**
+> **ParaLab mengubah jurnal lab menjadi co-pilot berbasis evidence: menemukan eksperimen terdahulu, menangkap risiko formula yang sudah dikenal, memantau sinyal stabilitas awal, dan menjaga pembelajaran dari setiap trial.**
 
 ### 1.3 Siklus pengguna utama
 
@@ -75,7 +75,7 @@ Brief riset
                                    │ API terautentikasi
                                    ▼
 ┌────────────────────────────────────────────────────────────────────────────┐
-│                     BACKEND MODULAR FORMULAB                                │
+│                     BACKEND MODULAR PARALAB                                │
 │                                                                            │
 │ ┌─────────────┐  ┌──────────────┐  ┌────────────────┐  ┌────────────────┐ │
 │ │ Journal API │  │ Access/Audit │  │ Ingest/Index   │  │ Model Adapter  │ │
@@ -816,7 +816,7 @@ Synthetic demo data boleh memakai external teacher API hanya jika tidak memiliki
 
 ### Pernyataan untuk juri
 
-> FormuLab tidak menggantikan formal stability test. FormuLab membawa keputusan go/no-go lebih awal untuk batch berisiko tinggi dengan menggabungkan formulation constraint terstruktur, trend measurement awal, dan institutional evidence. Prototype memvalidasi workflow ini dengan dataset berbasis skenario yang diberi label jelas, lalu dirancang untuk dilatih ulang memakai historical stability trajectory Paragon.
+> ParaLab tidak menggantikan formal stability test. ParaLab membawa keputusan go/no-go lebih awal untuk batch berisiko tinggi dengan menggabungkan formulation constraint terstruktur, trend measurement awal, dan institutional evidence. Prototype memvalidasi workflow ini dengan dataset berbasis skenario yang diberi label jelas, lalu dirancang untuk dilatih ulang memakai historical stability trajectory Paragon.
 
 ---
 
@@ -872,7 +872,7 @@ Synthetic demo data boleh memakai external teacher API hanya jika tidak memiliki
 
 ## 18. Keputusan Arsitektur Final
 
-FormuLab v4 memilih satu end-to-end demo universe yang koheren, bukan beberapa model terpisah:
+ParaLab v4 memilih satu end-to-end demo universe yang koheren, bukan beberapa model terpisah:
 
 ```text
 Synthetic trajectory O/W gel-cream

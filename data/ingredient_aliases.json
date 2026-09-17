@@ -8,7 +8,7 @@
     "name": "Alcohol Denat",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2024-005",
         "J-2022-007",
@@ -37,7 +37,7 @@
     "name": "Allantoin",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2021-010",
         "J-2024-018",
@@ -66,7 +66,7 @@
     "name": "Alpha Arbutin",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2022-002",
         "J-2023-025",
@@ -104,7 +104,7 @@
     "name": "Caffeine",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2022-016",
         "J-2024-053",
@@ -131,7 +131,7 @@
     "name": "Camellia Sinensis Leaf Extract",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2023-025",
         "J-2023-027",
@@ -171,7 +171,7 @@
     "name": "Centella Asiatica Extract",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2024-004",
         "J-2022-007",
@@ -251,7 +251,7 @@
     "name": "Cocamidopropyl Betaine",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2022-016",
         "J-2023-029",
@@ -276,7 +276,7 @@
     "name": "Coco-Glucoside",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2023-017",
         "J-2024-018",
@@ -303,7 +303,7 @@
     "name": "Decyl Glucoside",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2021-010",
         "J-2023-017",
@@ -331,7 +331,7 @@
     "name": "Dimethicone",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2023-003",
         "J-2024-004",
@@ -432,7 +432,7 @@
     "name": "Fragrance",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2023-029",
         "J-2024-066",
@@ -455,7 +455,7 @@
     "name": "Glycerin",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2024-001",
         "J-2024-004",
@@ -579,7 +579,7 @@
     "name": "Niacinamide",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2024-000",
         "J-2024-001",
@@ -713,7 +713,7 @@
     "name": "Panthenol",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2024-000",
         "J-2024-001",
@@ -839,7 +839,7 @@
     "name": "Salicylic Acid",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2021-010",
         "J-2023-017",
@@ -868,7 +868,7 @@
     "name": "Sodium Hyaluronate",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2024-000",
         "J-2024-001",
@@ -982,7 +982,7 @@
     "name": "Sodium Laureth Sulfate",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2022-016",
         "J-2024-053",
@@ -1010,7 +1010,7 @@
     "name": "Squalane",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2024-001",
         "J-2023-008",
@@ -1088,7 +1088,7 @@
     "name": "Titanium Dioxide",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2024-039",
         "J-2021-057",
@@ -1119,7 +1119,7 @@
     "name": "Tocopherol",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2022-020",
         "J-2024-039",
@@ -1152,7 +1152,7 @@
     "name": "Tranexamic Acid",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2022-002",
         "J-2024-006",
@@ -1194,7 +1194,7 @@
     "name": "Zinc Oxide",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2024-039",
         "J-2024-041",
@@ -1227,7 +1227,7 @@
     "name": "Zinc PCA",
     "provenance": {
       "sha256": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-      "source": "raw/corpus_formulab.json",
+      "source": "raw/corpus_paralab.json",
       "source_ids": [
         "J-2023-008",
         "J-2022-009",

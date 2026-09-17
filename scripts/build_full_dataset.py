@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generator dataset penuh FormuLab; simulasi demo, bukan data lab."""
+"""Generator dataset penuh ParaLab; simulasi demo, bukan data lab."""
 import argparse
 from collections import Counter
 from datetime import date, timedelta

@@ -1,4 +1,4 @@
-"""FormuLab AI - F2 Guardrail Engine (V4 contract).
+"""ParaLab AI - F2 Guardrail Engine (V4 contract).
 Konsumsi data/ingredient_master.json + data/formulation_rules.json.
 Output: status vocabulary V4, rules_fired (rule_id/version/source), derived_features, sign-off flag.
 Lolos 14 acceptance tests (lihat tests/test_f2_v4.py)."""

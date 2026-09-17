@@ -1,4 +1,4 @@
-# FormuLab AI — Arsitektur Teknis v3
+# ParaLab AI — Arsitektur Teknis v3
 
 > **Status:** proposed implementation architecture untuk hackathon
 >
@@ -10,11 +10,11 @@
 
 ### 1.1 Posisi terhadap Smart Lab 2.0
 
-FormuLab AI **bukan pengganti Smart Lab 2.0** dan bukan mesin formulasi tandingan. FormuLab adalah:
+ParaLab AI **bukan pengganti Smart Lab 2.0** dan bukan mesin formulasi tandingan. ParaLab adalah:
 
 > **researcher-facing evidence, guardrail, and institutional-memory layer yang dapat diintegrasikan ke alur Smart Lab.**
 
-Smart Lab membantu Paragon melakukan AI-driven formulation, ingredient discovery, dan intelligent experiment design. FormuLab memastikan bahwa keputusan di dalam alur tersebut:
+Smart Lab membantu Paragon melakukan AI-driven formulation, ingredient discovery, dan intelligent experiment design. ParaLab memastikan bahwa keputusan di dalam alur tersebut:
 
 1. menggunakan evidence eksperimen yang dapat ditemukan kembali;
 2. dibatasi oleh aturan kompatibilitas dan compliance yang dapat diaudit;
@@ -24,7 +24,7 @@ Smart Lab membantu Paragon melakukan AI-driven formulation, ingredient discovery
 
 ### 1.2 Value proposition
 
-> **FormuLab mengubah jurnal eksperimen dari arsip pasif menjadi memori riset aktif yang membantu peneliti menemukan kegagalan terdahulu, mencegah kesalahan formula yang dapat dideteksi lebih awal, dan mencatat evidence baru tanpa mengganggu pekerjaan di lab.**
+> **ParaLab mengubah jurnal eksperimen dari arsip pasif menjadi memori riset aktif yang membantu peneliti menemukan kegagalan terdahulu, mencegah kesalahan formula yang dapat dideteksi lebih awal, dan mencatat evidence baru tanpa mengganggu pekerjaan di lab.**
 
 ### 1.3 Scope hackathon
 
@@ -623,7 +623,7 @@ Review acak 30 entry sintetis tetap dilakukan, tetapi tambahkan:
 
 ### 11.1 Masalah yang dapat dibantu
 
-FormuLab tidak menciptakan data skin genomics, metabolomics, atau microbiome. FormuLab membantu Paragon mengetahui:
+ParaLab tidak menciptakan data skin genomics, metabolomics, atau microbiome. ParaLab membantu Paragon mengetahui:
 
 - evidence apa yang tersedia;
 - cohort mana yang underrepresented;
@@ -814,7 +814,7 @@ Jangan log raw formula, raw audio, atau biological data ke console/analytics tan
 
 ### Kalimat pitch
 
-> Smart Lab membantu Paragon merancang eksperimen yang lebih cerdas. FormuLab memastikan setiap eksperimen menggunakan evidence yang dapat dipercaya, mematuhi guardrail yang dapat diaudit, dan meninggalkan pembelajaran yang tidak hilang ketika proyek atau penelitinya berpindah.
+> Smart Lab membantu Paragon merancang eksperimen yang lebih cerdas. ParaLab memastikan setiap eksperimen menggunakan evidence yang dapat dipercaya, mematuhi guardrail yang dapat diaudit, dan meninggalkan pembelajaran yang tidak hilang ketika proyek atau penelitinya berpindah.
 
 ---
 
@@ -866,7 +866,7 @@ Jangan log raw formula, raw audio, atau biological data ke console/analytics tan
 
 | ID | Keputusan | Alasan |
 |---|---|---|
-| ADR-01 | FormuLab sebagai extension layer Smart Lab | Menghindari overlap strategic dan memperkuat complementarity |
+| ADR-01 | ParaLab sebagai extension layer Smart Lab | Menghindari overlap strategic dan memperkuat complementarity |
 | ADR-02 | Journal DB canonical, indexes derived | Konsistensi data dan rebuildability |
 | ADR-03 | Modular monolith untuk MVP | Delivery cepat tanpa distributed-system overhead |
 | ADR-04 | Hybrid RAG | Semantic retrieval saja lemah untuk INCI, angka, dan kode |
@@ -919,4 +919,4 @@ Arsitektur v3 mempertahankan fondasi v2, tetapi memusatkan project pada tiga kem
 2. **Deterministic and auditable formulation guardrails**
 3. **Low-friction, human-confirmed data capture melalui voice logging**
 
-Distillation menjadi strategi deployment untuk privasi dan efisiensi, bukan gimmick. F3 tetap mungkin dibangun dengan batas klaim yang benar. F4 dan biological active learning ditempatkan sebagai roadmap yang terhubung langsung ke visi Smart Lab, tanpa menjadikan FormuLab pesaing platform Paragon yang sudah ada.
+Distillation menjadi strategi deployment untuk privasi dan efisiensi, bukan gimmick. F3 tetap mungkin dibangun dengan batas klaim yang benar. F4 dan biological active learning ditempatkan sebagai roadmap yang terhubung langsung ke visi Smart Lab, tanpa menjadikan ParaLab pesaing platform Paragon yang sudah ada.

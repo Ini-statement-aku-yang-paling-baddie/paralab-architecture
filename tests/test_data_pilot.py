@@ -21,7 +21,7 @@ class PilotTests(unittest.TestCase):
     def test_raw_audit_and_aliases(self):
         self.assertTrue(SCRIPT.exists(), 'CLI pilot belum tersedia')
         m = api()
-        audit, aliases = m.audit_source(ROOT / 'corpus_formulab.json')
+        audit, aliases = m.audit_source(ROOT / 'corpus_paralab.json')
         self.assertEqual((audit['entries'], audit['unique_ids'], audit['trials'], audit['moisturizer'], len(aliases)), (200, 200, 492, 90, 23))
         self.assertEqual(audit['partial_formulas'], 200)
         self.assertTrue(audit['warnings'])
@@ -127,7 +127,7 @@ class PilotTests(unittest.TestCase):
         import sys
         m = api()
         self.assertTrue(hasattr(m, 'build'), 'Ekspor CLI belum tersedia')
-        originals = {name: m.sha(ROOT / name) for name in ['corpus_formulab.json', 'embeddings_formulab.npy']}
+        originals = {name: m.sha(ROOT / name) for name in ['corpus_paralab.json', 'embeddings_paralab.npy']}
         with tempfile.TemporaryDirectory() as tmp:
             out = Path(tmp) / 'pilot'
             command = [sys.executable, str(SCRIPT), 'build', '--output', str(out)]
@@ -140,7 +140,7 @@ class PilotTests(unittest.TestCase):
             manifest = json.loads((out / 'sha256_manifest.json').read_text())
             self.assertNotIn('sha256_manifest.json', manifest['files'])
             self.assertEqual(set(manifest['files']), set(before) - {'sha256_manifest.json'})
-            self.assertEqual(m.sha(out / 'raw/corpus_formulab.json'), originals['corpus_formulab.json'])
+            self.assertEqual(m.sha(out / 'raw/corpus_paralab.json'), originals['corpus_paralab.json'])
             self.assertEqual(manifest['originals'], originals)
             self.assertTrue((out / 'schema_contract.json').exists())
             check = [sys.executable, str(SCRIPT), 'validate', '--output', str(out)]

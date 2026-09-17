@@ -1,6 +1,11 @@
 {
   "algorithm": "sha256",
+  "originals": {
+    "corpus_paralab.json": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
+    "embeddings_paralab.npy": "a02ba85cc669d3dd33f218cd0b57c4b4bad56b8258cb1e93d8b00940efde8373"
+  },
   "files": {
+    "README.md": "7ec88fe1ea267fc99a91f3b928f20b1e558e3bec4df297e8835ecf3de21d3f8d",
     "audit_original.json": "427db123b97ddeb653844aa8408ca95ea852275ea7af27533187417bb353b88d",
     "authentic_rules.json": "6abdd964c1cfa4c4035cc217a4af335dc18ecdb4589e3cb283afa8d381249b20",
     "canonical/checkpoints.jsonl": "63ae14e99aa6c01a9ca21c029a5a0a018581ec6a8dee09c40948a057d5c07571",
@@ -18,15 +23,23 @@
     "derived/forecast_labels.jsonl": "7b00a0c4de5de295a9717b92626246d73e3fdc830daee8ae05501eaa034bf5f3",
     "derived/image_manifest.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "derived/journal_documents.jsonl": "be3b1a2483e6a9f11647b39bcea1577ddc2c15b370460accfc5d906f1848197a",
-    "ingredient_aliases.json": "4107b934745fb68ba7eb065c7b7167a3b715997a3e64ef91f93e09a1c960126a",
-    "metadata.json": "4c06f22b54303ef4976753f6ee838e40ba7883c42ca90c9c13cc4f99a93baccf",
+    "evidence_corpus.jsonl": "56b5ff18b731b8cb39946331fb3c455df22524b76ae6a3644b44920d161b5291",
+    "evidence_rag_text.jsonl": "4abb701930c3c169d53a93b5817a2cd38e74b13bcdd7db9d479e187c920a38d2",
+    "f2_screen_example.json": "44c2af263d6f13d3463794328b2130926504a4d81ec6e85fcf19dfb9a1684c49",
+    "formula_seeds.jsonl": "97e0ebac5dbdb0c805655a6074183ddc1f4d25ef3b88f497b8cbbacc6b2a3f46",
+    "formulation_rules.json": "bc857ef3a0b574ddf66d8337453c03384607950ce3be656d0e902183f7968d8b",
+    "ingredient_aliases.json": "e9a36336f25915d0ef27c6155ea1079766e91c4366ea51f0a79f9dfbc0b2aa6c",
+    "ingredient_master.json": "d233055da991a430122c1d920327ecafae640c34e628834153dcdd83a733bc45",
+    "labeling/rag_blind_v1/labeling_manifest.json": "2abf4c2a2f8ff7fcc77fa7af701461c7764111248cd29b5d8bd8bc2f2d15d7a1",
+    "labeling/rag_blind_v1/rag_blind_label_candidates.jsonl": "da475b9cf9c31f1579a7979c650067fd51b8d8eee3b1a99864fce37ea77f7b18",
+    "labeling/rag_blind_v1/rag_blind_labels_machine_adjudicated.jsonl": "b49fa90b67f883d5050e2bfc540cffbc912f97c850b2b30c0b700ef9dbd2cac4",
+    "metadata.json": "f1837e3ce88893873484d4e4bc604c397f6c53217436d025f27a31fd87221485",
+    "metadata_pilot.json": "b3af752399b16404c4bd4eda37706196a91ac851d93498828fc6de72f65fe026",
     "metrics.json": "728666906559f9bf1c9e7f7d9d0baa7560a4cddba4a62f2a06edaf64d3e644b7",
-    "raw/corpus_formulab.json": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
+    "rag_blind_test_queries.jsonl": "5f8c73c7fcf9d5aaaffc3720e6b1b2f562450dc34e1f13000cdcbe3d94e53967",
+    "rag_dev_queries.jsonl": "ee05d72380ebfc1b697a831ebe8e3a8d40592e130687ecf5ebf3305aa1fc3c1c",
+    "raw/corpus_paralab.json": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
     "schema_contract.json": "41554f70d659068a6dd06dae1c3b48f5554f33be3a0369425f6d3f9d6e6c2935",
     "simulation_assumptions.json": "509dd65e82324bb5ac810307797a5b81a35652056b83f22063075d126dd9e500"
-  },
-  "originals": {
-    "corpus_formulab.json": "40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856",
-    "embeddings_formulab.npy": "a02ba85cc669d3dd33f218cd0b57c4b4bad56b8258cb1e93d8b00940efde8373"
   }
 }

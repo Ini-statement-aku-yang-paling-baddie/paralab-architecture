@@ -1,6 +1,6 @@
-# data/ — Artefak Dataset FormuLab V4
+# data/ — Artefak Dataset ParaLab V4
 
-Semua file di sini dihasilkan oleh `FormuLab-V4-Corpus-Generator.ipynb` (source: `notebooks/corpus_v4_source.py`).
+Semua file di sini dihasilkan oleh `ParaLab-V4-Corpus-Generator.ipynb` (source: `notebooks/corpus_v4_source.py`).
 Regenerasi deterministik: seed `42`. Jalankan ulang notebook untuk mereproduksi persis.
 
 > ⚠️ **Semua data sintetis** (`data_origin: synthetic_demo`, `scientific_validation_status: not_validated_for_production`).
@@ -19,7 +19,7 @@ Variasi dibuat di dalam keluarga ini (sistem aktif, emulsifier, rasio fase minya
 | `formula_seeds.jsonl` | **tim F3** (trajectory generator) | **KONTRAK**: 600 trial, tiap trial punya `scenario_family` + `expected_outcome`/`expected_failure_mode`/`expected_failure_week`. Trajectory numerik harus konsisten dengan keluarga skenario ini |
 | `evidence_corpus.jsonl` | **tim web** + F1 | 600 evidence card (judul, observasi, pelajaran, outcome, `source_id`) untuk render dashboard & kartu hasil pencarian |
 | `evidence_rag_text.jsonl` | F1 retrieval | teks siap-embed per `source_id` |
-| `embeddings_formulab.npy` | F1 retrieval | matriks 600×384 (dihasilkan notebook) |
+| `embeddings_paralab.npy` | F1 retrieval | matriks 600×384 (dihasilkan notebook) |
 | `rag_dev_queries.jsonl` | evaluasi F1 | 40 query berlabel (`label_source: generated`) untuk tuning |
 | `rag_blind_test_queries.jsonl` | evaluasi F1 | 10 query ditulis manusia — **`relevant_source_ids` masih kosong, perlu pelabelan manusia** (§12.2) |
 | `ingredient_master.json` | F1 + F2 + F5 | ontology bahan kanonis (80 bahan, `ingredient_id` stabil) |

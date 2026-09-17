@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_LABELS = ROOT / "data" / "labeling" / "rag_blind_v1" / "rag_blind_labels_machine_adjudicated.jsonl"
 DEFAULT_TEXT = ROOT / "data" / "evidence_rag_text.jsonl"
-DEFAULT_EMBEDDINGS = ROOT / "sentence-transformer" / "embeddings_formulab.npy"
+DEFAULT_EMBEDDINGS = ROOT / "sentence-transformer" / "embeddings_paralab.npy"
 DEFAULT_MODEL_ARCHIVE = ROOT / "sentence-transformer" / "embedding_model.zip"
 DEFAULT_OUTPUT = ROOT / "data" / "evaluation" / "f1_dense_pool_v1.json"
 
@@ -55,7 +55,7 @@ def load_model(archive):
         from sentence_transformers import SentenceTransformer
     except ModuleNotFoundError as exc:
         raise RuntimeError("sentence-transformers belum tersedia di environment aktif.") from exc
-    with tempfile.TemporaryDirectory(prefix="formulab-st-") as temp_dir:
+    with tempfile.TemporaryDirectory(prefix="paralab-st-") as temp_dir:
         with zipfile.ZipFile(archive) as bundle:
             bundle.extractall(temp_dir)
         model = SentenceTransformer(temp_dir)

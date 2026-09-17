@@ -1,4 +1,4 @@
-# Dataset penuh sintetis FormuLab
+# Dataset penuh sintetis ParaLab
 
 ## Status
 

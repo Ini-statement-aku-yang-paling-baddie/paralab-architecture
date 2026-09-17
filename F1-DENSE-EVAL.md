@@ -9,7 +9,7 @@ Folder `sentence-transformer/` sengaja diabaikan Git karena berukuran sekitar 41
 ```text
 sentence-transformer/
 ├── embedding_model.zip
-└── embeddings_formulab.npy
+└── embeddings_paralab.npy
 ```
 
 Keduanya diperlukan. ZIP menyimpan model lokal, sedangkan `.npy` adalah 600 embedding dokumen yang urutannya cocok dengan `data/evidence_rag_text.jsonl`.

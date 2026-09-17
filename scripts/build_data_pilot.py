@@ -34,7 +34,7 @@ def audit_source(path):
                           'Alias, fungsi, narasi, hasil trial belum diverifikasi; bukan trajectory longitudinal.']}
     aliases = [{'id': f'ALIAS-{n:03}', 'name': name, 'aliases': [name],
                 'verification': 'unverified_alias', 'human_verified': False,
-                'provenance': {'source': 'raw/corpus_formulab.json', 'sha256': sha(path),
+                'provenance': {'source': 'raw/corpus_paralab.json', 'sha256': sha(path),
                                'source_ids': [e['id'] for e in entries if any(i['bahan'] == name for i in e['formula'])]}}
                for n, name in enumerate(names, 1)]
     return audit, aliases
@@ -328,7 +328,7 @@ def validate_derived(d, r):
 
 
 ROOT = Path(__file__).resolve().parents[1]
-ORIGINALS = ['corpus_formulab.json', 'embeddings_formulab.npy']
+ORIGINALS = ['corpus_paralab.json', 'embeddings_paralab.npy']
 DEMO_COMPONENTS = {'DEMO:WATER': 'Air demo', 'DEMO:GLYCERIN': 'Glycerin',
                    'DEMO:SQUALANE': 'Squalane', 'DEMO:NIACINAMIDE': 'Niacinamide',
                    'DEMO:EMULSIFIER_UNSPECIFIED': 'Placeholder emulsifier',
@@ -397,11 +397,11 @@ def build(output, seed=17):
     previous = output / 'sha256_manifest.json'
     if previous.exists() and json.loads(previous.read_text())['originals'] != originals:
         raise ValueError('Hash sumber berubah dari snapshot sebelumnya; perlu review, tidak ditimpa.')
-    raw = output / 'raw/corpus_formulab.json'
-    if raw.exists() and sha(raw) != originals['corpus_formulab.json']:
+    raw = output / 'raw/corpus_paralab.json'
+    if raw.exists() and sha(raw) != originals['corpus_paralab.json']:
         raise ValueError('Snapshot raw berbeda; tidak ditimpa.')
     raw.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(ROOT / 'corpus_formulab.json', raw)
+    shutil.copyfile(ROOT / 'corpus_paralab.json', raw)
     audit, aliases = audit_source(raw)
     d = generate(seed)
     errors = validate(d)
@@ -455,9 +455,9 @@ def validate_directory(output):
             errors.append('Manifest file/hash tidak cocok')
         if manifest['originals'] != {name: sha(ROOT / name) for name in ORIGINALS}:
             errors.append('Hash sumber asli berubah')
-        if sha(output / 'raw/corpus_formulab.json') != manifest['originals']['corpus_formulab.json']:
+        if sha(output / 'raw/corpus_paralab.json') != manifest['originals']['corpus_paralab.json']:
             errors.append('Raw snapshot tidak identik')
-        audit, aliases = audit_source(output / 'raw/corpus_formulab.json')
+        audit, aliases = audit_source(output / 'raw/corpus_paralab.json')
         for name, expected in [('audit_original.json', audit), ('ingredient_aliases.json', aliases),
                                ('schema_contract.json', contract()), ('metrics.json', metrics(d, r)),
                                ('simulation_assumptions.json', ASSUMPTIONS)]:

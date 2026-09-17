@@ -1,8 +1,8 @@
-# Pipeline evidence publik dan train/test FormuLab
+# Pipeline evidence publik dan train/test ParaLab
 
 ## Tujuan
 
-Pipeline ini menambahkan data yang benar-benar dilaporkan sumber open-access tanpa mengubah `corpus_formulab.json`, embedding lama, atau mengklaim bahwa semua data FormuLab menjadi data lab nyata.
+Pipeline ini menambahkan data yang benar-benar dilaporkan sumber open-access tanpa mengubah `corpus_paralab.json`, embedding lama, atau mengklaim bahwa semua data ParaLab menjadi data lab nyata.
 
 Ada tiga origin yang tetap terpisah:
 

@@ -1,5 +1,5 @@
 # %% [markdown]
-# # FormuLab AI — V4 Corpus Generator
+# # ParaLab AI — V4 Corpus Generator
 #
 # Menghasilkan **evidence corpus** untuk F1 (Copilot Evidence Riset) sesuai `ARCHITECTURE-V4.md`.
 #
@@ -678,7 +678,7 @@ for fn in sorted(os.listdir(OUT_DIR)):
 # ## 9. Embedding + export model (dense retrieval F1)
 
 # %%
-RUN_EMBEDDINGS = os.environ.get("FORMULAB_SKIP_EMB", "0") != "1"
+RUN_EMBEDDINGS = os.environ.get("PARALAB_SKIP_EMB", "0") != "1"
 MODEL_EMB = "paraphrase-multilingual-MiniLM-L12-v2"
 EMB = None
 if RUN_EMBEDDINGS:
@@ -686,8 +686,8 @@ if RUN_EMBEDDINGS:
     import numpy as np
     model = SentenceTransformer(MODEL_EMB)
     EMB = np.array(model.encode(RAG_TEXT, normalize_embeddings=True, show_progress_bar=True), dtype="float32")
-    np.save(os.path.join(OUT_DIR, "embeddings_formulab.npy"), EMB)
-    print(f"embedding: {EMB.shape} -> data/embeddings_formulab.npy")
+    np.save(os.path.join(OUT_DIR, "embeddings_paralab.npy"), EMB)
+    print(f"embedding: {EMB.shape} -> data/embeddings_paralab.npy")
 
     # export model penuh agar run berikutnya offline
     MODEL_DIR = "embedding_model"
@@ -698,7 +698,7 @@ if RUN_EMBEDDINGS:
                        reloaded.encode([qv], normalize_embeddings=True)[0], atol=1e-6)
     print(f"model tersimpan & tervalidasi: ./{MODEL_DIR}/")
 else:
-    print("embedding dilewati (FORMULAB_SKIP_EMB=1)")
+    print("embedding dilewati (PARALAB_SKIP_EMB=1)")
 
 # %% [markdown]
 # ## 9b. Bantu pelabelan blind test (memakai retriever sebenarnya)
@@ -747,6 +747,6 @@ print("""
 KONSUMSI ARTEFAK:
   - tim web            : evidence_corpus.jsonl (render dashboard/kartu F1)
   - tim F3             : formula_seeds.jsonl (KONTRAK - generate trajectory sesuai scenario_family)
-  - F1 retrieval       : evidence_rag_text.jsonl + embeddings_formulab.npy
+  - F1 retrieval       : evidence_rag_text.jsonl + embeddings_paralab.npy
   - evaluasi F1        : rag_dev_queries.jsonl (tuning) + rag_blind_test_queries.jsonl (blind, setelah dilabeli)
 """)

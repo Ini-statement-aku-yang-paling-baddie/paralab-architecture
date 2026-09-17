@@ -1,4 +1,4 @@
-# Pipeline data pilot FormuLab
+# Pipeline data pilot ParaLab
 
 ## Status dan batas keselamatan
 
@@ -21,8 +21,8 @@ python3 scripts/build_data_pilot.py validate
 Output alternatif/seed eksplisit:
 
 ```bash
-python3 scripts/build_data_pilot.py build --output /tmp/formulab-pilot --seed 17
-python3 scripts/build_data_pilot.py validate --output /tmp/formulab-pilot
+python3 scripts/build_data_pilot.py build --output /tmp/paralab-pilot --seed 17
+python3 scripts/build_data_pilot.py validate --output /tmp/paralab-pilot
 ```
 
 Exit code `0` berarti valid; selain itu kegagalan. `build` menulis ulang artefak turunan di direktori output dan memvalidasinya melalui pembacaan kembali. Gunakan direktori khusus; jangan simpan artefak lain di sana. Snapshot raw atau hash sumber yang berbeda dari build sebelumnya ditolak, bukan ditimpa diam-diam. Tidak ada opsi ekspansi 600 trial.
@@ -47,7 +47,7 @@ Tanggal awal simulasi tetap `2026-01-01`, ditambah minggu × 7 hari. Hanya check
 
 | Berkas di `data/` | Fungsi |
 |---|---|
-| `raw/corpus_formulab.json` | Salinan byte-identik corpus asli; tidak diedit |
+| `raw/corpus_paralab.json` | Salinan byte-identik corpus asli; tidak diedit |
 | `audit_original.json` | Hitungan sumber, total formula per ID, warning provenance |
 | `ingredient_aliases.json` | 23 nama/alias impor; ID `ALIAS-*`, source IDs dan hash; **tanpa authoritative properties** |
 | `demo_components.json` | Enam ID `DEMO:*` untuk formula buatan; terpisah dari alias asli, belum terverifikasi |
@@ -122,9 +122,9 @@ Build diulang dan **24 file output identik byte/hash**, termasuk manifest. Test 
 Hash sumber terjaga dan dibandingkan dengan Git HEAD:
 
 ```text
-corpus_formulab.json
+corpus_paralab.json
 40302c85d2018208e3a8fda23aeabd92f37c38d84e7cb3c426c03d4e9d3e3856
-embeddings_formulab.npy
+embeddings_paralab.npy
 a02ba85cc669d3dd33f218cd0b57c4b4bad56b8258cb1e93d8b00940efde8373
 ```
 
