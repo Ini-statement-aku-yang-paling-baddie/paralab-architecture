@@ -1,0 +1,96 @@
+services:
+  reverse-proxy:
+    image: nginx:1.27.5-alpine
+    restart: unless-stopped
+    depends_on:
+      f3-api:
+        condition: service_healthy
+      model-gateway:
+        condition: service_healthy
+    ports:
+      - "${PUBLIC_API_PORT:-443}:443"
+      - "80:80"
+    volumes:
+      - ./deploy/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./deploy/nginx/paralab-api.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./deploy/nginx/proxy_params:/etc/nginx/proxy_params:ro
+      - ${TLS_CERT_PATH:?Set TLS_CERT_PATH in .env.production}:/etc/nginx/tls/fullchain.pem:ro
+      - ${TLS_KEY_PATH:?Set TLS_KEY_PATH in .env.production}:/etc/nginx/tls/privkey.pem:ro
+    networks:
+      - edge
+      - backend
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /var/cache/nginx
+      - /var/run
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    cap_add:
+      - NET_BIND_SERVICE
+    healthcheck:
+      test: ["CMD-SHELL", "nginx -t"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  f3-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      PARALAB_CORS_ORIGINS: ${PARALAB_CORS_ORIGINS:?Set the public website origin in .env.production}
+    expose:
+      - "7860"
+    networks:
+      - backend
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:7860/health', timeout=3)\""]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+  model-gateway:
+    build:
+      context: .
+      dockerfile: deploy/model-gateway.Dockerfile
+    restart: unless-stopped
+    environment:
+      PARALAB_CORS_ORIGINS: ${PARALAB_CORS_ORIGINS:?Set the public website origin in .env.production}
+      PARALAB_F1_MODELS_DIR: /models/sentence-transformer
+    volumes:
+      - ${PARALAB_MODEL_DIR:?Set PARALAB_MODEL_DIR in .env.production}:/models/sentence-transformer:ro
+    expose:
+      - "8100"
+    networks:
+      - backend
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:8100/health', timeout=3)\""]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+networks:
+  edge: {}
+  backend:
+    internal: true

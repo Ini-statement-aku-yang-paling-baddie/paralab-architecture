@@ -8,6 +8,9 @@ sentence-transformer/
 models/*
 !models/README.md
 
+# Cloudflare Tunnel connector credential. Keep only the non-secret template tracked.
+.env.cloudflare-tunnel
+
 # Python virtual environments and bytecode
 .venv/
 .venv-f3/

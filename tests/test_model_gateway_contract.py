@@ -80,6 +80,30 @@ class ModelGatewayContractTests(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTrue(response.json()["requires_human_review"])
 
+    def test_model_artifact_locations_can_be_supplied_by_environment(self):
+        import importlib
+        import os
+
+        previous = os.environ.get("PARALAB_F1_MODELS_DIR")
+        os.environ["PARALAB_F1_MODELS_DIR"] = "/models/sentence-transformer"
+        try:
+            import api.model_gateway as gateway
+            gateway = importlib.reload(gateway)
+            self.assertEqual(
+                gateway.DEFAULT_EMBEDDINGS,
+                Path("/models/sentence-transformer/embeddings_paralab.npy"),
+            )
+            self.assertEqual(
+                gateway.DEFAULT_QWEN_MODEL,
+                Path("/models/sentence-transformer/Qwen2.5-1.5B-Instruct"),
+            )
+        finally:
+            if previous is None:
+                os.environ.pop("PARALAB_F1_MODELS_DIR", None)
+            else:
+                os.environ["PARALAB_F1_MODELS_DIR"] = previous
+            importlib.reload(gateway)
+
     def test_f5_makes_a_confirmation_required_draft_from_browser_transcript(self):
         response = self.client.post(
             "/v1/f5/transcribe-draft",

@@ -24,12 +24,27 @@ from scripts.f1_hybrid_retrieval import search
 from scripts.f1_runtime import finalize_summary, prepare_summary_request, redact_f1_numbers
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_ROWS = ROOT / "data" / "evidence_rag_text.jsonl"
-DEFAULT_CORPUS = ROOT / "data" / "evidence_corpus.jsonl"
-DEFAULT_EMBEDDINGS = ROOT / "sentence-transformer" / "embeddings_paralab.npy"
-DEFAULT_EMBEDDING_MODEL = ROOT / "models" / "embedding_model"
-DEFAULT_QWEN_MODEL = ROOT / "models" / "Qwen2.5-1.5B-Instruct"
-DEFAULT_QWEN_ADAPTER = ROOT / "models" / "formulab-qwen-lora"
+DEFAULT_ROWS = Path(os.environ.get("PARALAB_F1_ROWS_PATH", ROOT / "data" / "evidence_rag_text.jsonl"))
+DEFAULT_CORPUS = Path(os.environ.get("PARALAB_F1_CORPUS_PATH", ROOT / "data" / "evidence_corpus.jsonl"))
+# Production mounts all ignored F1 weights under one read-only directory. The
+# local-first defaults preserve the repository's existing development layout.
+_MODELS_DIR = os.environ.get("PARALAB_F1_MODELS_DIR")
+DEFAULT_EMBEDDINGS = Path(os.environ.get(
+    "PARALAB_F1_EMBEDDINGS_PATH",
+    Path(_MODELS_DIR) / "embeddings_paralab.npy" if _MODELS_DIR else ROOT / "sentence-transformer" / "embeddings_paralab.npy",
+))
+DEFAULT_EMBEDDING_MODEL = Path(os.environ.get(
+    "PARALAB_F1_EMBEDDING_MODEL_PATH",
+    Path(_MODELS_DIR) / "embedding_model" if _MODELS_DIR else ROOT / "models" / "embedding_model",
+))
+DEFAULT_QWEN_MODEL = Path(os.environ.get(
+    "PARALAB_F1_QWEN_MODEL_PATH",
+    Path(_MODELS_DIR) / "Qwen2.5-1.5B-Instruct" if _MODELS_DIR else ROOT / "models" / "Qwen2.5-1.5B-Instruct",
+))
+DEFAULT_QWEN_ADAPTER = Path(os.environ.get(
+    "PARALAB_F1_QWEN_ADAPTER_PATH",
+    Path(_MODELS_DIR) / "formulab-qwen-lora" if _MODELS_DIR else ROOT / "models" / "formulab-qwen-lora",
+))
 
 
 class F1Service(Protocol):
