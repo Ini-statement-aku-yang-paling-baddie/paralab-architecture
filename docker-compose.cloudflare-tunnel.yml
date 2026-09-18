@@ -1,0 +1,26 @@
+# Compose overlay for a free public Cloudflare Tunnel. Use only with
+# docker-compose.production.yml; it removes the VPS/TLS host-port exposure.
+services:
+  reverse-proxy:
+    ports: !reset []
+    expose:
+      - "8080"
+    volumes: !override
+      - ./deploy/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./deploy/nginx/paralab-api.cloudflare-tunnel.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./deploy/nginx/proxy_params:/etc/nginx/proxy_params:ro
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    restart: unless-stopped
+    depends_on:
+      reverse-proxy:
+        condition: service_healthy
+    command: tunnel --no-autoupdate run --token ${TUNNEL_TOKEN:?Set TUNNEL_TOKEN in .env.cloudflare-tunnel}
+    networks:
+      - edge
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL

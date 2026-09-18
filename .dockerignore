@@ -6,6 +6,7 @@ __pycache__/
 **/__pycache__/
 *.py[cod]
 sentence-transformer/
+models/
 
 # Materi yang tidak dibutuhkan adaptor API saat runtime.
 notebooks/
@@ -28,3 +29,5 @@ data/raw/
 data/canonical/
 data/derived/
 data/*.jsonl
+!data/evidence_rag_text.jsonl
+!data/evidence_corpus.jsonl
